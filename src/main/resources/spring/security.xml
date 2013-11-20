@@ -100,8 +100,8 @@
     <!--<expression-handler ref="oauth2ExpressionHandler"/>-->
     <!--</global-method-security>-->
 
-    <oauth2:expression-handler id="oauth2ExpressionHandler"/>
-    <oauth2:web-expression-handler id="oauth2WebExpressionHandler"/>
+    <!--<oauth2:expression-handler id="oauth2ExpressionHandler"/>-->
+    <!--<oauth2:web-expression-handler id="oauth2WebExpressionHandler"/>-->
 
     <beans:bean id="oauthUserApprovalHandler" class="cc.honyee.web.oauth.OauthUserApprovalHandler">
         <beans:property name="tokenServices" ref="tokenServices"/>
