@@ -20,9 +20,9 @@
 
         <!--jdbc execute sql config-->
         <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
-        <jdbc.url>jdbc:mysql://ec2-23-21-211-172.compute-1.amazonaws.com:3306/jiuzhai_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.url>
-        <jdbc.user>honyee</jdbc.user>
-        <jdbc.pass>honyee</jdbc.pass>
+        <jdbc.url>jdbc:mysql://localhost:3306/wdcy_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.url>
+        <jdbc.user>wdcy</jdbc.user>
+        <jdbc.pass>wdcy</jdbc.pass>
         <!--if do not use execute sql, change the value to true-->
         <jdbc.execute.skip>false</jdbc.execute.skip>
         <test.skip>false</test.skip>
