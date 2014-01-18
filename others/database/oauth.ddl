@@ -4,7 +4,7 @@
 
 Drop table  if exists oauth_client_details;
 create table oauth_client_details (
-  client_id VARCHAR(256) PRIMARY KEY,
+  client_id VARCHAR(255) PRIMARY KEY,
   resource_ids VARCHAR(256),
   client_secret VARCHAR(256),
   scope VARCHAR(256),
