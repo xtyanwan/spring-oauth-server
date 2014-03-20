@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>honyee.cc</groupId>
+    <groupId>wdcy.cc</groupId>
     <artifactId>spring-oauth-server</artifactId>
     <version>1.0</version>
     <name>spring-oauth-server</name>
     <packaging>war</packaging>
-    <description>Spring Oauth Server</description>
+    <description>Spring Oauth Server (WDCY)</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,7 +36,7 @@
     <developers>
         <developer>
             <name>shengzhao</name>
-            <email>shengzhao@honyee.cc</email>
+            <email>shengzhao@wdcy.cc</email>
         </developer>
         <!--more developer-->
     </developers>
@@ -67,10 +67,10 @@
                                 ${project.version}
                             </Implementation-BuildNumber>
                             <Specification-Vendor>
-                                honyee.cc
+                                wdcy.cc
                             </Specification-Vendor>
                             <Implementation-Vendor>
-                                honyee.cc
+                                wdcy.cc
                             </Implementation-Vendor>
                             <Implementation-Title>
                                 ${project.name}
