@@ -9,8 +9,8 @@
         <setting name="useGeneratedKeys" value="true"/>
     </settings>
     <typeAliases>
-        <typeAlias alias="User" type="cc.honyee.domain.user.User"/>
-        <typeAlias alias="OauthClientDetails" type="cc.honyee.domain.oauth.OauthClientDetails"/>
+        <typeAlias alias="User" type="cc.wdcy.domain.user.User"/>
+        <typeAlias alias="OauthClientDetails" type="cc.wdcy.domain.oauth.OauthClientDetails"/>
 
     </typeAliases>
 

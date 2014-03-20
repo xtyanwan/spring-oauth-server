@@ -41,7 +41,7 @@
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="cc.honyee.infrastructure.mybatis"/>
+        <property name="basePackage" value="cc.wdcy.infrastructure.mybatis"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 

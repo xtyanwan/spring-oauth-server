@@ -108,7 +108,7 @@
 
     <!-- Spring context listener -->
     <listener>
-        <listener-class>cc.honyee.web.context.BeanContextLoaderListener</listener-class>
+        <listener-class>cc.wdcy.web.context.BeanContextLoaderListener</listener-class>
     </listener>
 
     <!--hy mvc-->
