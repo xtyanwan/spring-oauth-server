@@ -15,8 +15,8 @@
     </typeAliases>
 
     <mappers>
-        <mapper resource="cc/honyee/infrastructure/mybatis/UserMapper.xml"/>
-        <mapper resource="cc/honyee/infrastructure/mybatis/OauthMapper.xml"/>
+        <mapper resource="cc/wdcy/infrastructure/mybatis/UserMapper.xml"/>
+        <mapper resource="cc/wdcy/infrastructure/mybatis/OauthMapper.xml"/>
 
     </mappers>
 
