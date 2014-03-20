@@ -25,9 +25,9 @@
 
     <meta name="viewport" content="width=device-width,user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="honyee.cc"/>
-    <meta name="description" content="honyee.cc"/>
-    <meta name="author" content="honyee.cc"/>
+    <meta name="keywords" content="wdcy.cc"/>
+    <meta name="description" content="wdcy.cc"/>
+    <meta name="author" content="wdcy.cc"/>
 
     <title><decorator:title default=""/> - Oauth</title>
     <decorator:head/>

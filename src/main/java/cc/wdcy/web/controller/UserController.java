@@ -12,7 +12,6 @@
 package cc.wdcy.web.controller;
 
 import cc.wdcy.service.UserService;
-import cc.wdcy.web.validator.UserFormDtoValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,8 +27,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private UserFormDtoValidator validator;
 
     @RequestMapping("overview.htm")
     public String overview(Model model) {

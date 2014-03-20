@@ -11,7 +11,7 @@
  */
 package cc.wdcy.web.context;
 
-import cc.wdcy.domain.shared.security.HonyeeUserDetails;
+import cc.wdcy.domain.shared.security.WdcyUserDetails;
 import cc.wdcy.domain.shared.security.SecurityHolder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -22,14 +22,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 public class SpringSecurityHolder implements SecurityHolder {
 
     @Override
-    public HonyeeUserDetails userDetails() {
+    public WdcyUserDetails userDetails() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null) {
             return null;
         }
         Object principal = authentication.getPrincipal();
-        if (principal instanceof HonyeeUserDetails) {
-            return (HonyeeUserDetails) principal;
+        if (principal instanceof WdcyUserDetails) {
+            return (WdcyUserDetails) principal;
         }
         return null;
     }

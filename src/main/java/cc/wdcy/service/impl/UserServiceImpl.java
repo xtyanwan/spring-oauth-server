@@ -11,7 +11,7 @@
  */
 package cc.wdcy.service.impl;
 
-import cc.wdcy.domain.shared.security.HonyeeUserDetails;
+import cc.wdcy.domain.shared.security.WdcyUserDetails;
 import cc.wdcy.domain.user.User;
 import cc.wdcy.domain.user.UserRepository;
 import cc.wdcy.service.UserService;
@@ -36,6 +36,6 @@ public class UserServiceImpl implements UserService {
             throw new UsernameNotFoundException("Not found any user for username[" + username + "]");
         }
 
-        return new HonyeeUserDetails(user);
+        return new WdcyUserDetails(user);
     }
 }

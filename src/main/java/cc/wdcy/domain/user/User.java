@@ -13,7 +13,6 @@ package cc.wdcy.domain.user;
 
 import cc.wdcy.domain.AbstractDomain;
 import cc.wdcy.domain.shared.BeanProvider;
-import cc.wdcy.infrastructure.PasswordHandler;
 
 import java.util.Date;
 
@@ -101,12 +100,6 @@ public class User extends AbstractDomain {
         return this;
     }
 
-    public String resetPassword() {
-        String newOriginalPass = PasswordHandler.randomPassword();
-        this.password = PasswordHandler.encryptPassword(newOriginalPass);
-        this.saveOrUpdate();
-        return newOriginalPass;
-    }
 
 
     public Date lastLoginTime() {

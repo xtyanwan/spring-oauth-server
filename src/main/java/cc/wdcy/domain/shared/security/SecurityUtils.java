@@ -25,7 +25,7 @@ public class SecurityUtils {
     }
 
     public static User currentUser() {
-        HonyeeUserDetails userDetails = securityHolder.userDetails();
+        WdcyUserDetails userDetails = securityHolder.userDetails();
         return (userDetails != null ? userDetails.user() : null);
     }
 }

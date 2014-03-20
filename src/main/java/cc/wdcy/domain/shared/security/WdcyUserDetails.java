@@ -11,7 +11,6 @@
  */
 package cc.wdcy.domain.shared.security;
 
-import cc.wdcy.infrastructure.DateUtils;
 import cc.wdcy.domain.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,27 +22,23 @@ import java.util.Collection;
 /**
  * @author Shengzhao Li
  */
-public class HonyeeUserDetails implements UserDetails {
+public class WdcyUserDetails implements UserDetails {
 
     protected static final String ROLE_PREFIX = "ROLE_";
     protected static final GrantedAuthority DEFAULT_USER_ROLE = new SimpleGrantedAuthority(ROLE_PREFIX + "USER");
-    protected static final GrantedAuthority ADMIN_USER_ROLE = new SimpleGrantedAuthority(ROLE_PREFIX + "ADMIN");
 
     protected User user;
 
 
-    public HonyeeUserDetails() {
+    public WdcyUserDetails() {
     }
 
-    public HonyeeUserDetails(User user) {
+    public WdcyUserDetails(User user) {
         this.user = user;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-//        if (user.defaultUser()) {
-//            return Arrays.asList(ADMIN_USER_ROLE, DEFAULT_USER_ROLE);
-//        }
         return Arrays.asList(DEFAULT_USER_ROLE, new SimpleGrantedAuthority(ROLE_PREFIX + "UNITY"), new SimpleGrantedAuthority(ROLE_PREFIX + "MOBILE"));
     }
 
@@ -81,12 +76,6 @@ public class HonyeeUserDetails implements UserDetails {
         return user;
     }
 
-    public String getLastLoginTime() {
-        if (user != null && user.lastLoginTime() != null) {
-            return DateUtils.toDateText(user.lastLoginTime(), DateUtils.DEFAULT_DATE_TIME_FORMAT);
-        }
-        return "---";
-    }
 
     @Override
     public String toString() {

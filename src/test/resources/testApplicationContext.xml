@@ -8,8 +8,7 @@
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                <value>classpath:database.properties</value>
-                <!--<value>classpath:mail.properties</value>-->
+                <value>classpath:test.properties</value>
             </list>
         </property>
     </bean>
@@ -45,20 +44,6 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-    <!--Mail configuration-->
-    <!--<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
-    <!--<property name="host" value="${host.name}"/>-->
-    <!--<property name="port" value="${mail.smtp.port}"/>-->
-    <!--<property name="username" value="${mail.username}"/>-->
-    <!--<property name="password" value="${mail.password}"/>-->
-
-    <!--<property name="defaultEncoding" value="UTF-8"/>-->
-    <!--<property name="javaMailProperties">-->
-    <!--<props>-->
-    <!--<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>-->
-    <!--</props>-->
-    <!--</property>-->
-    <!--</bean>-->
 
 
 </beans>

@@ -17,7 +17,6 @@
         <property name="locations">
             <list>
                 <value>classpath:database.properties</value>
-                <value>classpath:mail.properties</value>
             </list>
         </property>
     </bean>
@@ -32,9 +31,9 @@
         <property name="validationQuery" value="SELECT 1"/>
         <property name="testOnReturn" value="false"/>
         <property name="testOnBorrow" value="true"/>
-        <!--Based on 1000 connected user -->
-        <property name="maxActive" value="200"/>
-        <property name="maxIdle" value="50"/>
+        <!--Based on 100 connected user -->
+        <property name="maxActive" value="20"/>
+        <property name="maxIdle" value="5"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

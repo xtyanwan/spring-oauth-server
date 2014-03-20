@@ -17,6 +17,6 @@ package cc.wdcy.domain.shared.security;
 
 public interface SecurityHolder {
 
-    HonyeeUserDetails userDetails();
+    WdcyUserDetails userDetails();
 
 }
