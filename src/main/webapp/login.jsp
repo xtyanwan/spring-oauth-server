@@ -30,7 +30,7 @@
     <br/>
     <br/>
     <label for="password">Password:</label>
-    <input type="password" name="j_password" id="password" value="honyee2013"/>
+    <input type="password" name="j_password" id="password" value="admin"/>
     <br/>
     <input type="submit" value="Login"/>
 </form>
