@@ -8,17 +8,6 @@
         </encoder>
     </appender>
 
-    <!--<appender name="AccessLogin" class="ch.qos.logback.core.FileAppender">-->
-        <!--<file>../logs/access_login.log</file>-->
-        <!--<append>true</append>-->
-        <!--<encoder>-->
-            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss} %level %class:%line - %msg%n</pattern>-->
-        <!--</encoder>-->
-    <!--</appender>-->
-
-    <!--<logger name="com.honyee.jiuzhai.web.context.JiuzhaiAuthenticationSuccessHandler" level="DEBUG" additivity="false">-->
-        <!--<appender-ref ref="AccessLogin"/>-->
-    <!--</logger>-->
 
     <!--springframework package level: WARN-->
     <logger name="org.springframework" level="WARN"/>
