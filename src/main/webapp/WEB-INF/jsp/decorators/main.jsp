@@ -29,13 +29,19 @@
     <meta name="description" content="wdcy.cc"/>
     <meta name="author" content="wdcy.cc"/>
 
-    <title><decorator:title default=""/> - Oauth</title>
+    <title><decorator:title default=""/> - WDCY Oauth</title>
     <decorator:head/>
 
 </head>
 <body>
 <div>
     <decorator:body/>
+</div>
+<div>
+    <hr/>
+    <p>
+        Copyright <a href="http://wdcy.cc" target="_blank">wdcy.cc</a>
+    </p>
 </div>
 </body>
 </html>

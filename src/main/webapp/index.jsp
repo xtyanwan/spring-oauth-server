@@ -22,7 +22,10 @@
 </head>
 <body>
 <h3>spring-oauth is work!</h3>
-<a href="${contextPath}/logout.do">Logout</a>
+
+<p>
+    <a href="${contextPath}/logout.do">Logout</a>
+</p>
 
 <div>
     操作说明:
@@ -37,6 +40,8 @@
         </li>
     </ol>
 </div>
+<br/>
+菜单
 <ul>
     <li>
         <a href="${contextPath}/user/overview.htm">User</a>
