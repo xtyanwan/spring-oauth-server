@@ -28,15 +28,10 @@
         <test.skip>false</test.skip>
     </properties>
 
-    <ciManagement>
-        <system>Jenkins</system>
-        <url>https://honyee.ci.cloudbees.com/</url>
-    </ciManagement>
-
     <developers>
         <developer>
             <name>shengzhao</name>
-            <email>shengzhao@wdcy.cc</email>
+            <email>monkeyk1987@gmail.com</email>
         </developer>
         <!--more developer-->
     </developers>
