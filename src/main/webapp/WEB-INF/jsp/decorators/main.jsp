@@ -29,7 +29,7 @@
 <div>
     <hr/>
     <p>
-        Contact me <a href="mailto:monkeyk1987@gmail.com">monkeyk1987@gmail.com</a>
+        <a href="mailto:monkeyk1987@gmail.com">monkeyk1987@gmail.com</a>, from <a href="http://wdcy.cc" target="_blank">WDCY</a>.
     </p>
 </div>
 </body>
