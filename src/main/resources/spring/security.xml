@@ -171,11 +171,5 @@
     Oauth server end.............
     -->
 
-    <!--security holder-->
-    <beans:bean id="springSecurityHolder" class="cc.wdcy.web.context.SpringSecurityHolder"/>
-
-    <beans:bean id="securityHolderFactory" class="cc.wdcy.domain.shared.security.SecurityUtils">
-        <beans:property name="securityHolder" ref="springSecurityHolder"/>
-    </beans:bean>
 
 </beans:beans>

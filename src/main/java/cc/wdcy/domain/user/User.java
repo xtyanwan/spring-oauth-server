@@ -12,7 +12,6 @@
 package cc.wdcy.domain.user;
 
 import cc.wdcy.domain.AbstractDomain;
-import cc.wdcy.domain.shared.BeanProvider;
 
 import java.util.Date;
 
@@ -21,7 +20,6 @@ import java.util.Date;
  */
 public class User extends AbstractDomain {
 
-    private transient UserRepository userRepository = BeanProvider.getBean(UserRepository.class);
 
     private String username;
     private String password;
@@ -86,14 +84,6 @@ public class User extends AbstractDomain {
         return this;
     }
 
-    @Override
-    public void saveOrUpdate() {
-        if (isNewly()) {
-            userRepository.saveUser(this);
-        } else {
-            userRepository.updateUser(this);
-        }
-    }
 
     public User username(String username) {
         this.username = username;

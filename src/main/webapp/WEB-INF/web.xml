@@ -72,7 +72,7 @@
 
     <!-- Spring context listener -->
     <listener>
-        <listener-class>cc.wdcy.web.context.BeanContextLoaderListener</listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
     <!--hy mvc-->
