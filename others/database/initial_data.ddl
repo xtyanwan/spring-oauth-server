@@ -2,7 +2,7 @@
 -- admin, password is honyee2013
 insert into user_(id,guid,create_time,email,password,phone,username,default_user)
 values
-(21,'29f6004fb1b0466f9572b02bf2ac1be8',now(),'admin@honyee.cc','69f71fbb5b41bd481d5d3b28a02a0b7e','028-65536867','admin',true);
+(21,'29f6004fb1b0466f9572b02bf2ac1be8',now(),'admin@wdcy.cc','69f71fbb5b41bd481d5d3b28a02a0b7e','028-1234567','admin',true);
 
 
 -- initial oauth client details test data
