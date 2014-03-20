@@ -18,10 +18,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unity login</title>
+    <title>Oauth login</title>
 </head>
 <body>
-<h3>Unity login</h3>
+<h3>Oauth login</h3>
 
 <form action="${contextPath}/login.do" method="post">
 
