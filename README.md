@@ -26,6 +26,7 @@
 </li>
 <li>
 创建MySQL数据库(如数据库名oauth2), 并运行相应的SQL脚本(脚本文件位于others/database目录),
+<br/>
    运行脚本的顺序: initial_db.ddl -> oauth.ddl -> initial_data.ddl
 </li>
 <li>
@@ -38,7 +39,7 @@
          将war放在Tomcat中并启动(注意: 这种方式需要将spring-oauth-server.properties加入到classpath中并正确配置数据库连接信息).
 </li>
 <li>
-6.参考oauth_test.txt(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
+参考oauth_test.txt(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
 </li>
 </ol>
 </p>
