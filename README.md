@@ -52,5 +52,5 @@
 
 
 <p>
- 欢迎发邮件到<a href="mailto:monkeyk1987@gmail.com">monkeyk1987@gmail.com</a>一起讨论.
+ 欢迎发邮件到<a href="mailto:shengzhao@shengzhaoli.com">shengzhao@shengzhaoli.com</a>一起讨论.
 </p>
