@@ -10,6 +10,6 @@
     <title>Mobile dashboard</title>
 </head>
 <body>
-<h3>Hi Mobile.</h3>
+<h2>Hi Mobile.</h2>
 </body>
 </html>

@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 <body>
-<h3>spring-oauth is work!</h3>
+<h2>spring-oauth is work!</h2>
 
 <p>
     <a href="${contextPath}/logout.do">Logout</a>

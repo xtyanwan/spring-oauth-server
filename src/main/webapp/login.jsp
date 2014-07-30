@@ -10,7 +10,7 @@
     <title>Oauth login</title>
 </head>
 <body>
-<h3>Oauth login</h3>
+<h2>Oauth login</h2>
 
 <form action="${contextPath}/login.do" method="post">
 

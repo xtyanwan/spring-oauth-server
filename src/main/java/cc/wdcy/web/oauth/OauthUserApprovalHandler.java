@@ -26,7 +26,7 @@ public class OauthUserApprovalHandler extends TokenServicesUserApprovalHandler {
         }
 
         OauthClientDetails clientDetails = oauthService.loadOauthClientDetails(authorizationRequest.getClientId());
-        return (clientDetails != null && clientDetails.trusted());
+        return clientDetails != null && clientDetails.trusted();
 
     }
 
