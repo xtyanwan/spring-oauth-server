@@ -17,10 +17,6 @@
         <result property="username" column="username"/>
         <result property="lastLoginTime" column="last_login_time"/>
 
-        <!--<discriminator column="type_" javaType="String">-->
-        <!--<case value="Developer"-->
-        <!--resultMap="com.andaily.infrastructure.mybatis.user.DeveloperRepositoryMyBatis.developerMap"/>-->
-        <!--</discriminator>-->
     </resultMap>
 
 

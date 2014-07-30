@@ -9,6 +9,12 @@ public abstract class PasswordHandler {
 
 
     /**
+     * Private constructor
+     */
+    private PasswordHandler() {
+    }
+
+    /**
      * Encrypt  password ,if original password is empty,
      *
      * @param originalPassword Original password

@@ -26,6 +26,12 @@ public class WdcyUserDetails implements UserDetails {
         this.user = user;
     }
 
+    /**
+     * Note:  please change the codes in this method ,  make it is much more available .
+     * Just for test of current implements.
+     *
+     * @return Collection of GrantedAuthority
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(DEFAULT_USER_ROLE, new SimpleGrantedAuthority(ROLE_PREFIX + "UNITY"), new SimpleGrantedAuthority(ROLE_PREFIX + "MOBILE"));
