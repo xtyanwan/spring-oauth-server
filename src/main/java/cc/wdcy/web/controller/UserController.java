@@ -1,9 +1,6 @@
 package cc.wdcy.web.controller;
 
-import cc.wdcy.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -14,12 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
 
-    @Autowired
-    private UserService userService;
+//    @Autowired
+//    private UserService userService;
 
+    /**
+     * Just forward to page
+     *
+     * @return View page
+     */
     @RequestMapping("overview.htm")
-    public String overview(Model model) {
-
+    public String overview() {
         return "user_overview";
     }
 

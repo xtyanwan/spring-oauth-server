@@ -71,4 +71,74 @@ public class OauthClientDetails implements Serializable {
     public boolean trusted() {
         return trusted;
     }
+
+    public Date createTime() {
+        return createTime;
+    }
+
+    public boolean archived() {
+        return archived;
+    }
+
+    public String clientId() {
+        return clientId;
+    }
+
+    public String resourceIds() {
+        return resourceIds;
+    }
+
+    public String clientSecret() {
+        return clientSecret;
+    }
+
+    public String scope() {
+        return scope;
+    }
+
+    public String authorizedGrantTypes() {
+        return authorizedGrantTypes;
+    }
+
+    public String webServerRedirectUri() {
+        return webServerRedirectUri;
+    }
+
+    public String authorities() {
+        return authorities;
+    }
+
+    public Integer accessTokenValidity() {
+        return accessTokenValidity;
+    }
+
+    public Integer refreshTokenValidity() {
+        return refreshTokenValidity;
+    }
+
+    public String additionalInformation() {
+        return additionalInformation;
+    }
+
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("OauthClientDetails");
+        sb.append("{createTime=").append(createTime);
+        sb.append(", archived=").append(archived);
+        sb.append(", clientId='").append(clientId).append('\'');
+        sb.append(", resourceIds='").append(resourceIds).append('\'');
+        sb.append(", clientSecret='").append(clientSecret).append('\'');
+        sb.append(", scope='").append(scope).append('\'');
+        sb.append(", authorizedGrantTypes='").append(authorizedGrantTypes).append('\'');
+        sb.append(", webServerRedirectUri='").append(webServerRedirectUri).append('\'');
+        sb.append(", authorities='").append(authorities).append('\'');
+        sb.append(", accessTokenValidity=").append(accessTokenValidity);
+        sb.append(", refreshTokenValidity=").append(refreshTokenValidity);
+        sb.append(", additionalInformation='").append(additionalInformation).append('\'');
+        sb.append(", trusted=").append(trusted);
+        sb.append('}');
+        return sb.toString();
+    }
 }
