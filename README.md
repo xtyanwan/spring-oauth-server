@@ -45,12 +45,14 @@
 </p>
 
 <hr/>
-
+<strong>帮助</strong>
+<ol>
+<li>
 <p>
  与该项目相关的博客请访问 <a target="_blank" href="http://blog.csdn.net/monkeyking1987/article/details/16828059">http://blog.csdn.net/monkeyking1987/article/details/16828059</a>
 </p>
-
-
+</li>
+<li>
 <p>
  如果在使用过程中遇到特殊的问题(如:如何将oauth_code存入数据库),请访问项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/wikis/pages">Wiki</a> 
  与 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">附件</a>. 
@@ -60,8 +62,11 @@
  若在这两个地方没有找到解决办法的,
  欢迎发邮件到<a href="mailto:shengzhao@shengzhaoli.com">shengzhao@shengzhaoli.com</a>一起讨论.
 </p>
+</li>
+</ol>
 
-
+<hr/>
 <p>
  关注更多我的项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
+
