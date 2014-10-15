@@ -66,7 +66,8 @@
 
 <li>
 <p>
- 如果在使用项目的过程中发现任何的BUG或者更好的提议, 建议将其提交到项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/issues">Issues</a> 中, 我会一直关注与改进项目. 
+ 如果在使用项目的过程中发现任何的BUG或者更好的提议, 建议将其提交到项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/issues">Issues</a> 中, 
+ 我会一直关注并不断改进项目. 
 </p>
 </li>
 </ol>
