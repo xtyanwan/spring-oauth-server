@@ -22,7 +22,7 @@
 项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MySql(开发用的mysql版本号为5.5)
 </li>
 <li>
-下载(或clone)项目到本地
+<a href="http://git.oschina.net/shengzhao/spring-oauth-server/repository/archive?ref=master">下载</a>(或clone)项目到本地
 </li>
 <li>
 创建MySQL数据库(如数据库名oauth2), 并运行相应的SQL脚本(脚本文件位于others/database目录),
@@ -30,7 +30,7 @@
    运行脚本的顺序: initial_db.ddl -> oauth.ddl -> initial_data.ddl
 </li>
 <li>
-修改spring-oauth-server.properties(位于src/resources目录)中的数据库连接信息(包括username, password等)
+修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/resources目录)中的数据库连接信息(包括username, password等)
 </li>
 <li>
 将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servelt运行服务器), 并启动Tomcat(默认端口为8080)
@@ -39,7 +39,7 @@
          将war放在Tomcat中并启动(注意: 这种方式需要将spring-oauth-server.properties加入到classpath中并正确配置数据库连接信息).
 </li>
 <li>
-参考oauth_test.txt(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
+参考<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
 </li>
 </ol>
 </p>
