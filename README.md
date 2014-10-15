@@ -45,7 +45,7 @@
 </p>
 
 <hr/>
-<strong>帮助</strong>
+<strong>帮助与改进</strong>
 <ol>
 <li>
 <p>
@@ -63,10 +63,15 @@
  欢迎发邮件到<a href="mailto:shengzhao@shengzhaoli.com">shengzhao@shengzhaoli.com</a>一起讨论.
 </p>
 </li>
+
+<li>
+<p>
+ 如果在使用项目的过程中发现任何的BUG或者更好的提议, 建议将其提交到项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/issues">Issues</a> 中, 我会一直关注与改进项目. 
+</p>
+</li>
 </ol>
 
 <hr/>
 <p>
  关注更多我的项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
-
