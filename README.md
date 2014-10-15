@@ -55,7 +55,7 @@
  如果在使用过程中遇到特殊的问题(如:如何将oauth_code存入数据库),请访问项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/wikis/pages">Wiki</a> 
  与 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">附件</a>. 我会把大家反馈的问题解决办法添加在这里.
  <br/>
- 若在这两块没找到解决办法的,
+ 若在这两个地方没有找到解决办法的,
  欢迎发邮件到<a href="mailto:shengzhao@shengzhaoli.com">shengzhao@shengzhaoli.com</a>一起讨论.
 </p>
 
