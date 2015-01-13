@@ -86,7 +86,7 @@
         则可以修改 oauth_client_details 表中的 authorized_grant_types 字段的值;
         <br/>
         若想把整个Oauth服务修改来只支持某些grant_type, 请修改 <i>security.xml</i>文件中的
-        <label><oauth2:authorization-server</label> 中的内容,将对应的 grant_type 注释或删掉即可
+        <label>oauth2:authorization-server</label> 中的内容,将对应的 grant_type 注释或删掉即可
     </li>
 </ol>
 
