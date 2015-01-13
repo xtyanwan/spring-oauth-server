@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
 
-//    @Autowired
-//    private UserService userService;
 
     /**
      * Just forward to page
