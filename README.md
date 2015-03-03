@@ -108,6 +108,18 @@
 </ol>
 
 <hr/>
+<strong>更多资源</strong>
+<p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用Oauth有帮助</p>
+<ul>
+       <li>
+            <p>
+                <a href="http://netment.iteye.com/blog/945402">OAUTH2核心参数说明</a>, 该文章重点介绍了grant_type 与 response_type 以及示例
+            </p>
+       </li>
+</ul>
+
+
+<hr/>
 <p>
  关注更多我的开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
