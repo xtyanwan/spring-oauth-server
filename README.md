@@ -113,7 +113,12 @@
 <ul>
        <li>
             <p>
-                <a href="http://netment.iteye.com/blog/945402">OAUTH2核心参数说明</a>, 该文章重点介绍了grant_type 与 response_type 以及示例
+                <a href="http://netment.iteye.com/blog/945402">OAUTH2核心参数说明</a>, 重点介绍了grant_type 与 response_type 以及示例
+            </p>
+       </li>
+       <li>
+            <p>
+                <a href="http://apiwiki.poken.com/authentication/oauth2">OAuth2 flows</a>, 详细介绍Oauth2的流程,各类错误发生时的响应
             </p>
        </li>
 </ul>
