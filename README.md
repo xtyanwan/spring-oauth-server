@@ -121,6 +121,11 @@
                 <a href="http://apiwiki.poken.com/authentication/oauth2">OAuth2 flows</a>, 详细介绍Oauth2的流程,各类错误发生时的响应
             </p>
        </li>
+       <li>
+            <p>
+                <a href="http://www.oschina.net/translate/oauth-2-developers-guide">OAuth 2 开发人员指南（Spring security oauth2）</a>, 翻译OAuth 2 Developers Guide(spring security oauth2)
+            </p>
+       </li>
 </ul>
 
 
