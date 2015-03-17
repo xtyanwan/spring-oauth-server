@@ -16,7 +16,7 @@
 <hr/>
 
 <p>
-   客户端demo请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
+   客户端demo项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </p>
 <hr/>
 
