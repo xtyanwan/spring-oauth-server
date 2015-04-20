@@ -133,7 +133,12 @@
        </li>
        <li>
             <p>
-                <a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">理解OAuth 2.0</a>, 介绍Oauth2很不错的文章
+                <a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">理解OAuth 2.0</a>, 介绍Oauth2各类grant_type的使用
+            </p>
+       </li>
+       <li>
+            <p>
+                <a href="http://www.dannysite.com/blog/178/">OAuth2：隐式授权（Implicit Grant）类型的开放授权</a>, 介绍grant_type='implicit'模式
             </p>
        </li>
 </ul>
