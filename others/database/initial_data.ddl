@@ -15,8 +15,8 @@ web_server_redirect_uri,authorities, access_token_validity,
 refresh_token_validity, additional_information, create_time, archived, trusted)
 values
 ('unity-client','unity-resource', 'unity', 'read,write','password,authorization_code,refresh_token,implicit',
-null,'ROLE_UNITY',null,
+null,'ROLE_CLIENT',null,
 null,null, now(), 0, 0),
 ('mobile-client','mobile-resource', 'mobile', 'read,write','password,refresh_token',
-null,'ROLE_MOBILE',null,
+null,'ROLE_CLIENT',null,
 null,null, now(), 0, 0);

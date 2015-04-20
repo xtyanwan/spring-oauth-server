@@ -131,6 +131,11 @@
                 <a href="http://www.oschina.net/translate/oauth-2-developers-guide">OAuth 2 开发人员指南（Spring security oauth2）</a>, 翻译OAuth 2 Developers Guide(spring security oauth2)
             </p>
        </li>
+       <li>
+            <p>
+                <a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">理解OAuth 2.0</a>, 介绍Oauth2很不错的文章
+            </p>
+       </li>
 </ul>
 
 

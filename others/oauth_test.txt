@@ -25,3 +25,21 @@ http://localhost:8080/unity/dashboard.htm?access_token=3420d0e0-ed77-45e1-8370-2
 
 刷新access_token [GET]
 http://localhost:8080/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=refresh_token&refresh_token=b36f4978-a172-4aa8-af89-60f58abe3ba1
+
+
+
+------------------------------------------------------------------------------------------------
+grant_type(授权方式)
+1.authorization_code                      授权码模式(即先登录获取code,再获取token)
+2.password                                     密码模式(将用户名,密码传过去,直接获取token)
+3.refresh_token                            刷新token
+4.implicit                                        简化模式(获取URL Hash传递token)
+5.client_credentials                      客户端模式(无用户,用户向客户端注册,然后客户端以自己的名义向'服务端'获取资源)
+
+
+scope
+1.read
+2.write
+3.trust
+
+
