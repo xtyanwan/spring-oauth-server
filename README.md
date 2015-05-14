@@ -122,13 +122,15 @@
 </p>
 <ul>
        <li>
-            Version: <strong>0.3</strong> [developing]
-            <br/>
-            Date: 2015-05-14
+            <p>
+                Version: <strong>0.3</strong> [developing]
+                <br/>
+                Date: 2015-05-14
+            </p>
             <ol>
-                <li>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CREATED]</li>
-                <li>#74 - oauth mysql ddl add create_time,  default is now()      [CREATED]</li>
-                <li>#75 - Add user information API, for <code>spring-oauth-client</code> project use
+                <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CREATED]</p></li>
+                <li><p>#74 - oauth mysql ddl add create_time,  default is now()      [CREATED]</p></li>
+                <li><p>#75 - Add user information API, for <code>spring-oauth-client</code> project use
                     <pre>
                     URL: /unity/user_info
                     Login: Yes (ROLE_UNITY)
@@ -138,16 +140,18 @@
                     Login: Yes (ROLE_MOBILE)
                     Data Format: JSON
                     </pre>
-                    [CREATED]
+                    [CREATED]</p>
                 </li>
-                <li>#91 - User log4j replace logback dependency    [CREATED]</li>
+                <li><p>#91 - User log4j replace logback dependency    [CREATED]</p></li>
 
             </ol>
        </li>
        <li>
-            Version: <strong>0.4</strong> [scheduled]
-            <br/>
-            Date: ------
+            <p>
+                Version: <strong>0.4</strong> [scheduled]
+                <br/>
+                Date: ------
+            </p>
        </li>
 </ul>
 
