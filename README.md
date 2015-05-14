@@ -115,10 +115,14 @@
 
 <hr/>
 <strong>开发计划</strong>
+<p>
 从 0.3版本开始将项目的所有计划的开发内容列出来, 方便大家跟进, 也欢迎你加入.
+<br/>
+项目的开发管理使用开源项目 <a href="http://git.oschina.net/mkk/andaily-developer">andaily-developer</a>.
+</p>
 <ul>
        <li>
-            Version: <strong>0.3</strong> [planning]
+            Version: <strong>0.3</strong> [developing]
             <br/>
             Date: 2015-05-14
             <ol>
@@ -139,6 +143,11 @@
                 <li>#91 - User log4j replace logback dependency    [CREATED]</li>
 
             </ol>
+       </li>
+       <li>
+            Version: <strong>0.4</strong> [scheduled]
+            <br/>
+            Date: ------
        </li>
 </ul>
 
