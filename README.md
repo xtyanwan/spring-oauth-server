@@ -112,6 +112,37 @@
     </li>
 </ol>
 
+
+<hr/>
+<strong>开发计划</strong>
+从 0.3版本开始将项目的所有计划的开发内容列出来, 方便大家跟进, 也欢迎你加入.
+<ul>
+       <li>
+            Version: <strong>0.3</strong> [planning]
+            <br/>
+            Date: 2015-05-14
+            <ol>
+                <li>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CREATED]</li>
+                <li>#74 - oauth mysql ddl add create_time,  default is now()      [CREATED]</li>
+                <li>#75 - Add user information API, for <code>spring-oauth-client</code> project use
+                    <pre>
+                    URL: /unity/user_info
+                    Login: Yes (ROLE_UNITY)
+                    Data Format: JSON
+
+                    URL: /m/user_info
+                    Login: Yes (ROLE_MOBILE)
+                    Data Format: JSON
+                    </pre>
+                    [CREATED]
+                </li>
+                <li>#91 - User log4j replace logback dependency    [CREATED]</li>
+
+            </ol>
+       </li>
+</ul>
+
+
 <hr/>
 <strong>更多资源</strong>
 <p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用Oauth有帮助</p>
