@@ -1,10 +1,12 @@
 package cc.wdcy.service.impl;
 
+import cc.wdcy.domain.dto.UserJsonDto;
 import cc.wdcy.domain.shared.security.WdcyUserDetails;
 import cc.wdcy.domain.user.User;
 import cc.wdcy.domain.user.UserRepository;
 import cc.wdcy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -26,5 +28,11 @@ public class UserServiceImpl implements UserService {
         }
 
         return new WdcyUserDetails(user);
+    }
+
+    @Override
+    public UserJsonDto loadCurrentUserJsonDto() {
+        final WdcyUserDetails userDetails = (WdcyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
     }
 }
