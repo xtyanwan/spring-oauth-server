@@ -10,6 +10,7 @@
     </settings>
     <typeAliases>
         <typeAlias alias="User" type="cc.wdcy.domain.user.User"/>
+        <typeAlias alias="Privilege" type="cc.wdcy.domain.user.Privilege"/>
         <typeAlias alias="OauthClientDetails" type="cc.wdcy.domain.oauth.OauthClientDetails"/>
 
     </typeAliases>

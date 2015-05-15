@@ -1,12 +1,14 @@
 package cc.wdcy.domain.shared.security;
 
+import cc.wdcy.domain.user.Privilege;
 import cc.wdcy.domain.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Shengzhao Li
@@ -14,27 +16,43 @@ import java.util.Collection;
 public class WdcyUserDetails implements UserDetails {
 
     protected static final String ROLE_PREFIX = "ROLE_";
-    protected static final GrantedAuthority DEFAULT_USER_ROLE = new SimpleGrantedAuthority(ROLE_PREFIX + "USER");
+    protected static final GrantedAuthority DEFAULT_USER_ROLE = new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.USER.name());
 
     protected User user;
 
+    protected List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
 
     public WdcyUserDetails() {
     }
 
     public WdcyUserDetails(User user) {
         this.user = user;
+        initialAuthorities();
+    }
+
+    private void initialAuthorities() {
+        //Default, everyone have it
+        this.grantedAuthorities.add(DEFAULT_USER_ROLE);
+        //default user have all privileges
+        if (user.defaultUser()) {
+            this.grantedAuthorities.add(new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.UNITY.name()));
+            this.grantedAuthorities.add(new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.MOBILE.name()));
+        } else {
+            final List<Privilege> privileges = user.privileges();
+            for (Privilege privilege : privileges) {
+                this.grantedAuthorities.add(new SimpleGrantedAuthority(ROLE_PREFIX + privilege.name()));
+            }
+        }
     }
 
     /**
-     * Note:  please change the codes in this method ,  make it is much more available .
-     * Just for test of current implements.
+     * Return authorities, more information see {@link #initialAuthorities()}
      *
      * @return Collection of GrantedAuthority
      */
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
-        return Arrays.asList(DEFAULT_USER_ROLE, new SimpleGrantedAuthority(ROLE_PREFIX + "UNITY"), new SimpleGrantedAuthority(ROLE_PREFIX + "MOBILE"));
+        return this.grantedAuthorities;
     }
 
     @Override

@@ -27,3 +27,13 @@ CREATE TABLE `user_` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
+
+-- ###############
+-- Domain:  Privilege
+-- ###############
+Drop table  if exists user_privilege;
+CREATE TABLE `user_privilege` (
+  `user_id` int(11),
+  `privilege` varchar(255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

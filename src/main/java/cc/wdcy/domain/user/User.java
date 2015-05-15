@@ -2,7 +2,9 @@ package cc.wdcy.domain.user;
 
 import cc.wdcy.domain.AbstractDomain;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Shengzhao Li
@@ -19,6 +21,8 @@ public class User extends AbstractDomain {
     private boolean defaultUser = false;
 
     private Date lastLoginTime;
+
+    private List<Privilege> privileges = new ArrayList<>();
 
     public User() {
     }
@@ -50,6 +54,10 @@ public class User extends AbstractDomain {
         return email;
     }
 
+    public List<Privilege> privileges() {
+        return privileges;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
@@ -78,7 +86,6 @@ public class User extends AbstractDomain {
         this.username = username;
         return this;
     }
-
 
 
     public Date lastLoginTime() {

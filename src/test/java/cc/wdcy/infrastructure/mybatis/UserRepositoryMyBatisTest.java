@@ -63,4 +63,20 @@ public class UserRepositoryMyBatisTest extends AbstractRepositoryTest {
     }
 
 
+    /*
+    * Run the test must initial db firstly
+    * */
+    @Test(enabled = false)
+    public void testPrivilege() {
+
+        String guid = "55b713df1c6f423e842ad68668523c49";
+        final User user = userRepository.findByGuid(guid);
+
+        assertNotNull(user);
+        assertEquals(user.privileges().size(), 1);
+
+
+    }
+
+
 }

@@ -17,6 +17,8 @@
         <result property="username" column="username"/>
         <result property="lastLoginTime" column="last_login_time"/>
 
+        <collection property="privileges" column="id" select="findPrivilegesByUserId" ofType="Privilege"/>
+
     </resultMap>
 
 
@@ -26,6 +28,10 @@
 
     <select id="findUserById" parameterType="Integer" resultMap="userMap">
          select * from user_ where id = #{id}
+	</select>
+
+    <select id="findPrivilegesByUserId" parameterType="Integer" resultType="Privilege">
+         select privilege from user_privilege where user_id = #{userId}
 	</select>
 
     <select id="findByUsername" parameterType="String" resultMap="userMap">
