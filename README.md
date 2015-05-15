@@ -12,6 +12,7 @@
  <li>Spring Security (3.1.0.RELEASE)</li>
  <li>MyBatis (3.2.1)</li>
  <li>spring-security-oauth2 (1.0.5.RELEASE)</li>
+ <li>Log4j (1.2.14)</li>
 </ol>
 <hr/>
 
@@ -142,7 +143,7 @@
                     </pre>
                     [CREATED]</p>
                 </li>
-                <li><p>#91 - User log4j replace logback dependency    <mark>[FINISHED]</mark></p></li>
+                <li><p><del>#91 - User log4j replace logback dependency </del></p></li>
 
             </ol>
        </li>
