@@ -142,7 +142,7 @@
                     </pre>
                     [CREATED]</p>
                 </li>
-                <li><p>#91 - User log4j replace logback dependency    [CREATED]</p></li>
+                <li><p>#91 - User log4j replace logback dependency    <mark>[FINISHED]</mark></p></li>
 
             </ol>
        </li>
