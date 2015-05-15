@@ -23,7 +23,7 @@ insert into user_privilege(user_id,privilege) values (23,'MOBILE');
 
 
 -- initial oauth client details test data
--- 'unity-client'   support browser,mobile-device visit
+-- 'unity-client'   support browser, js(flash) visit
 -- 'mobile-client'  only support mobile-device visit
 truncate  oauth_client_details;
 insert into oauth_client_details
@@ -31,7 +31,7 @@ insert into oauth_client_details
 web_server_redirect_uri,authorities, access_token_validity,
 refresh_token_validity, additional_information, create_time, archived, trusted)
 values
-('unity-client','unity-resource', 'unity', 'read,write','password,authorization_code,refresh_token,implicit',
+('unity-client','unity-resource', 'unity', 'read,write','authorization_code,refresh_token,implicit',
 null,'ROLE_CLIENT',null,
 null,null, now(), 0, 0),
 ('mobile-client','mobile-resource', 'mobile', 'read,write','password,refresh_token',

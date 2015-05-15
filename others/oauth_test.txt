@@ -10,7 +10,7 @@ http://localhost:8080/oauth/token?client_id=unity-client&client_secret=unity&gra
 
 
 方式2:基于客户端  (注意参数中的username,password,对应用户的账号,密码) [GET]
-http://localhost:8080/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=password&scope=read,write&username=admin&password=admin
+http://localhost:8080/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=password&scope=read,write&username=mobile&password=mobile
 
 
 
