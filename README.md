@@ -53,6 +53,7 @@
 
 <hr/>
 <strong>grant_type</strong>
+<br/>
 说明Oauth支持的grant_type(授权方式)与功能
 <ol>
     <li><code>authorization_code</code> -- 授权码模式(即先登录获取code,再获取token)</li>
