@@ -10,6 +10,8 @@
     <title>Oauth Error</title>
 </head>
 <body>
+<a href="${contextPath}/">Home</a>
+
 <p>
     Illegal action.
 </p>

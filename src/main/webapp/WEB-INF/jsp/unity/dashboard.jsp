@@ -10,6 +10,8 @@
     <title>Unity dashboard</title>
 </head>
 <body>
+<a href="../">Home</a>
+
 <h2>Hi Unity.</h2>
 </body>
 </html>
