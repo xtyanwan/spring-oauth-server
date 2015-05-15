@@ -302,21 +302,20 @@
             <scope>compile</scope>
         </dependency>
 
+
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
-        </dependency>
-        <dependency>
-            <groupId>org.logback-extensions</groupId>
-            <artifactId>logback-ext-spring</artifactId>
-            <version>0.1.2-SNAPSHOT</version>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.14</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>jul-to-slf4j</artifactId>
+            <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.5</version>
+            <scope>compile</scope>
         </dependency>
+
 
         <!--mybatis-->
         <dependency>
@@ -356,11 +355,5 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>basedir</id>
-            <url>file://${project.basedir}/lib/</url>
-        </repository>
-    </repositories>
 
 </project>
