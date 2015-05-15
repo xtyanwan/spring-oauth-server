@@ -130,8 +130,8 @@
             </p>
             <ol>
                 <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CREATED]</p></li>
-                <li><p>#74 - oauth mysql ddl add create_time,  default is now()      [CREATED]</p></li>
-                <li><p>#75 - Add user information API, for <code>spring-oauth-client</code> project use
+                <li><p><del>#74 - oauth mysql ddl add create_time,  default is now()  </del></p></li>
+                <li><p>#75 - Add user information API, for <a href="http://git.oschina.net/mkk/spring-oauth-client"><code>spring-oauth-client</code></a> project use
                     <pre>
                     URL: /unity/user_info
                     Login: Yes (ROLE_UNITY)

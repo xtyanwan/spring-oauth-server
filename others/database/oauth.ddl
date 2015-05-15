@@ -14,13 +14,14 @@ create table oauth_client_details (
   access_token_validity INTEGER,
   refresh_token_validity INTEGER,
   additional_information VARCHAR(4096),
-  create_time datetime,
+  create_time timestamp default now(),
   archived tinyint(1) default '0',
   trusted tinyint(1) default '0'
 );
 
 Drop table  if exists oauth_client_token;
 create table oauth_client_token (
+  create_time timestamp default now(),
   token_id VARCHAR(256),
   token BLOB,
   authentication_id VARCHAR(256),
@@ -30,6 +31,7 @@ create table oauth_client_token (
 
 Drop table  if exists oauth_access_token;
 create table oauth_access_token (
+  create_time timestamp default now(),
   token_id VARCHAR(256),
   token BLOB,
   authentication_id VARCHAR(256),
@@ -41,6 +43,7 @@ create table oauth_access_token (
 
 Drop table  if exists oauth_refresh_token;
 create table oauth_refresh_token (
+  create_time timestamp default now(),
   token_id VARCHAR(256),
   token BLOB,
   authentication BLOB
@@ -48,7 +51,9 @@ create table oauth_refresh_token (
 
 Drop table  if exists oauth_code;
 create table oauth_code (
-  code VARCHAR(256), authentication BLOB
+  create_time timestamp default now(),
+  code VARCHAR(256),
+  authentication BLOB
 );
 
 
