@@ -62,12 +62,6 @@
                             <Implementation-BuildNumber>
                                 ${project.version}
                             </Implementation-BuildNumber>
-                            <Specification-Vendor>
-                                wdcy.cc
-                            </Specification-Vendor>
-                            <Implementation-Vendor>
-                                wdcy.cc
-                            </Implementation-Vendor>
                             <Implementation-Title>
                                 ${project.name}
                             </Implementation-Title>
