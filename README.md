@@ -144,6 +144,7 @@
                     [CREATED]</p>
                 </li>
                 <li><p><del>#91 - User log4j replace logback dependency </del></p></li>
+                <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
 
             </ol>
        </li>
