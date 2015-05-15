@@ -19,6 +19,9 @@ http://localhost:8080/oauth/token?client_id=unity-client&client_secret=unity&gra
 方式2:基于客户端  (注意参数中的username,password,对应用户的账号,密码) [GET]
 http://localhost:8080/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=password&scope=read,write&username=mobile&password=mobile
 
+说明:由于unity-client不支持password,所以若用unity-client通过password方式去授权,将返回invalid_grant
+http://localhost:8080/oauth/token?client_id=unity-client&client_secret=unity&grant_type=password&scope=read,write&username=mobile&password=mobile
+
 
 
 获取access_token响应的数据如:
