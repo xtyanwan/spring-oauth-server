@@ -185,6 +185,11 @@
                 <a href="http://www.dannysite.com/blog/178/">OAuth2：隐式授权（Implicit Grant）类型的开放授权</a>, 介绍grant_type='implicit'模式
             </p>
        </li>
+       <li>
+            <p>
+                <a href="http://oltu.apache.org/">Apache Oltu</a>, Java版的 Oauth参考实现, 建议去了解了解
+            </p>
+       </li>
 </ul>
 
 
