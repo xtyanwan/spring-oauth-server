@@ -4,6 +4,7 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -22,6 +23,10 @@
     <input type="password" name="j_password" id="password" value="" required="required"/>
     <br/>
     <input type="submit" value="Login"/>
+    <span style="color:red;">
+        <c:if test="${param.authorization_error eq 2}">Access denied !!!</c:if>
+        <c:if test="${param.authentication_error eq 1}">Authentication Failure</c:if>
+    </span>
 </form>
 <div>
     <p>You can use the users to login as follow:</p>
