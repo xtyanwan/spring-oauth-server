@@ -4,6 +4,7 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -12,8 +13,13 @@
 <body>
 <a href="${contextPath}/">Home</a>
 
-<p>
+<h3>
     Illegal action.
-</p>
+</h3>
+
+<div class="alert alert-danger">
+    <c:out value="${error.summary}"/>
+</div>
+
 </body>
 </html>
