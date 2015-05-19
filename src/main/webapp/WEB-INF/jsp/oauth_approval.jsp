@@ -17,11 +17,11 @@
 <form id='confirmationForm' name='confirmationForm' action='${pageContext.request.contextPath}/oauth/authorize'
       method='post'>
     <input name='user_oauth_approval' value='true' type='hidden'/>
-    <label> <input name='authorize' value='Authorize' type='submit'></label>
+    <label> <input name='authorize' value='Authorize' type='submit' class="btn btn-success"/></label>
 </form>
 <form id='denialForm' name='denialForm' action='${pageContext.request.contextPath}/oauth/authorize' method='post'>
     <input name='user_oauth_approval' value='false' type='hidden'/>
-    <label><input name='deny' value='Deny' type='submit'></label>
+    <label><input name='deny' value='Deny' type='submit' class="btn btn-warning"/></label>
 </form>
 </body>
 </html>

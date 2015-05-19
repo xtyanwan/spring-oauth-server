@@ -22,15 +22,15 @@
     <label for="password">Password:</label>
     <input type="password" name="j_password" id="password" value="" required="required"/>
     <br/>
-    <input type="submit" value="Login"/>
-    <span style="color:red;">
+    <input type="submit" value="Login" class="btn btn-primary"/>
+    <span class="text-danger">
         <c:if test="${param.authorization_error eq 2}">Access denied !!!</c:if>
         <c:if test="${param.authentication_error eq 1}">Authentication Failure</c:if>
     </span>
 </form>
 <div>
     <p>You can use the users to login as follow:</p>
-    <table style="border: 1px solid #eee;">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th>Username</th>
