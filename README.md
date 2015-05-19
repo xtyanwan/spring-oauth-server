@@ -39,7 +39,9 @@
 修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
 </li>
 <li>
-将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080)
+将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080);
+<br/>
+注意将项目的 contextPath(根路径) 设置为 'spring-oauth-server'.
 <br/>
    另: 也可通过maven package命令将项目编译为war文件(spring-oauth-server.war),
          将war放在Tomcat中并启动(注意: 这种方式需要将spring-oauth-server.properties加入到classpath中并正确配置数据库连接信息).
