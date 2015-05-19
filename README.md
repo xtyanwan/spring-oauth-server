@@ -36,10 +36,10 @@
    运行脚本的顺序: initial_db.ddl -> oauth.ddl -> initial_data.ddl
 </li>
 <li>
-修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/resources目录)中的数据库连接信息(包括username, password等)
+修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
 </li>
 <li>
-将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servelt运行服务器), 并启动Tomcat(默认端口为8080)
+将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080)
 <br/>
    另: 也可通过maven package命令将项目编译为war文件(spring-oauth-server.war),
          将war放在Tomcat中并启动(注意: 这种方式需要将spring-oauth-server.properties加入到classpath中并正确配置数据库连接信息).
@@ -161,7 +161,9 @@
                 <li><p><del>#77 - User add Privilege domain.
                                   Addition initial two user: unityuser(ROLE_UNITY),mobileuser("ROLE_MOBILE).
                                   If default user, return all privilegs, otherwise return specify privilege(s) </del></p></li>
+                <li><p>#78 - Initial 'sprint-oauth-client' project(maven), add sub-modules</p></li>
                 <li><p><del>#91 - User log4j replace logback dependency </del></p></li>
+                <li><p>#92 - Add database table column description. (添加数据库表的字段说明) </p></li>
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
 
             </ol>
