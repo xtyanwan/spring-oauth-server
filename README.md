@@ -163,7 +163,7 @@
                 <li><p><del>#77 - User add Privilege domain.
                                   Addition initial two user: unityuser(ROLE_UNITY),mobileuser("ROLE_MOBILE).
                                   If default user, return all privilegs, otherwise return specify privilege(s) </del></p></li>
-                <li><p>#78 - Initial 'sprint-oauth-client' project(maven), add sub-modules</p></li>
+                <li><p><del>#78 - Initial 'sprint-oauth-client' project(maven), add sub-modules</del></p></li>
                 <li><p><del>#91 - User log4j replace logback dependency </del></p></li>
                 <li><p>#92 - Add database table column description. (添加数据库表的字段说明) </p></li>
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
