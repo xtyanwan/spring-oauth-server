@@ -38,11 +38,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserJsonDto loadCurrentUserJsonDto() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        final Object principal = authentication.getPrincipal();
 
-        if (authentication instanceof OAuth2Authentication && authentication.getPrincipal() instanceof String) {
+        if (authentication instanceof OAuth2Authentication &&
+                (principal instanceof String || principal instanceof org.springframework.security.core.userdetails.User)) {
             return loadOauthUserJsonDto((OAuth2Authentication) authentication);
         } else {
-            final WdcyUserDetails userDetails = (WdcyUserDetails) authentication.getPrincipal();
+            final WdcyUserDetails userDetails = (WdcyUserDetails) principal;
             return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
         }
     }
