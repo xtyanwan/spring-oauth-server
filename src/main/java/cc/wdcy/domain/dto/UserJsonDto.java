@@ -20,7 +20,7 @@ public class UserJsonDto implements Serializable {
     private String phone;
     private String email;
 
-    private List<Privilege> privileges = new ArrayList<>();
+    private List<String> privileges = new ArrayList<>();
 
     public UserJsonDto() {
     }
@@ -32,7 +32,11 @@ public class UserJsonDto implements Serializable {
 
         this.phone = user.phone();
         this.email = user.email();
-        this.privileges = user.privileges();
+
+        final List<Privilege> privilegeList = user.privileges();
+        for (Privilege privilege : privilegeList) {
+            this.privileges.add(privilege.name());
+        }
     }
 
     public boolean isArchived() {
@@ -75,11 +79,11 @@ public class UserJsonDto implements Serializable {
         this.email = email;
     }
 
-    public List<Privilege> getPrivileges() {
+    public List<String> getPrivileges() {
         return privileges;
     }
 
-    public void setPrivileges(List<Privilege> privileges) {
+    public void setPrivileges(List<String> privileges) {
         this.privileges = privileges;
     }
 }

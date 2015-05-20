@@ -6,10 +6,15 @@ import cc.wdcy.domain.user.User;
 import cc.wdcy.domain.user.UserRepository;
 import cc.wdcy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
+
+import java.util.Collection;
 
 /**
  * @author Shengzhao Li
@@ -32,7 +37,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserJsonDto loadCurrentUserJsonDto() {
-        final WdcyUserDetails userDetails = (WdcyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
+        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (authentication instanceof OAuth2Authentication && authentication.getPrincipal() instanceof String) {
+            return loadOauthUserJsonDto((OAuth2Authentication) authentication);
+        } else {
+            final WdcyUserDetails userDetails = (WdcyUserDetails) authentication.getPrincipal();
+            return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
+        }
+    }
+
+
+    private UserJsonDto loadOauthUserJsonDto(OAuth2Authentication oAuth2Authentication) {
+        UserJsonDto userJsonDto = new UserJsonDto();
+        userJsonDto.setUsername(oAuth2Authentication.getName());
+
+        final Collection<GrantedAuthority> authorities = oAuth2Authentication.getAuthorities();
+        for (GrantedAuthority authority : authorities) {
+            userJsonDto.getPrivileges().add(authority.getAuthority());
+        }
+
+        return userJsonDto;
     }
 }
