@@ -168,6 +168,7 @@
                 <li><p>#92 - Add database table column description. (添加数据库表的字段说明) </p></li>
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
+                <li><p>#95 - Add 'client-details' management; create/delete, show testing links</p></li>
 
             </ol>
        </li>
