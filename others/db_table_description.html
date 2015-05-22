@@ -132,6 +132,8 @@
                 <br/>
                 在服务端获取的access_token JSON数据中的<code>expires_in</code>字段的值即为当前access_token的有效时间值.
                 <br/>
+                在项目中, 可具体参考<code>DefaultTokenServices.java</code>中属性<code>accessTokenValiditySeconds</code>.
+                <br/>
                 在实际应用中, 该值一般是由服务端处理的, 不需要客户端自定义.
             </td>
         </tr>
@@ -141,6 +143,8 @@
                 设定客户端的refresh_token的有效时间值(单位:秒),可选, 若不设定值则使用默认的有效时间值(60 * 60 * 24 * 30, 30天).
                 <br/>
                 若客户端的grant_type不包括<code>refresh_token</code>,则不用关心该字段
+                在项目中, 可具体参考<code>DefaultTokenServices.java</code>中属性<code>refreshTokenValiditySeconds</code>.
+                <br/>
                 <br/>
                 在实际应用中, 该值一般是由服务端处理的, 不需要客户端自定义.
             </td>
@@ -157,11 +161,24 @@
         </tr>
         <tr>
             <td>archived</td>
-            <td></td>
+            <td>
+                用于标识客户端是否已存档(即实现逻辑删除),默认值为'0'(即未存档).
+                <br/>
+                对该字段的具体使用请参考<code>CustomJdbcClientDetailsService.java</code>,在该类中,扩展了在查询client_details的SQL加上<em>archived
+                = 0</em>条件 (扩展字段)
+            </td>
         </tr>
         <tr>
             <td>trusted</td>
-            <td></td>
+            <td>
+                设置客户端是否为受信任的,默认为'0'(即不受信任的,1为受信任的).
+                <br/>
+                该字段只适用于grant_type="authorization_code"的情况,当用户登录成功后,若该值为0,则会跳转到让用户Approve的页面让用户同意授权,
+                <br/>
+                若该字段为1,则在登录后不需要再让用户Approve同意授权(因为是受信任的).
+                <br/>
+                对该字段的具体使用请参考<code>OauthUserApprovalHandler.java</code>. (扩展字段)
+            </td>
         </tr>
         <!-- oauth_client_token -->
         <tr>
