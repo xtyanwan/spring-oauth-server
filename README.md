@@ -186,6 +186,8 @@
 <strong>数据库表字段说明</strong>
 <p>
     在0.3版本中添加了<code>db_table_description.html</code>文件(位于/others目录), 用来说明数据库脚本文件<code>oauth.ddl</code>中各表,各字段的用途及使用场合.
+    <br/>
+    也可在线访问<a href="http://andaily.com/spring-oauth-server/db_table_description.html">http://andaily.com/spring-oauth-server/db_table_description.html</a>.
 </p>
 
 
