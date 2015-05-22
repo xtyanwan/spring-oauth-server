@@ -183,6 +183,14 @@
 <br/>
 
 <hr/>
+<strong>数据库表字段说明</strong>
+<p>
+    在0.3版本中添加了<code>db_table_description.html</code>文件(位于/others目录), 用来说明数据库脚本文件<code>oauth.ddl</code>中各表,各字段的用途及使用场合.
+</p>
+
+
+
+<hr/>
 <strong>更多资源</strong>
 <p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用Oauth有帮助</p>
 <ul>
