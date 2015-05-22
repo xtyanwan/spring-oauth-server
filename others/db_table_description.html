@@ -81,7 +81,28 @@
         </tr>
         <tr>
             <td>web_server_redirect_uri</td>
-            <td></td>
+            <td>
+                客户端的重定向URI,可为空, 当grant_type为<code>authorization_code</code>或<code>implicit</code>时,
+                在Oauth的流程中会使用并检查与注册时填写的redirect_uri是否一致. 下面分别说明:
+                <ul>
+                    <li>
+                        当grant_type=<code>authorization_code</code>时, 第一步 <code>从 spring-oauth-server获取
+                        'code'</code>时客户端发起请求时必须有<code>redirect_uri</code>参数, 该参数的值必须与
+                        <code>web_server_redirect_uri</code>的值一致. 第二步 <code>用 'code' 换取 'access_token'</code>
+                        时客户也必须传递相同的<code>redirect_uri</code>.
+                        <br/>
+                        在实际应用中, <em>web_server_redirect_uri</em>在注册时是必须填写的, 一般用来处理服务器返回的<code>code</code>,
+                        验证<code>state</code>是否合法与通过<code>code</code>去换取<code>access_token</code>值.
+                        <br/>
+                        在spring-oauth-client项目中, 可具体参考<code>AuthorizationCodeController.java</code>中的<code>authorizationCodeCallback</code>方法.
+                    </li>
+                    <li>
+                        当grant_type=<code>implicit</code>时通过<code>redirect_uri</code>的hash值来传递<code>access_token</code>值.如:
+                        <pre>http://localhost:7777/spring-oauth-client/implicit#access_token=dc891f4a-ac88-4ba6-8224-a2497e013865&token_type=bearer&expires_in=43199</pre>
+                        然后客户端通过JS等从hash值中取到<code>access_token</code>值.
+                    </li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>authorities</td>
