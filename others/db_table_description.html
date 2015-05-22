@@ -22,7 +22,7 @@
         </thead>
         <tbody>
         <tr>
-            <td rowspan="13">oauth_client_details</td>
+            <td rowspan="14">oauth_client_details</td>
             <td>client_id</td>
             <td>
                 主键,必须唯一,不能为空.
@@ -152,7 +152,15 @@
         <tr>
             <td>additional_information</td>
             <td>
-
+                这是一个预留的字段,在Oauth的流程中没有实际的使用,可选,但若设置值,必须是JSON格式的数据,如:
+                <pre>{"country":"CN","country_code":"086"}</pre>
+                按照<code>spring-security-oauth</code>项目中对该字段的描述
+                <br/>
+                <em>Additional information for this client, not need by the vanilla OAuth protocol but might be useful,
+                    for example,for storing descriptive information.</em>
+                <br/>
+                <span class="help-block">(详见<code>ClientDetails.java</code>的<code>getAdditionalInformation()</code>方法的注释)</span>
+                在实际应用中, 可以用该字段来存储关于客户端的一些其他信息,如客户端的国家,地区,注册时的IP地址等等.
             </td>
         </tr>
         <tr>
@@ -178,6 +186,16 @@
                 若该字段为1,则在登录后不需要再让用户Approve同意授权(因为是受信任的).
                 <br/>
                 对该字段的具体使用请参考<code>OauthUserApprovalHandler.java</code>. (扩展字段)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p class="text-info">
+                    在项目中,主要操作<code>oauth_client_details</code>表的类是<code>JdbcClientDetailsService.java</code>,
+                    更多的细节请参考该类.
+                    <br/>
+                    也可以根据实际的需要,去扩展或修改该类的实现.
+                </p>
             </td>
         </tr>
         <!-- oauth_client_token -->
