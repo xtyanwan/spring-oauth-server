@@ -38,6 +38,11 @@
                 若想访问 Unity 与 Mobile, 则先用基于浏览器的测试URL 访问,等验证通过后即可访问(注意不同的账号对应的权限).
             </p>
         </li>
+        <li>
+            <p>
+                若需要自定义<code>client_details</code>数据并进行测试, 可进入<a href="client_details">client_details</a>去手动添加<code>client_details</code>或删除已创建的<code>client_details</code>.
+            </p>
+        </li>
     </ol>
 </div>
 <br/>
