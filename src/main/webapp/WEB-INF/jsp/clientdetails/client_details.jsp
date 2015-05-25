@@ -43,6 +43,7 @@
                         <a href="archive_client/${cli.clientId}" class="text-danger"
                            onclick="return confirm('Are you sure archive \'${cli.clientId}\'?')">archive</a>
                     </c:if>
+                    <c:if test="${cli.archived}"><strong class="text-muted">Archived</strong></c:if>
                 </div>
                 <h3 class="list-group-item-heading">
                         ${cli.clientId}
