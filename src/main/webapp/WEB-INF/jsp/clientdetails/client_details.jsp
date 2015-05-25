@@ -38,9 +38,11 @@
         <c:forEach items="${clientDetailsDtoList}" var="cli">
             <li class="list-group-item">
                 <div class="pull-right">
-                    <a href="test_client/${cli.clientId}">test</a>
-                    <a href="archive_client/${cli.clientId}" class="text-danger"
-                       onclick="return confirm('Are you sure archive \'${cli.clientId}\'?')">archive</a>
+                    <c:if test="${not cli.archived}">
+                        <a href="test_client/${cli.clientId}">test</a>
+                        <a href="archive_client/${cli.clientId}" class="text-danger"
+                           onclick="return confirm('Are you sure archive \'${cli.clientId}\'?')">archive</a>
+                    </c:if>
                 </div>
                 <h3 class="list-group-item-heading">
                         ${cli.clientId}
