@@ -39,7 +39,8 @@
             <li class="list-group-item">
                 <div class="pull-right">
                     <a href="test_client/${cli.clientId}">test</a>
-                    <a href="archive_client/${cli.clientId}" class="text-danger">archive</a>
+                    <a href="archive_client/${cli.clientId}" class="text-danger"
+                       onclick="return confirm('Are you sure archive \'${cli.clientId}\'?')">archive</a>
                 </div>
                 <h3 class="list-group-item-heading">
                         ${cli.clientId}
@@ -71,6 +72,10 @@
     </ul>
     <p class="help-block">
         每一个item对应<code>oauth_client_details</code>表中的一条数据; 共<strong>${fun:length(clientDetailsDtoList)}</strong>条数据.
+        <br/>
+        对spring-oauth-server数据库表的详细说明请访问
+        <a href="http://andaily.com/spring-oauth-server/db_table_description.html" target="_blank">http://andaily.com/spring-oauth-server/db_table_description.html</a>
+        (或访问项目others目录的db_table_description.html文件)
     </p>
 </div>
 </body>
