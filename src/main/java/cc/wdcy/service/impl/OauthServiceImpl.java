@@ -28,4 +28,9 @@ public class OauthServiceImpl implements OauthService {
         List<OauthClientDetails> clientDetailses = oauthRepository.findAllOauthClientDetails();
         return OauthClientDetailsDto.toDtos(clientDetailses);
     }
+
+    @Override
+    public void archiveOauthClientDetails(String clientId) {
+        oauthRepository.updateOauthClientDetailsArchive(clientId, true);
+    }
 }

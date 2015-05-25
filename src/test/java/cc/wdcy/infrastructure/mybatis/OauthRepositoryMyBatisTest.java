@@ -34,4 +34,9 @@ public class OauthRepositoryMyBatisTest extends AbstractRepositoryTest {
         assertTrue(allOauthClientDetails.isEmpty());
     }
 
+    @Test
+    public void updateOauthClientDetailsArchive() {
+        oauthRepositoryMyBatis.updateOauthClientDetailsArchive("ddooelddd", true);
+    }
+
 }

@@ -14,4 +14,6 @@ public interface OauthService {
     OauthClientDetails loadOauthClientDetails(String clientId);
 
     List<OauthClientDetailsDto> loadAllOauthClientDetailsDtos();
+
+    void archiveOauthClientDetails(String clientId);
 }

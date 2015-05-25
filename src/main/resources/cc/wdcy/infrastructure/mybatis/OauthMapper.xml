@@ -33,5 +33,10 @@
          select * from oauth_client_details
 	</select>
 
+    <update id="updateOauthClientDetailsArchive">
+         update oauth_client_details set archived = #{archive}
+         where client_id = #{clientId}
+	</update>
+
 
 </mapper>
