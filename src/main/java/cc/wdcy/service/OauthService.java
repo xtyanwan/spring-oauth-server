@@ -1,6 +1,9 @@
 package cc.wdcy.service;
 
+import cc.wdcy.domain.dto.OauthClientDetailsDto;
 import cc.wdcy.domain.oauth.OauthClientDetails;
+
+import java.util.List;
 
 /**
  * @author Shengzhao Li
@@ -9,4 +12,6 @@ import cc.wdcy.domain.oauth.OauthClientDetails;
 public interface OauthService {
 
     OauthClientDetails loadOauthClientDetails(String clientId);
+
+    List<OauthClientDetailsDto> loadAllOauthClientDetailsDtos();
 }

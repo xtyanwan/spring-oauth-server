@@ -4,6 +4,8 @@ import cc.wdcy.domain.oauth.OauthClientDetails;
 import cc.wdcy.infrastructure.DateUtils;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Shengzhao Li
@@ -162,5 +164,13 @@ public class OauthClientDetailsDto implements Serializable {
 
     public void setTrusted(boolean trusted) {
         this.trusted = trusted;
+    }
+
+    public static List<OauthClientDetailsDto> toDtos(List<OauthClientDetails> clientDetailses) {
+        List<OauthClientDetailsDto> dtos = new ArrayList<>(clientDetailses.size());
+        for (OauthClientDetails clientDetailse : clientDetailses) {
+            dtos.add(new OauthClientDetailsDto(clientDetailse));
+        }
+        return dtos;
     }
 }

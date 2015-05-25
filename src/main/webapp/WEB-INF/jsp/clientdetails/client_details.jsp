@@ -4,6 +4,8 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fun" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -33,69 +35,42 @@
 
 <div>
     <ul class="list-group">
-        <li class="list-group-item">
-            <div class="pull-right">
-                <a href="#">test</a>
-                <a href="#" class="text-danger">delete</a>
-            </div>
-            <h3 class="list-group-item-heading">
-                mobile-client
-                <small>password,refresh_token</small>
-            </h3>
+        <c:forEach items="${clientDetailsDtoList}" var="cli">
+            <li class="list-group-item">
+                <div class="pull-right">
+                    <a href="test_client/${cli.clientId}">test</a>
+                    <a href="archive_client/${cli.clientId}" class="text-danger">archive</a>
+                </div>
+                <h3 class="list-group-item-heading">
+                        ${cli.clientId}
+                    <small>${cli.authorizedGrantTypes}</small>
+                </h3>
 
-            <div class="list-group-item-text text-muted">
-                client_id: <span class="text-danger">mobile-client</span>&nbsp;
-                client_secret: <span class="text-primary">mobile</span>&nbsp;
-                <br/>
-                authorized_grant_types: <span class="text-primary">password,refresh_token</span>&nbsp;
-                resource_ids: <span class="text-primary">mobile-resource</span>&nbsp;
-                <br/>
-                scope: <span class="text-primary">read,write</span>&nbsp;
-                web_server_redirect_uri: <span class="text-primary">...</span>&nbsp;
-                <br/>
-                authorities: <span class="text-primary">ROLE_CLIENT</span>&nbsp;
-                access_token_validity: <span class="text-primary">...</span>&nbsp;
-                refresh_token_validity: <span class="text-primary">...</span>&nbsp;
-                <br/>
-                create_time: <span class="text-primary">2015-05-08 21:12:22</span>&nbsp;
-                archived: <span class="text-primary">false</span>&nbsp;
-                trusted: <span class="text-primary">false</span>&nbsp;
-                additional_information: <span class="text-primary">...</span>&nbsp;
-            </div>
-        </li>
-        <li class="list-group-item">
-            <div class="pull-right">
-                <a href="#">test</a>
-                <a href="#" class="text-danger">delete</a>
-            </div>
-            <h3 class="list-group-item-heading">
-                unity-client
-                <small>authorization_code,refresh_token,implicit</small>
-            </h3>
+                <div class="list-group-item-text text-muted">
+                    client_id: <span class="text-danger">${cli.clientId}</span>&nbsp;
+                    client_secret: <span class="text-primary">${cli.clientSecret}</span>&nbsp;
+                    <br/>
+                    authorized_grant_types: <span class="text-primary">${cli.authorizedGrantTypes}</span>&nbsp;
+                    resource_ids: <span class="text-primary">${cli.resourceIds}</span>&nbsp;
+                    <br/>
+                    scope: <span class="text-primary">${cli.scope}</span>&nbsp;
+                    web_server_redirect_uri: <span class="text-primary">${cli.webServerRedirectUri}</span>&nbsp;
+                    <br/>
+                    authorities: <span class="text-primary">${cli.authorities}</span>&nbsp;
+                    access_token_validity: <span class="text-primary">${cli.accessTokenValidity}</span>&nbsp;
+                    refresh_token_validity: <span class="text-primary">${cli.refreshTokenValidity}</span>&nbsp;
+                    <br/>
+                    create_time: <span class="text-primary">${cli.createTime}</span>&nbsp;
+                    archived: <span class="${cli.archived?'text-warning':'text-primary'}">${cli.archived}</span>&nbsp;
+                    trusted: <span class="text-primary">${cli.trusted}</span>&nbsp;
+                    additional_information: <span class="text-primary">${cli.additionalInformation}</span>&nbsp;
+                </div>
+            </li>
+        </c:forEach>
 
-            <div class="list-group-item-text text-muted">
-                client_id: <span class="text-danger">unity-client</span>&nbsp;
-                client_secret: <span class="text-primary">unity</span>&nbsp;
-                <br/>
-                authorized_grant_types: <span class="text-primary">authorization_code,refresh_token,implicit</span>&nbsp;
-                resource_ids: <span class="text-primary">unity-resource</span>&nbsp;
-                <br/>
-                scope: <span class="text-primary">read,write</span>&nbsp;
-                web_server_redirect_uri: <span class="text-primary">...</span>&nbsp;
-                <br/>
-                authorities: <span class="text-primary">ROLE_CLIENT</span>&nbsp;
-                access_token_validity: <span class="text-primary">...</span>&nbsp;
-                refresh_token_validity: <span class="text-primary">...</span>&nbsp;
-                <br/>
-                create_time: <span class="text-primary">2015-05-08 21:12:22</span>&nbsp;
-                archived: <span class="text-primary">false</span>&nbsp;
-                trusted: <span class="text-primary">false</span>&nbsp;
-                additional_information: <span class="text-primary">...</span>&nbsp;
-            </div>
-        </li>
     </ul>
     <p class="help-block">
-        每一个item对应<code>oauth_client_details</code>表中的一条数据.
+        每一个item对应<code>oauth_client_details</code>表中的一条数据; 共<strong>${fun:length(clientDetailsDtoList)}</strong>条数据.
     </p>
 </div>
 </body>

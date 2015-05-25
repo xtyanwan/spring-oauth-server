@@ -29,5 +29,9 @@
          where  client_id = #{clientId}
 	</select>
 
+    <select id="findAllOauthClientDetails" resultMap="oauthClientDetailsMap">
+         select * from oauth_client_details
+	</select>
+
 
 </mapper>

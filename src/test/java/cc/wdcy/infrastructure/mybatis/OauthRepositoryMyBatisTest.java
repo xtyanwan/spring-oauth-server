@@ -6,7 +6,9 @@ import cc.wdcy.infrastructure.AbstractRepositoryTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertNull;
+import java.util.List;
+
+import static org.testng.Assert.*;
 
 /**
  * @author Shengzhao Li
@@ -23,6 +25,13 @@ public class OauthRepositoryMyBatisTest extends AbstractRepositoryTest {
         OauthClientDetails oauthClientDetails = oauthRepositoryMyBatis.findOauthClientDetails("unity-client");
         assertNull(oauthClientDetails);
 
+    }
+
+    @Test
+    public void findAllOauthClientDetails() {
+        final List<OauthClientDetails> allOauthClientDetails = oauthRepositoryMyBatis.findAllOauthClientDetails();
+        assertNotNull(allOauthClientDetails);
+        assertTrue(allOauthClientDetails.isEmpty());
     }
 
 }
