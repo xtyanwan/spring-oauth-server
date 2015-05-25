@@ -64,7 +64,7 @@
                     refresh_token_validity: <span class="text-primary">${cli.refreshTokenValidity}</span>&nbsp;
                     <br/>
                     create_time: <span class="text-primary">${cli.createTime}</span>&nbsp;
-                    archived: <span class="${cli.archived?'text-warning':'text-primary'}">${cli.archived}</span>&nbsp;
+                    archived: <strong class="${cli.archived?'text-warning':'text-primary'}">${cli.archived}</strong>&nbsp;
                     trusted: <span class="text-primary">${cli.trusted}</span>&nbsp;
                     additional_information: <span class="text-primary">${cli.additionalInformation}</span>&nbsp;
                 </div>
