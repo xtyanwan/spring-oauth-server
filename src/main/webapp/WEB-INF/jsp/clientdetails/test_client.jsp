@@ -85,8 +85,22 @@
                                          required="required"/>
 
                     <p>
-                        <a href="${contextPath}/oauth/authorize?client_id={{clientId}}&client_secret={{clientSecret}}&response_type=token&scope={{scope}}&&redirect_uri={{implicitRedirectUri}}"
+                        <a href="${contextPath}/oauth/authorize?client_id={{clientId}}&client_secret={{clientSecret}}&response_type=token&scope={{scope}}&redirect_uri={{implicitRedirectUri}}"
                                 >/oauth/authorize?client_id={{clientId}}&client_secret={{clientSecret}}&response_type=token&scope={{scope}}&redirect_uri={{implicitRedirectUri}}</a>
+                    </p>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${clientDetailsDto.containsClientCredentials}">
+            <div class="panel panel-default">
+                <div class="panel-heading">Test [client_credentials]</div>
+                <div class="panel-body">
+                    <p class="text-muted">点击链接地址即可测试</p>
+
+                    <p>
+                        <a href="${contextPath}/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=client_credentials&scope={{scope}}"
+                           target="_blank">/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=client_credentials&scope={{scope}}</a>
                     </p>
                 </div>
             </div>
