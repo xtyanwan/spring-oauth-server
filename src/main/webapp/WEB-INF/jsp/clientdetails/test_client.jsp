@@ -111,7 +111,7 @@
                 <div class="panel-heading">Test [refresh_token]</div>
                 <div class="panel-body">
                     <p class="text-muted">输入refresh_token 后点击链接地址.</p>
-                    refresh_token: <input type="text" ng-model="refreshToken" required="required"/>
+                    refresh_token: <input type="text" ng-model="refreshToken" required="required" size="70"/>
 
                     <p>
                         <a href="${contextPath}/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=refresh_token&refresh_token={{refreshToken}}"
@@ -133,8 +133,14 @@
         $scope.clientSecret = "${clientDetailsDto.clientSecret}";
         $scope.scope = "${clientDetailsDto.scope}";
 
-        $scope.redirectUri = "${empty clientDetailsDto.webServerRedirectUri?'http://localhost:8080/spring-oauth-server/unity/dashboard.htm':clientDetailsDto.webServerRedirectUri}";
-        $scope.implicitRedirectUri = "${empty clientDetailsDto.webServerRedirectUri?pageContext.request.requestURI:clientDetailsDto.webServerRedirectUri}";
+        <c:if test="${empty clientDetailsDto.webServerRedirectUri}" var="eptRedUri">
+        $scope.implicitRedirectUri = location.href;
+        $scope.redirectUri = "http://localhost:8080/spring-oauth-server/unity/dashboard.htm";
+        </c:if>
+        <c:if test="${not eptRedUri}">
+        $scope.implicitRedirectUri = "${clientDetailsDto.webServerRedirectUri}";
+        $scope.redirectUri = "${clientDetailsDto.webServerRedirectUri}";
+        </c:if>
 
         $scope.username = "mobile";
         $scope.password = "mobile";
