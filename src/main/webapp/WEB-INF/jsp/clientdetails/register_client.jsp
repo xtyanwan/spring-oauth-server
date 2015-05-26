@@ -25,8 +25,10 @@
                 <label for="clientId" class="col-sm-2 control-label">client_id<em class="text-danger">*</em></label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="clientId" id="clientId" placeholder="client_id"
-                           required="required"/>
+                        <%--<input type="text" class="form-control" name="clientId" id="clientId" placeholder="client_id"--%>
+                        <%--required="required"/>--%>
+                    <form:input path="clientId" cssClass="form-control" id="clientId" placeholder="client_id"
+                                required="required"/>
 
                     <p class="help-block">client_id必须输入,且必须唯一,长度至少5位; 在实际应用中的另一个名称叫appKey,与client_id是同一个概念.</p>
                 </div>
@@ -36,9 +38,11 @@
                         class="text-danger">*</em></label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="clientSecret" id="clientSecret"
-                           placeholder="client_secret"
-                           required="required"/>
+                        <%--<input type="text" class="form-control" name="clientSecret" id="clientSecret"--%>
+                        <%--placeholder="client_secret"--%>
+                        <%--required="required"/>--%>
+                    <form:input path="clientSecret" cssClass="form-control" id="clientSecret"
+                                placeholder="client_secret" required="required"/>
 
                     <p class="help-block">client_secret必须输入,且长度至少8位; 在实际应用中的另一个名称叫appSecret,与client_secret是同一个概念.</p>
                 </div>
@@ -48,11 +52,11 @@
                         class="text-danger">*</em></label>
 
                 <div class="col-sm-10">
-                    <select class="form-control" name="resourceIds" id="resourceIds">
-                        <option value="unity-resource">unity-resource</option>
-                        <option value="mobile-resource">mobile-resource</option>
-                        <option value="unity-resource,mobile-resource">unity-resource,mobile-resource</option>
-                    </select>
+                    <form:select path="resourceIds" cssClass="form-control" id="resourceIds">
+                        <form:option value="unity-resource">unity-resource</form:option>
+                        <form:option value="mobile-resource">mobile-resource</form:option>
+                        <form:option value="unity-resource,mobile-resource">unity-resource,mobile-resource</form:option>
+                    </form:select>
 
                     <p class="help-block">resourceIds必须选择; 可选值必须来源于与<code>security.xml</code>中标签<code>&lsaquo;oauth2:resource-server</code>的属性<code>resource-id</code>值
                     </p>
@@ -63,12 +67,12 @@
                 <label for="scope" class="col-sm-2 control-label">scope<em class="text-danger">*</em></label>
 
                 <div class="col-sm-10">
-                    <select class="form-control" name="scope" id="scope">
-                        <option value="read">read</option>
-                        <option value="write">write</option>
-                        <option value="trust">trust</option>
-                        <option value="read,write">read,write</option>
-                    </select>
+                    <form:select path="scope" id="scope" cssClass="form-control">
+                        <form:option value="read">read</form:option>
+                        <form:option value="write">write</form:option>
+                        <form:option value="trust">trust</form:option>
+                        <form:option value="read,write">read,write</form:option>
+                    </form:select>
 
                     <p class="help-block">scope必须选择</p>
                 </div>
@@ -104,8 +108,8 @@
                 <label for="webServerRedirectUri" class="col-sm-2 control-label">redirect_uri</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="webServerRedirectUri" id="webServerRedirectUri"
-                           placeholder="redirect_uri"/>
+                    <form:input path="webServerRedirectUri" id="webServerRedirectUri" placeholder="redirect_uri"
+                                cssClass="form-control"/>
 
                     <p class="help-block">若<code>grant_type</code>包括<em>authorization_code</em>或<em>implicit</em>,
                         则必须输入redirect_uri</p>
@@ -116,12 +120,12 @@
                 <label for="authorities" class="col-sm-2 control-label">authorities</label>
 
                 <div class="col-sm-10">
-                    <select class="form-control" name="authorities" id="authorities">
-                        <option value="">无</option>
-                        <option value="ROLE_USER,ROLE_UNITY">ROLE_UNITY</option>
-                        <option value="ROLE_USER,ROLE_MOBILE">ROLE_MOBILE</option>
-                        <option value="ROLE_USER,ROLE_UNITY,ROLE_MOBILE">ROLE_UNITY,ROLE_MOBILE</option>
-                    </select>
+                    <form:select path="authorities" id="authorities" cssClass="form-control">
+                        <form:option value="">无</form:option>
+                        <form:option value="ROLE_USER,ROLE_UNITY">ROLE_UNITY</form:option>
+                        <form:option value="ROLE_USER,ROLE_MOBILE">ROLE_MOBILE</form:option>
+                        <form:option value="ROLE_USER,ROLE_UNITY,ROLE_MOBILE">ROLE_UNITY,ROLE_MOBILE</form:option>
+                    </form:select>
 
                     <p class="help-block">指定客户端所拥有的Spring Security的权限值,可选;
                         若<code>grant_type</code>为<em>implicit</em>或<em>client_credentials</em>则必须选择authorities,
@@ -199,7 +203,7 @@
             <div class="form-group">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-10">
-                    <form:errors cssClass="text-danger"/>
+                    <form:errors path="*" cssClass="text-danger"/>
                 </div>
             </div>
 
