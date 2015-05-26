@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -48,6 +49,16 @@ public class ClientDetailsController {
         OauthClientDetailsDto clientDetailsDto = oauthService.loadOauthClientDetailsDto(clientId);
         model.addAttribute("clientDetailsDto", clientDetailsDto);
         return "clientdetails/test_client";
+    }
+
+
+    /*
+    * Register client
+    * */
+    @RequestMapping(value = "register_client", method = RequestMethod.GET)
+    public String registerClient(Model model) {
+        model.addAttribute("formDto", new OauthClientDetailsDto());
+        return "clientdetails/register_client";
     }
 
 
