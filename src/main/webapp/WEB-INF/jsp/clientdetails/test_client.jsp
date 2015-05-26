@@ -59,8 +59,25 @@
             </div>
         </c:if>
 
+        <c:if test="${clientDetailsDto.containsPassword}">
+            <div class="panel panel-default">
+                <div class="panel-heading">Test [password]</div>
+                <div class="panel-body">
+                    <p class="text-muted">输入username, password 后点击链接地址.</p>
+                    username: <input type="text" required="required" ng-model="username"/>
+                    <br/>
+                    password: <input type="text" required="required" ng-model="password"/>
+
+                    <p>
+                        <a href="${contextPath}/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=password&scope={{scope}}&username={{username}}&password={{password}}"
+                           target="_blank">/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=password&scope={{scope}}&username={{username}}&password={{password}}</a>
+                    </p>
+                </div>
+            </div>
+        </c:if>
+
         <div class="text-center">
-            <a href="${contextPath}/" class="btn btn-default">Back</a>
+            <a href="${contextPath}/client_details" class="btn btn-default">Back</a>
         </div>
     </div>
 </div>
@@ -72,6 +89,8 @@
         $scope.scope = "${clientDetailsDto.scope}";
 
         $scope.redirectUri = "${empty clientDetailsDto.webServerRedirectUri?'http://localhost:8080/spring-oauth-server/unity/dashboard.htm':clientDetailsDto.webServerRedirectUri}";
+        $scope.username = "mobile";
+        $scope.password = "mobile";
 
     }];
 </script>
