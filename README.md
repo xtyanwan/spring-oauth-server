@@ -146,7 +146,7 @@
                 Date: 2015-05-14
             </p>
             <ol>
-                <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CREATED]</p></li>
+                <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CANCELED]</p></li>
                 <li><p><del>#74 - oauth mysql ddl add create_time,  default is now()  </del></p></li>
                 <li><p><del>#75 - Add user information API, for <a href="http://git.oschina.net/mkk/spring-oauth-client"><code>spring-oauth-client</code></a> project use
                     <pre>
@@ -168,7 +168,7 @@
                 <li><p><del>#92 - Add database table column description. (添加数据库表的字段说明) </del></p></li>
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
-                <li><p>#95 - Add 'client-details' management; create/delete, show testing links</p></li>
+                <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links<del></p></li>
 
             </ol>
        </li>
