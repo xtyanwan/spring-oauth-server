@@ -37,6 +37,11 @@ public class OauthClientDetailsDtoValidator implements Validator {
         final String grantTypes = clientDetailsDto.getAuthorizedGrantTypes();
         if (StringUtils.isEmpty(grantTypes)) {
             errors.rejectValue("authorizedGrantTypes", null, "grant_type(s) is required");
+            return;
+        }
+
+        if ("refresh_token".equalsIgnoreCase(grantTypes)) {
+            errors.rejectValue("authorizedGrantTypes", null, "grant_type(s) 不能只是[refresh_token]");
         }
     }
 

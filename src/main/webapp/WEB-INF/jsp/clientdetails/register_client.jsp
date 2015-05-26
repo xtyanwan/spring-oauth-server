@@ -5,6 +5,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fun" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE HTML>
 <html>
@@ -25,8 +26,6 @@
                 <label for="clientId" class="col-sm-2 control-label">client_id<em class="text-danger">*</em></label>
 
                 <div class="col-sm-10">
-                        <%--<input type="text" class="form-control" name="clientId" id="clientId" placeholder="client_id"--%>
-                        <%--required="required"/>--%>
                     <form:input path="clientId" cssClass="form-control" id="clientId" placeholder="client_id"
                                 required="required"/>
 
@@ -38,9 +37,6 @@
                         class="text-danger">*</em></label>
 
                 <div class="col-sm-10">
-                        <%--<input type="text" class="form-control" name="clientSecret" id="clientSecret"--%>
-                        <%--placeholder="client_secret"--%>
-                        <%--required="required"/>--%>
                     <form:input path="clientSecret" cssClass="form-control" id="clientSecret"
                                 placeholder="client_secret" required="required"/>
 
@@ -83,21 +79,29 @@
 
                 <div class="col-sm-10">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="authorizedGrantTypes" value="authorization_code">
+                        <input type="checkbox" name="authorizedGrantTypes"
+                               value="authorization_code" ${fun:containsIgnoreCase(formDto.authorizedGrantTypes, 'authorization_code') ?'checked':''} />
                         authorization_code
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="authorizedGrantTypes" value="password"> password
+                        <input type="checkbox" name="authorizedGrantTypes"
+                               value="password" ${fun:containsIgnoreCase(formDto.authorizedGrantTypes, 'authorization_code') ?'checked':''} />
+                        password
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="authorizedGrantTypes" value="implicit"> implicit
+                        <input type="checkbox" name="authorizedGrantTypes"
+                               value="implicit" ${fun:containsIgnoreCase(formDto.authorizedGrantTypes, 'implicit') ?'checked':''} />
+                        implicit
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="authorizedGrantTypes" value="client_credentials">
+                        <input type="checkbox" name="authorizedGrantTypes"
+                               value="client_credentials" ${fun:containsIgnoreCase(formDto.authorizedGrantTypes, 'client_credentials') ?'checked':''} />
                         client_credentials
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="authorizedGrantTypes" value="refresh_token"> refresh_token
+                        <input type="checkbox" name="authorizedGrantTypes"
+                               value="refresh_token" ${fun:containsIgnoreCase(formDto.authorizedGrantTypes, 'refresh_token') ?'checked':''} />
+                        refresh_token
                     </label>
 
                     <p class="help-block">至少勾选一项grant_type(s), 且不能只单独勾选<code>refresh_token</code></p>
