@@ -33,4 +33,10 @@ public class OauthServiceImpl implements OauthService {
     public void archiveOauthClientDetails(String clientId) {
         oauthRepository.updateOauthClientDetailsArchive(clientId, true);
     }
+
+    @Override
+    public OauthClientDetailsDto loadOauthClientDetailsDto(String clientId) {
+        final OauthClientDetails oauthClientDetails = oauthRepository.findOauthClientDetails(clientId);
+        return new OauthClientDetailsDto(oauthClientDetails);
+    }
 }

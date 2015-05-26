@@ -173,4 +173,27 @@ public class OauthClientDetailsDto implements Serializable {
         }
         return dtos;
     }
+
+
+    public boolean isContainsAuthorizationCode() {
+        return this.authorizedGrantTypes.contains("authorization_code");
+    }
+
+    public boolean isContainsPassword() {
+        return this.authorizedGrantTypes.contains("password");
+    }
+
+    public boolean isContainsImplicit() {
+        return this.authorizedGrantTypes.contains("implicit");
+    }
+
+    public boolean isContainsClientCredentials() {
+        return this.authorizedGrantTypes.contains("client_credentials");
+    }
+
+    public boolean isContainsRefreshToken() {
+        return this.authorizedGrantTypes.contains("refresh_token");
+    }
+
+
 }

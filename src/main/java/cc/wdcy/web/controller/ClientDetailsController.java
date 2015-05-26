@@ -40,5 +40,15 @@ public class ClientDetailsController {
         return "redirect:../client_details";
     }
 
+    /*
+    * Test client
+    * */
+    @RequestMapping("test_client/{clientId}")
+    public String testClient(@PathVariable("clientId") String clientId, Model model) {
+        OauthClientDetailsDto clientDetailsDto = oauthService.loadOauthClientDetailsDto(clientId);
+        model.addAttribute("clientDetailsDto", clientDetailsDto);
+        return "clientdetails/test_client";
+    }
+
 
 }
