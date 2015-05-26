@@ -18,4 +18,6 @@ public interface OauthService {
     void archiveOauthClientDetails(String clientId);
 
     OauthClientDetailsDto loadOauthClientDetailsDto(String clientId);
+
+    void registerClientDetails(OauthClientDetailsDto formDto);
 }

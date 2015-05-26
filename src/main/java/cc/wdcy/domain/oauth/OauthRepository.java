@@ -15,4 +15,6 @@ public interface OauthRepository extends Repository {
     List<OauthClientDetails> findAllOauthClientDetails();
 
     void updateOauthClientDetailsArchive(@Param("clientId") String clientId, @Param("archive") boolean archive);
+
+    void saveOauthClientDetails(OauthClientDetails clientDetails);
 }

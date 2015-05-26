@@ -195,6 +195,15 @@
                 </div>
             </div>
 
+
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <form:errors cssClass="text-danger"/>
+                </div>
+            </div>
+
+
             <div class="form-group">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-10">

@@ -37,6 +37,12 @@ public class OauthServiceImpl implements OauthService {
     @Override
     public OauthClientDetailsDto loadOauthClientDetailsDto(String clientId) {
         final OauthClientDetails oauthClientDetails = oauthRepository.findOauthClientDetails(clientId);
-        return new OauthClientDetailsDto(oauthClientDetails);
+        return oauthClientDetails != null ? new OauthClientDetailsDto(oauthClientDetails) : null;
+    }
+
+    @Override
+    public void registerClientDetails(OauthClientDetailsDto formDto) {
+        OauthClientDetails clientDetails = formDto.createDomain();
+        oauthRepository.saveOauthClientDetails(clientDetails);
     }
 }

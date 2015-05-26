@@ -2,9 +2,12 @@ package cc.wdcy.web.controller;
 
 import cc.wdcy.domain.dto.OauthClientDetailsDto;
 import cc.wdcy.service.OauthService;
+import cc.wdcy.web.oauth.OauthClientDetailsDtoValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +25,9 @@ public class ClientDetailsController {
 
     @Autowired
     private OauthService oauthService;
+
+    @Autowired
+    private OauthClientDetailsDtoValidator clientDetailsDtoValidator;
 
 
     @RequestMapping("client_details")
@@ -59,6 +65,20 @@ public class ClientDetailsController {
     public String registerClient(Model model) {
         model.addAttribute("formDto", new OauthClientDetailsDto());
         return "clientdetails/register_client";
+    }
+
+
+    /*
+    * Submit register client
+    * */
+    @RequestMapping(value = "register_client", method = RequestMethod.POST)
+    public String submitRegisterClient(@ModelAttribute("formDto") OauthClientDetailsDto formDto, BindingResult result) {
+        clientDetailsDtoValidator.validate(formDto, result);
+        if (result.hasErrors()) {
+            return "clientdetails/register_client";
+        }
+        oauthService.registerClientDetails(formDto);
+        return "redirect:client_details";
     }
 
 

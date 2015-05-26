@@ -2,6 +2,7 @@ package cc.wdcy.domain.dto;
 
 import cc.wdcy.domain.oauth.OauthClientDetails;
 import cc.wdcy.infrastructure.DateUtils;
+import org.apache.commons.lang.StringUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -196,4 +197,30 @@ public class OauthClientDetailsDto implements Serializable {
     }
 
 
+    public OauthClientDetails createDomain() {
+        OauthClientDetails clientDetails = new OauthClientDetails()
+                .clientId(clientId)
+                .clientSecret(clientSecret)
+                .resourceIds(resourceIds)
+                .authorizedGrantTypes(authorizedGrantTypes)
+                .scope(scope);
+
+        if (StringUtils.isNotEmpty(webServerRedirectUri)) {
+            clientDetails.webServerRedirectUri(webServerRedirectUri);
+        }
+
+        if (StringUtils.isNotEmpty(authorities)) {
+            clientDetails.authorities(authorities);
+        }
+
+        clientDetails.accessTokenValidity(accessTokenValidity)
+                .refreshTokenValidity(refreshTokenValidity)
+                .trusted(trusted);
+
+        if (StringUtils.isNotEmpty(additionalInformation)) {
+            clientDetails.additionalInformation(additionalInformation);
+        }
+
+        return clientDetails;
+    }
 }

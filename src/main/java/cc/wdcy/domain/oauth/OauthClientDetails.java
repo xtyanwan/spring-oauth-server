@@ -141,4 +141,59 @@ public class OauthClientDetails implements Serializable {
         sb.append('}');
         return sb.toString();
     }
+
+    public OauthClientDetails clientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+
+    public OauthClientDetails clientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+
+    public OauthClientDetails resourceIds(String resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+
+    public OauthClientDetails authorizedGrantTypes(String authorizedGrantTypes) {
+        this.authorizedGrantTypes = authorizedGrantTypes;
+        return this;
+    }
+
+    public OauthClientDetails scope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+
+    public OauthClientDetails webServerRedirectUri(String webServerRedirectUri) {
+        this.webServerRedirectUri = webServerRedirectUri;
+        return this;
+    }
+
+    public OauthClientDetails authorities(String authorities) {
+        this.authorities = authorities;
+        return this;
+    }
+
+    public OauthClientDetails accessTokenValidity(Integer accessTokenValidity) {
+        this.accessTokenValidity = accessTokenValidity;
+        return this;
+    }
+
+    public OauthClientDetails refreshTokenValidity(Integer refreshTokenValidity) {
+        this.refreshTokenValidity = refreshTokenValidity;
+        return this;
+    }
+
+    public OauthClientDetails trusted(boolean trusted) {
+        this.trusted = trusted;
+        return this;
+    }
+
+    public OauthClientDetails additionalInformation(String additionalInformation) {
+        this.additionalInformation = additionalInformation;
+        return this;
+    }
 }
