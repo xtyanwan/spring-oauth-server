@@ -106,6 +106,21 @@
             </div>
         </c:if>
 
+        <c:if test="${clientDetailsDto.containsRefreshToken}">
+            <div class="panel panel-default">
+                <div class="panel-heading">Test [refresh_token]</div>
+                <div class="panel-body">
+                    <p class="text-muted">输入refresh_token 后点击链接地址.</p>
+                    refresh_token: <input type="text" ng-model="refreshToken" required="required"/>
+
+                    <p>
+                        <a href="${contextPath}/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=refresh_token&refresh_token={{refreshToken}}"
+                           target="_blank">/oauth/token?client_id={{clientId}}&client_secret={{clientSecret}}&grant_type=refresh_token&refresh_token={{refreshToken}}</a>
+                    </p>
+                </div>
+            </div>
+        </c:if>
+
         <div class="text-center">
             <a href="${contextPath}/client_details" class="btn btn-default">Back</a>
         </div>
@@ -123,6 +138,8 @@
 
         $scope.username = "mobile";
         $scope.password = "mobile";
+        //a temp value
+        $scope.refreshToken = "1156ebfe-e303-4572-9fb5-4459a5d46610";
 
     }];
 </script>
