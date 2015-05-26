@@ -76,6 +76,22 @@
             </div>
         </c:if>
 
+        <c:if test="${clientDetailsDto.containsImplicit}">
+            <div class="panel panel-default">
+                <div class="panel-heading">Test [implicit]</div>
+                <div class="panel-body">
+                    <p class="text-muted">输入redirect_uri 后点击链接地址. 获取access_token后注意查看redirect_uri的hash部分(#号后边部分)</p>
+                    redirect_uri: <input type="text" value="" ng-model="implicitRedirectUri" size="70"
+                                         required="required"/>
+
+                    <p>
+                        <a href="${contextPath}/oauth/authorize?client_id={{clientId}}&client_secret={{clientSecret}}&response_type=token&scope={{scope}}&&redirect_uri={{implicitRedirectUri}}"
+                                >/oauth/authorize?client_id={{clientId}}&client_secret={{clientSecret}}&response_type=token&scope={{scope}}&redirect_uri={{implicitRedirectUri}}</a>
+                    </p>
+                </div>
+            </div>
+        </c:if>
+
         <div class="text-center">
             <a href="${contextPath}/client_details" class="btn btn-default">Back</a>
         </div>
@@ -89,6 +105,8 @@
         $scope.scope = "${clientDetailsDto.scope}";
 
         $scope.redirectUri = "${empty clientDetailsDto.webServerRedirectUri?'http://localhost:8080/spring-oauth-server/unity/dashboard.htm':clientDetailsDto.webServerRedirectUri}";
+        $scope.implicitRedirectUri = "${empty clientDetailsDto.webServerRedirectUri?pageContext.request.requestURI:clientDetailsDto.webServerRedirectUri}";
+
         $scope.username = "mobile";
         $scope.password = "mobile";
 
