@@ -20,7 +20,14 @@
 <h2>注册client</h2>
 
 <div ng-app>
-    <div ng-controller="RegisterClientCtrl">
+<p class="help-block">
+    若对Oauth的<code>client_details</code>中的属性及作用不清楚,
+    建议你先查看项目中的<code>db_table_description.html</code>文件(位于others目录)中对表<code>oauth_client_details</code>的说明,
+    或在线访问<a href="http://andaily.com/spring-oauth-server/db_table_description.html" target="_blank">db_table_description.html</a>;
+    因为注册client实际上是向该表中按不同的条件添加数据.
+</p>
+
+<div ng-controller="RegisterClientCtrl">
         <form:form commandName="formDto" cssClass="form-horizontal">
             <div class="form-group">
                 <label for="clientId" class="col-sm-2 control-label">client_id<em class="text-danger">*</em></label>
