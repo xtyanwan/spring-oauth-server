@@ -29,7 +29,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Test [authorization_code]</div>
                 <div class="panel-body">
-
+                    <p class="text-muted">输入每一步必要的信息后点击其下面的链接地址.</p>
                     <ol>
                         <li>
                             <p>
