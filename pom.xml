@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>3.1.1.RELEASE</spring.version>
         <spring.security.version>3.1.0.RELEASE</spring.security.version>
+        <spring.security.oauth.version>1.0.5.RELEASE</spring.security.oauth.version>
         <aspectj.version>1.6.10</aspectj.version>
         <mybatis.version>3.2.1</mybatis.version>
 
@@ -286,7 +287,7 @@
         <dependency>
             <groupId>org.springframework.security.oauth</groupId>
             <artifactId>spring-security-oauth2</artifactId>
-            <version>1.0.5.RELEASE</version>
+            <version>${spring.security.oauth.version}</version>
         </dependency>
 
         <dependency>
