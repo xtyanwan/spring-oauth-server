@@ -6,10 +6,10 @@
 
     <groupId>wdcy.cc</groupId>
     <artifactId>spring-oauth-server</artifactId>
-    <version>1.0</version>
+    <version>0.3</version>
     <name>spring-oauth-server</name>
     <packaging>war</packaging>
-    <description>Spring Oauth Server (WDCY)</description>
+    <description>Spring Oauth Server</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +31,7 @@
     <developers>
         <developer>
             <name>shengzhao</name>
-            <email>monkeyk1987@gmail.com</email>
+            <email>shengzhao@shengzhaoli.com</email>
         </developer>
         <!--more developer-->
     </developers>
@@ -358,6 +358,12 @@
             <artifactId>testng</artifactId>
             <version>6.1.1</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
