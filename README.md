@@ -195,11 +195,11 @@
 <strong>Project Log</strong>
 <p>
     <ol>
-        <li><p>2013-11-19     Initial project, start push code</p></li>
-        <li><p>2013-11-20     发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.1/">0.1</a>版本</p></li>
-        <li><p>2015-5-6        发布<a href="http://www.oschina.net/news/62176/spring-oauth-server-0-2">0.2</a>版本</p></li>
-        <li><p>2015-5-27      创建项目博客,访问地址 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a></p></li>
-        <li><p>2015-6-7        发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.1/">0.3</a>版本</p></li>
+        <li><p><em>2013-11-19</em>     Initial project, start push code</p></li>
+        <li><p><em>2013-11-20</em>     发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.1/">0.1</a>版本</p></li>
+        <li><p><em>2015-5-6</em>        发布<a href="http://www.oschina.net/news/62176/spring-oauth-server-0-2">0.2</a>版本</p></li>
+        <li><p><em>2015-5-27</em>      创建项目博客,访问地址 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a></p></li>
+        <li><p><em>2015-6-7</em>        发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.3/">0.3</a>版本</p></li>
     </ol>
 </p>
 
