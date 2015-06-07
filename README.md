@@ -141,9 +141,9 @@
 <ul>
        <li>
             <p>
-                Version: <strong>0.3</strong> [developing]
+                Version: <strong>0.3</strong> [finished]
                 <br/>
-                Date: 2015-05-14
+                Date: 2015-05-14 / 2015-06-07
             </p>
             <ol>
                 <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CANCELED]</p></li>
@@ -197,9 +197,9 @@
     <ol>
         <li><p><em>2013-11-19</em>     Initial project, start push code</p></li>
         <li><p><em>2013-11-20</em>     发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.1/">0.1</a>版本</p></li>
-        <li><p><em>2015-5-6</em>        发布<a href="http://www.oschina.net/news/62176/spring-oauth-server-0-2">0.2</a>版本</p></li>
-        <li><p><em>2015-5-27</em>      创建项目博客,访问地址 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a></p></li>
-        <li><p><em>2015-6-7</em>        发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.3/">0.3</a>版本</p></li>
+        <li><p><em>2015-05-06</em>        发布<a href="http://www.oschina.net/news/62176/spring-oauth-server-0-2">0.2</a>版本</p></li>
+        <li><p><em>2015-05-27</em>      创建项目博客,访问地址 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a></p></li>
+        <li><p><em>2015-06-07</em>        发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.3/">0.3</a>版本</p></li>
     </ol>
 </p>
 
