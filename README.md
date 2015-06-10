@@ -254,6 +254,13 @@
 
 <hr/>
 <p>
+    <strong>捐助</strong>
+    <br/>
+    支付宝: monkeyking1987@126.com (**钊)
+</p>
+
+<hr/>
+<p>
  关注更多我的开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
 <p>
