@@ -179,6 +179,7 @@
                 Date: ------
             </p>
             <ol>
+                <li><p>#97 - Fix custom access_token_validity,refresh_token_validity issue(#6)</p></li>
                 <li><p>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a>.</p></li>
             </ol>
        </li>
