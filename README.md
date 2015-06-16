@@ -204,6 +204,10 @@
         <li><p><em>2015-05-06</em>        发布<a href="http://www.oschina.net/news/62176/spring-oauth-server-0-2">0.2</a>版本</p></li>
         <li><p><em>2015-05-27</em>      创建项目博客,访问地址 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a></p></li>
         <li><p><em>2015-06-07</em>        发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.3/">0.3</a>版本</p></li>
+        <li><p>
+            <em>2015-06-16</em>       添加github访问: <a href="https://github.com/monkeyk/spring-oauth-server">https://github.com/monkeyk/spring-oauth-server</a>,
+            以后的更新将同步github与gitosc.
+        </p></li>
     </ol>
 </p>
 
