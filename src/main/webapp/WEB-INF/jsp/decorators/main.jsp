@@ -17,7 +17,7 @@
 
     <title><decorator:title default=""/> - Spring Security&Oauth2</title>
 
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="${contextPath}/resources/bootstrap.min.css" rel="stylesheet"/>
     <decorator:head/>
 
 </head>
