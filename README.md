@@ -19,6 +19,9 @@
 <h3>
    Oauth客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
+<h3>
+   在线测试访问地址 <a href="https://andaily.com/spring-oauth-server/">https://andaily.com/spring-oauth-server/</a>
+</h3>
 <hr/>
 
 <p>

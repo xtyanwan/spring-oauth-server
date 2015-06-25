@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>注册client</title>
-    <script src="http://cdn.bootcss.com/angular.js/1.1.5/angular.min.js"></script>
+    <script src="${contextPath}/resources/angular.min.js"></script>
 
 </head>
 <body>
