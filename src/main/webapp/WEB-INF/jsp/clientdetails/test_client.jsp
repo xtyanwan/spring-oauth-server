@@ -135,7 +135,7 @@
 
         <c:if test="${empty clientDetailsDto.webServerRedirectUri}" var="eptRedUri">
         $scope.implicitRedirectUri = location.href;
-        $scope.redirectUri = "http://localhost:8080/spring-oauth-server/unity/dashboard.htm";
+        $scope.redirectUri = "http://localhost:8080/spring-oauth-server/unity/dashboard";
         </c:if>
         <c:if test="${not eptRedUri}">
         $scope.implicitRedirectUri = "${clientDetailsDto.webServerRedirectUri}";

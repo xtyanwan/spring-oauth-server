@@ -17,7 +17,7 @@ public class UserController {
      *
      * @return View page
      */
-    @RequestMapping("overview.htm")
+    @RequestMapping("overview")
     public String overview() {
         return "user_overview";
     }

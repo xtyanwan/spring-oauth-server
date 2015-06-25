@@ -22,7 +22,7 @@ public class MobileController {
     private UserService userService;
 
 
-    @RequestMapping("dashboard.htm")
+    @RequestMapping("dashboard")
     public String dashboard() {
         return "mobile/dashboard";
     }

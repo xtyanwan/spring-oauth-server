@@ -49,13 +49,13 @@
 菜单
 <ul>
     <li>
-        <a href="${contextPath}/user/overview.htm">User</a>
+        <a href="${contextPath}/user/overview">User</a>
     </li>
     <li>
-        <a href="${contextPath}/unity/dashboard.htm">Unity</a>
+        <a href="${contextPath}/unity/dashboard">Unity</a>
     </li>
     <li>
-        <a href="${contextPath}/m/dashboard.htm">Mobile</a>
+        <a href="${contextPath}/m/dashboard">Mobile</a>
     </li>
 </ul>
 </body>
