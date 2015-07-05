@@ -122,7 +122,7 @@
         </c:if>
 
         <div class="text-center">
-            <a href="${contextPath}/client_details" class="btn btn-default">Back</a>
+            <a href="${contextPath}/client_details" class="btn btn-info">Back</a>
         </div>
     </div>
 </div>
