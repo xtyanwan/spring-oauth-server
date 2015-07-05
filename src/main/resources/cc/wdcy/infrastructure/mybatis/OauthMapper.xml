@@ -30,7 +30,7 @@
 	</select>
 
     <select id="findAllOauthClientDetails" resultMap="oauthClientDetailsMap">
-         select * from oauth_client_details
+         select * from oauth_client_details order by create_time desc
 	</select>
 
     <update id="updateOauthClientDetailsArchive">
