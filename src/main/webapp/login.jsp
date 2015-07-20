@@ -13,7 +13,7 @@
 <body>
 <h2>Oauth login</h2>
 
-<form action="${contextPath}/login.do" method="post">
+<form action="${pageContext.request.contextPath}/login.do" method="post">
 
     <label for="username">Username:</label>
     <input type="text" id="username" name="j_username" value="" required="required"/>
