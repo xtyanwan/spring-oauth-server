@@ -1,13 +1,13 @@
 -- ###############
 --    create MySQL database , if need create, cancel the comment
 -- ###############
--- create database if not exists spring_oauth default character set utf8;
--- use spring_oauth set default character = utf8;
+-- create database if not exists oauth2 default character set utf8;
+-- use oauth2 set default character = utf8;
 
 -- ###############
---    grant privileges  to spring_oauth/spring_oauth
+--    grant privileges  to oauth2/oauth2
 -- ###############
--- GRANT ALL PRIVILEGES ON spring_oauth.* TO spring_oauth@localhost IDENTIFIED BY "spring_oauth";
+-- GRANT ALL PRIVILEGES ON oauth2.* TO oauth2@localhost IDENTIFIED BY "oauth2";
 
 -- ###############
 -- Domain:  User
