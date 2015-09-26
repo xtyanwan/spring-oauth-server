@@ -22,6 +22,9 @@
 <h3>
    在线测试访问地址 <a href="https://andaily.com/spring-oauth-server/">https://andaily.com/spring-oauth-server/</a>
 </h3>
+<h4>
+   Shiro与OLTU整合的Oauth2项目 <a href="http://git.oschina.net/mkk/oauth2-shiro">http://git.oschina.net/mkk/oauth2-shiro</a>
+</h4>
 <hr/>
 
 <p>
