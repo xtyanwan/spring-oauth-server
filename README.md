@@ -24,6 +24,7 @@
 </h3>
 <h4>
    Shiro与OLTU整合的Oauth2项目 <a href="http://git.oschina.net/mkk/oauth2-shiro">http://git.oschina.net/mkk/oauth2-shiro</a>
+   (相比spring-oauth-server, 该项目入门门槛相对较低, 代码更加透明, 理解更容易,可扩展性更强, 且模块化开发)
 </h4>
 <hr/>
 
