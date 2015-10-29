@@ -271,6 +271,19 @@
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
 </p>
 
+
+<hr/>
+<h4>案例</h4>
+<p>以下是已知的使用 spring-oauth-server 开源项目的商业项目(排名不分先后), 若你希望添加你的案例, 请联系作者.</p>
+<ul>
+    <li><p>Hongkong Parkway Online (在线医疗服务系统)</p></li>
+    <li><p>海尔日日平台 (B2B电商平台)</p></li>
+    <li><p>wdcy-game (手机游戏服务端)</p></li>
+    <li><p>Honyee Management System (企业管理系统)</p></li>
+    <li><p>......</p></li>
+</ul>
+
+
 <hr/>
 <p>
     <strong>捐助</strong>
@@ -284,4 +297,7 @@
 </p>
 <p>
  若需更多的技术支持请联系 <a href="mailto:monkeyk@shengzhaoli.com">monkeyk@shengzhaoli.com</a>
+</p>
+<p>
+ <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
 </p>
