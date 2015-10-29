@@ -148,6 +148,21 @@
 <ul>
        <li>
             <p>
+                Version: <strong>0.4</strong> [planning]
+                <br/>
+                Date: ------
+            </p>
+            <ol>
+                <li><p>(97) - Fix custom access_token_validity,refresh_token_validity issue(#5)</p></li>
+                <li><p>(109) - 升级 spring-security-oauth2 的版本到 2.0.6以上, 目前是1.0.5 </p></li>
+                <li><p>(110) - 添加不同数据支持branch, 包括 spring-oauth-server(jdbc), spring-oauth-server(hibernate), 拟计划还有ldap, redis, mongodb的数据支持</p></li>
+                <li><p>(113) - Upgrade spring, spring security version to > 4.0</p></li>
+                <li><p>将项目添加到在线测试服务器</p></li>
+                <li><p><em>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a></em></p></li>
+            </ol>
+       </li>
+       <li>
+            <p>
                 Version: <strong>0.3</strong> [finished]
                 <br/>
                 Date: 2015-05-14 / 2015-06-07
@@ -177,21 +192,6 @@
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
                 <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links<del></p></li>
 
-            </ol>
-       </li>
-       <li>
-            <p>
-                Version: <strong>0.4</strong> [planning]
-                <br/>
-                Date: ------
-            </p>
-            <ol>
-                <li><p>(97) - Fix custom access_token_validity,refresh_token_validity issue(#5)</p></li>
-                <li><p>(109) - 升级 spring-security-oauth2 的版本到 2.0.6以上, 目前是1.0.5 </p></li>
-                <li><p>(110) - 添加不同数据支持branch, 包括 spring-oauth-server(jdbc), spring-oauth-server(hibernate), 拟计划还有ldap, redis, mongodb的数据支持</p></li>
-                <li><p>(113) - Upgrade spring, spring security version to > 4.0</p></li>
-                <li><p>将项目添加到在线测试服务器</p></li>
-                <li><p>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a>.</p></li>
             </ol>
        </li>
 </ul>
