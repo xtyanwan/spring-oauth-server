@@ -274,7 +274,7 @@
 
 <hr/>
 <h4>使用案例</h4>
-<p>以下是已知的使用 spring-oauth-server 开源项目的商业项目(排名不分先后), 若你希望添加你的案例, 请联系作者.</p>
+<p>以下是已知的使用(或基于) spring-oauth-server 开源项目的各类商业项目(排名不分先后), 若你有案例希望添加, 请联系作者.</p>
 <ul>
     <li><p>Hongkong Parkway Online (在线医疗服务系统)</p></li>
     <li><p>海尔日日平台 (B2B电商平台)</p></li>
