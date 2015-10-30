@@ -280,6 +280,7 @@
     <li><p>海尔日日平台 (B2B电商平台)</p></li>
     <li><p>wdcy-game (手机游戏服务端)</p></li>
     <li><p>Honyee Management System (企业管理系统)</p></li>
+    <li><p>AoLin Open Platform (国际物流开发平台)</p></li>
     <li><p>......</p></li>
 </ul>
 
