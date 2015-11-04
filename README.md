@@ -229,6 +229,16 @@
 <ul>
        <li>
             <p>
+                <a href="http://tools.ietf.org/html/rfc6749">RFC 6749 - The OAuth 2.0 Authorization Framework</a>, OAuth2.0协议(英文)
+            </p>
+       </li>
+       <li>
+            <p>
+                <a href="http://oauth.net/2/">OAuth 2.0 &mdash; OAuth</a>, OAuth2.0官方网站
+            </p>
+       </li>
+       <li>
+            <p>
                 <a href="http://netment.iteye.com/blog/945402">OAUTH2核心参数说明</a>, 重点介绍了grant_type 与 response_type 以及示例
             </p>
        </li>
