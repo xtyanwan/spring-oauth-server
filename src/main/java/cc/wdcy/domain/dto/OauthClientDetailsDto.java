@@ -107,6 +107,14 @@ public class OauthClientDetailsDto implements Serializable {
         return scope;
     }
 
+
+    public String getScopeWithBlank() {
+        if (scope != null && scope.contains(",")) {
+            return scope.replaceAll(",", " ");
+        }
+        return scope;
+    }
+
     public void setScope(String scope) {
         this.scope = scope;
     }

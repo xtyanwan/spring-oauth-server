@@ -73,8 +73,7 @@
                     <form:select path="scope" id="scope" cssClass="form-control">
                         <form:option value="read">read</form:option>
                         <form:option value="write">write</form:option>
-                        <form:option value="trust">trust</form:option>
-                        <form:option value="read,write">read,write</form:option>
+                        <form:option value="read,write">read write</form:option>
                     </form:select>
 
                     <p class="help-block">scope必须选择</p>
