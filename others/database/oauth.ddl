@@ -16,7 +16,8 @@ create table oauth_client_details (
   additional_information VARCHAR(4096),
   create_time timestamp default now(),
   archived tinyint(1) default '0',
-  trusted tinyint(1) default '0'
+  trusted tinyint(1) default '0',
+  autoapprove VARCHAR (255) default 'false'
 );
 
 Drop table  if exists oauth_client_token;

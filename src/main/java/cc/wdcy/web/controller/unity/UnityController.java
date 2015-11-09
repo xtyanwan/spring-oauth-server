@@ -2,14 +2,10 @@ package cc.wdcy.web.controller.unity;
 
 import cc.wdcy.domain.dto.UserJsonDto;
 import cc.wdcy.service.UserService;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.servlet.http.HttpServletResponse;
-
-import static cc.wdcy.web.WebUtils.writeJson;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author Shengzhao Li
@@ -29,9 +25,9 @@ public class UnityController {
     }
 
     @RequestMapping("user_info")
-    public void userInfo(HttpServletResponse response) throws Exception {
-        final UserJsonDto jsonDto = userService.loadCurrentUserJsonDto();
-        writeJson(response, JSONObject.fromObject(jsonDto));
+    @ResponseBody
+    public UserJsonDto userInfo() throws Exception {
+        return userService.loadCurrentUserJsonDto();
     }
 
 }

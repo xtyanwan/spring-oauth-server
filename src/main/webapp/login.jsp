@@ -16,11 +16,11 @@
 <form action="${pageContext.request.contextPath}/login.do" method="post">
 
     <label for="username">Username:</label>
-    <input type="text" id="username" name="j_username" value="" required="required"/>
+    <input type="text" id="username" name="username" value="" required="required"/>
     <br/>
     <br/>
     <label for="password">Password:</label>
-    <input type="password" name="j_password" id="password" value="" required="required"/>
+    <input type="password" name="password" id="password" value="" required="required"/>
     <br/>
     <input type="submit" value="Login" class="btn btn-primary"/>
     <span class="text-danger">
