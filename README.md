@@ -148,16 +148,17 @@
 <ul>
        <li>
             <p>
-                Version: <strong>0.4</strong> [planning]
+                Version: <strong>0.4</strong> [pending]
                 <br/>
-                Date: ------
+                Date: 2015-11-09 / 2015-11-30
             </p>
             <ol>
-                <li><p>(97) - Fix custom access_token_validity,refresh_token_validity issue(#5)</p></li>
-                <li><p>(109) - 升级 spring-security-oauth2 的版本到 2.0.6以上, 目前是1.0.5 </p></li>
+                <li><p><del>(97) - Fix custom access_token_validity,refresh_token_validity issue(#5)</del></p></li>
+                <li><p><del>(109) - 升级 spring-security-oauth2 的版本到 2.0.6以上, 目前是1.0.5 </del></p></li>
                 <li><p>(110) - 添加不同数据支持branch, 包括 spring-oauth-server(jdbc), spring-oauth-server(hibernate), 拟计划还有ldap, redis, mongodb的数据支持</p></li>
-                <li><p>(113) - Upgrade spring, spring security version to > 4.0</p></li>
-                <li><p>将项目添加到在线测试服务器</p></li>
+                <li><p><del>(113) - Upgrade spring, spring security version to > 4.0</del></p></li>
+                <li><p><del>将项目添加到在线测试服务器</del></p></li>
+                <li><p>(115) - Sync update spring-oauth-client version with spring-oauth-server</p></li>
                 <li><p><em>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a></em></p></li>
             </ol>
        </li>
