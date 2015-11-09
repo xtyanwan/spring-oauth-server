@@ -8,10 +8,10 @@
 
 使用的技术与版本号
 <ol>
- <li>Spring (3.1.1.RELEASE)</li>
- <li>Spring Security (3.1.0.RELEASE)</li>
+ <li>Spring (4.1.6.RELEASE)</li>
+ <li>Spring Security (4.0.1.RELEASE)</li>
  <li>MyBatis (3.2.1)</li>
- <li>spring-security-oauth2 (1.0.5.RELEASE)</li>
+ <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
 </ol>
 <hr/>
@@ -32,7 +32,7 @@
 <strong>如何使用?</strong>
 <ol>
 <li>
-项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MySql(开发用的mysql版本号为5.5)
+项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MySql(开发用的mysql版本号为5.6)
 </li>
 <li>
 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/repository/archive?ref=master">下载</a>(或clone)项目到本地
