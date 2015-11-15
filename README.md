@@ -292,6 +292,7 @@
     <li><p>wdcy-game (手机游戏服务端)</p></li>
     <li><p>Honyee Management System (企业管理系统)</p></li>
     <li><p>AoLin Open Platform (国际物流开发平台)</p></li>
+    <li><p>IDS (移动安全产品)</p></li>
     <li><p>......</p></li>
 </ul>
 
@@ -301,6 +302,8 @@
     <strong>捐助</strong>
     <br/>
     支付宝: monkeyking1987@126.com (**钊)
+    <br/>
+    快意江湖 -- 100元
 </p>
 
 <hr/>
