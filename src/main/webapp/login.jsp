@@ -36,10 +36,11 @@
             </div>
             <input type="submit" value="Login" class="btn btn-primary"/>
             <a href="${pageContext.request.contextPath}">Back to Home</a>&nbsp;
-            <span class="label label-danger">
-                <c:if test="${param.authorization_error eq 2}">Access denied !!!</c:if>
-                <c:if test="${param.authentication_error eq 1}">Authentication Failure</c:if>
-            </span>
+            <%--Login error--%>
+            <c:if test="${param.authorization_error eq 2}"><span
+                    class="label label-danger">Access denied !!!</span></c:if>
+            <c:if test="${param.authentication_error eq 1}"><span
+                    class="label label-danger">Authentication Failure</span></c:if>
         </form>
     </div>
 </div>
