@@ -10,7 +10,6 @@
 <ol>
  <li>Spring (4.1.6.RELEASE)</li>
  <li>Spring Security (4.0.1.RELEASE)</li>
- <li>MyBatis (3.2.1)</li>
  <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
 </ol>
