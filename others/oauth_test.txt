@@ -12,11 +12,11 @@ http://localhost:8080/spring-oauth-server/oauth/authorize?client_id=mobile-clien
 响应的URL如:
 http://localhost:8080/spring-oauth-server/unity/dashboard.htm?code=zLl170
 
-通过code换取access_token [GET]
+通过code换取access_token [POST]
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=unity-client&client_secret=unity&grant_type=authorization_code&code=zLl170&redirect_uri=http%3a%2f%2flocalhost%3a8080%2fspring-oauth-server%2funity%2fdashboard
 
 
-方式2:基于客户端  (注意参数中的username,password,对应用户的账号,密码) [GET]
+方式2:基于客户端  (注意参数中的username,password,对应用户的账号,密码) [POST]
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=password&scope=read,write&username=mobile&password=mobile
 
 说明:由于unity-client不支持password,所以若用unity-client通过password方式去授权,将返回invalid_grant
@@ -33,7 +33,7 @@ http://localhost:8080/spring-oauth-server/unity/dashboard.htm?access_token=3420d
 
 
 
-刷新access_token [GET]
+刷新access_token [POST]
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=refresh_token&refresh_token=b36f4978-a172-4aa8-af89-60f58abe3ba1
 
 
