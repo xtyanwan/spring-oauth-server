@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class WdcyUserDetails implements UserDetails {
 
+    private static final long serialVersionUID = 3957586021470480642L;
+
     protected static final String ROLE_PREFIX = "ROLE_";
     protected static final GrantedAuthority DEFAULT_USER_ROLE = new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.USER.name());
 

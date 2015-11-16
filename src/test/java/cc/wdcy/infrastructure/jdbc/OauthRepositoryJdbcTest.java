@@ -1,4 +1,15 @@
-package cc.wdcy.infrastructure.mybatis;
+/*
+ * Copyright (c) 2015 MONKEYK Information Technology Co. Ltd
+ * www.monkeyk.com
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * MONKEYK Information Technology Co. Ltd ("Confidential Information").
+ * You shall not disclose such Confidential Information and shall use
+ * it only in accordance with the terms of the license agreement you
+ * entered into with MONKEYK Information Technology Co. Ltd.
+ */
+package cc.wdcy.infrastructure.jdbc;
 
 import cc.wdcy.domain.oauth.OauthClientDetails;
 import cc.wdcy.domain.oauth.OauthRepository;
@@ -11,10 +22,10 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-/**
- * @author Shengzhao Li
- */
-public class OauthRepositoryMyBatisTest extends AbstractRepositoryTest {
+/*
+  * @author Shengzhao Li
+  */
+public class OauthRepositoryJdbcTest extends AbstractRepositoryTest {
 
 
     @Autowired
@@ -55,5 +66,6 @@ public class OauthRepositoryMyBatisTest extends AbstractRepositoryTest {
     public void updateOauthClientDetailsArchive() {
         oauthRepositoryMyBatis.updateOauthClientDetailsArchive("ddooelddd", true);
     }
+
 
 }

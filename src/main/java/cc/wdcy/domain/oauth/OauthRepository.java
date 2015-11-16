@@ -1,7 +1,6 @@
 package cc.wdcy.domain.oauth;
 
 import cc.wdcy.domain.shared.Repository;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ public interface OauthRepository extends Repository {
 
     List<OauthClientDetails> findAllOauthClientDetails();
 
-    void updateOauthClientDetailsArchive(@Param("clientId") String clientId, @Param("archive") boolean archive);
+    void updateOauthClientDetailsArchive(String clientId, boolean archive);
 
     void saveOauthClientDetails(OauthClientDetails clientDetails);
 }

@@ -11,6 +11,8 @@ import java.util.Date;
 public class OauthClientDetails implements Serializable {
 
 
+    private static final long serialVersionUID = -6947822646185526939L;
+
     private Date createTime = DateUtils.now();
     private boolean archived = false;
 
@@ -64,9 +66,22 @@ public class OauthClientDetails implements Serializable {
      */
     private boolean trusted = false;
 
+    /**
+     * Value is 'true' or 'false',  default 'false'
+     */
+    private String autoApprove;
+
     public OauthClientDetails() {
     }
 
+    public String autoApprove() {
+        return autoApprove;
+    }
+
+    public OauthClientDetails autoApprove(String autoApprove) {
+        this.autoApprove = autoApprove;
+        return this;
+    }
 
     public boolean trusted() {
         return trusted;
@@ -74,6 +89,11 @@ public class OauthClientDetails implements Serializable {
 
     public Date createTime() {
         return createTime;
+    }
+
+    public OauthClientDetails createTime(Date createTime) {
+        this.createTime = createTime;
+        return this;
     }
 
     public boolean archived() {
@@ -194,6 +214,11 @@ public class OauthClientDetails implements Serializable {
 
     public OauthClientDetails additionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
+        return this;
+    }
+
+    public OauthClientDetails archived(boolean archived) {
+        this.archived = archived;
         return this;
     }
 }

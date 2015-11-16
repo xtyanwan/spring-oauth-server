@@ -2,6 +2,7 @@ package cc.wdcy.domain.user;
 
 import cc.wdcy.domain.AbstractDomain;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +11,9 @@ import java.util.List;
  * @author Shengzhao Li
  */
 public class User extends AbstractDomain {
+
+
+    private static final long serialVersionUID = -2921689304753120556L;
 
 
     private String username;
@@ -92,7 +96,18 @@ public class User extends AbstractDomain {
         return lastLoginTime;
     }
 
-    public void lastLoginTime(Date lastLoginTime) {
+    public User lastLoginTime(Date lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
+        return this;
+    }
+
+    public User createTime(Date createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    public User password(String password) {
+        this.password = password;
+        return this;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.test.context.transaction.BeforeTransaction;
 /**
  * @author Shengzhao Li
  */
-@ContextConfiguration(locations = {"classpath:testApplicationContext.xml"})
+@ContextConfiguration(locations = {"classpath:/spring/*.xml"}, initializers = {TestApplicationContextInitializer.class})
 public abstract class ContextTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @BeforeTransaction

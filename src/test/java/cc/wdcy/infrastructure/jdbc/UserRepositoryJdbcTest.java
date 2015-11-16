@@ -1,4 +1,15 @@
-package cc.wdcy.infrastructure.mybatis;
+/*
+ * Copyright (c) 2015 MONKEYK Information Technology Co. Ltd
+ * www.monkeyk.com
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * MONKEYK Information Technology Co. Ltd ("Confidential Information").
+ * You shall not disclose such Confidential Information and shall use
+ * it only in accordance with the terms of the license agreement you
+ * entered into with MONKEYK Information Technology Co. Ltd.
+ */
+package cc.wdcy.infrastructure.jdbc;
 
 import cc.wdcy.domain.user.User;
 import cc.wdcy.domain.user.UserRepository;
@@ -6,12 +17,16 @@ import cc.wdcy.infrastructure.AbstractRepositoryTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.*;
+import static org.testng.Assert.*;
+import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertNotNull;
+import static org.testng.AssertJUnit.assertNull;
 
-/**
- * @author Shengzhao Li
- */
-public class UserRepositoryMyBatisTest extends AbstractRepositoryTest {
+/*
+  * @author Shengzhao Li
+  */
+public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
+
 
     @Autowired
     private UserRepository userRepository;
