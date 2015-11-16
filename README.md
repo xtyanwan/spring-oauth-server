@@ -158,7 +158,8 @@
                 <li><p>(110) - 添加不同数据支持branch, 包括 spring-oauth-server(jdbc), spring-oauth-server(hibernate), 拟计划还有ldap, redis, mongodb的数据支持</p></li>
                 <li><p><del>(113) - Upgrade spring, spring security version to > 4.0</del></p></li>
                 <li><p><del>将项目添加到在线测试服务器</del></p></li>
-                <li><p>(115) - Sync update spring-oauth-client version with spring-oauth-server</p></li>
+                <li><p><del>(115) - Sync update spring-oauth-client version with spring-oauth-server</del></p></li>
+                <li><p>(116) - Remove mybatis dependency</p></li>
                 <li><p><em>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a></em></p></li>
             </ol>
        </li>
@@ -220,6 +221,7 @@
             <em>2015-06-16</em>       添加github访问: <a href="https://github.com/monkeyk/spring-oauth-server">https://github.com/monkeyk/spring-oauth-server</a>,
             以后的更新将同步github与gitosc.
         </p></li>
+        <li><p><em>2015-11-09</em>        开始开发 0.4-beta 版本</p></li>
     </ol>
 </p>
 
