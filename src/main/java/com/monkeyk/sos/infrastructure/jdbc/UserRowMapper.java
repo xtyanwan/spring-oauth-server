@@ -36,7 +36,7 @@ public class UserRowMapper implements RowMapper<User> {
         user.guid(rs.getString("guid"));
 
         user.archived(rs.getBoolean("archived"));
-        user.createTime(rs.getTimestamp("create_time"));
+        user.createTime(rs.getTimestamp("create_time").toLocalDateTime());
 
         user.email(rs.getString("email"));
         user.phone(rs.getString("phone"));

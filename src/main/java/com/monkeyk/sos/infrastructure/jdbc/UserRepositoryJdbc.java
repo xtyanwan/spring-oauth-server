@@ -35,7 +35,6 @@ import java.util.List;
 public class UserRepositoryJdbc implements UserRepository {
 
 
-
     private static UserRowMapper userRowMapper = new UserRowMapper();
 
     @Autowired
@@ -77,7 +76,7 @@ public class UserRepositoryJdbc implements UserRepository {
                 ps.setString(1, user.guid());
                 ps.setBoolean(2, user.archived());
 
-                ps.setTimestamp(3, new Timestamp(user.createTime().getTime()));
+                ps.setTimestamp(3, Timestamp.valueOf(user.createTime()));
                 ps.setString(4, user.email());
 
                 ps.setString(5, user.password());

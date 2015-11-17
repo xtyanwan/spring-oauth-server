@@ -23,9 +23,9 @@
 
         <!--jdbc execute sql config-->
         <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
-        <jdbc.url>jdbc:mysql://localhost:3306/wdcy_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.url>
-        <jdbc.user>wdcy</jdbc.user>
-        <jdbc.pass>wdcy</jdbc.pass>
+        <jdbc.url>jdbc:mysql://localhost:3306/oauth2_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.url>
+        <jdbc.user>andaily</jdbc.user>
+        <jdbc.pass>andaily</jdbc.pass>
         <!--if do not use execute sql, change the value to true-->
         <jdbc.execute.skip>false</jdbc.execute.skip>
         <test.skip>false</test.skip>
@@ -47,19 +47,20 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.2</version>
                 <configuration>
-                    <encoding>utf-8</encoding>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.0.2</version>
+                <version>2.6</version>
                 <configuration>
                     <warSourceExcludes>*/classes/spring-oauth-server.properties</warSourceExcludes>
+                    <packagingExcludes>*/classes/spring-oauth-server.properties</packagingExcludes>
                     <archive>
                         <manifestEntries>
                             <Implementation-BuildNumber>
@@ -168,8 +169,8 @@
         <!-- provided dependency -->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.4</version>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

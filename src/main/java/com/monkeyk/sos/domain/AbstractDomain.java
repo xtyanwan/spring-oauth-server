@@ -1,16 +1,17 @@
 package com.monkeyk.sos.domain;
 
-import com.monkeyk.sos.infrastructure.DateUtils;
 import com.monkeyk.sos.domain.shared.GuidGenerator;
+import com.monkeyk.sos.infrastructure.DateUtils;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * @author Shengzhao Li
  */
 public abstract class AbstractDomain implements Serializable {
 
+    private static final long serialVersionUID = 6569365774429340632L;
     /**
      * Database id
      */
@@ -25,7 +26,7 @@ public abstract class AbstractDomain implements Serializable {
     /**
      * The domain create time.
      */
-    protected Date createTime = DateUtils.now();
+    protected LocalDateTime createTime = DateUtils.now();
 
     public AbstractDomain() {
     }
@@ -55,13 +56,10 @@ public abstract class AbstractDomain implements Serializable {
         this.guid = guid;
     }
 
-    public Date createTime() {
+    public LocalDateTime createTime() {
         return createTime;
     }
 
-    public boolean isNewly() {
-        return id == 0;
-    }
 
     @Override
     public boolean equals(Object o) {

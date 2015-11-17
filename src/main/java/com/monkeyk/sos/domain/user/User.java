@@ -2,6 +2,7 @@ package com.monkeyk.sos.domain.user;
 
 import com.monkeyk.sos.domain.AbstractDomain;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -100,7 +101,7 @@ public class User extends AbstractDomain {
         return this;
     }
 
-    public User createTime(Date createTime) {
+    public User createTime(LocalDateTime createTime) {
         this.createTime = createTime;
         return this;
     }

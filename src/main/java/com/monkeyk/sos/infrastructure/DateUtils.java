@@ -1,7 +1,8 @@
 package com.monkeyk.sos.infrastructure;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 /**
@@ -18,27 +19,26 @@ public abstract class DateUtils {
     private DateUtils() {
     }
 
-    public static Date now() {
-        return new Date();
+    public static LocalDateTime now() {
+        return LocalDateTime.now();
     }
 
 
-    //Create new  SimpleDateFormat
-    private static SimpleDateFormat newDateFormat(String pattern) {
-        return new SimpleDateFormat(pattern, Locale.SIMPLIFIED_CHINESE);
+    public static String toDateTime(LocalDateTime date) {
+        return toDateTime(date, DEFAULT_DATE_TIME_FORMAT);
     }
 
-    public static String toDateTime(Date date) {
-        return toDateText(date, DEFAULT_DATE_TIME_FORMAT);
+    public static String toDateTime(LocalDateTime dateTime, String pattern) {
+        return dateTime.format(DateTimeFormatter.ofPattern(pattern, Locale.SIMPLIFIED_CHINESE));
     }
 
 
-    public static String toDateText(Date date, String pattern) {
+
+    public static String toDateText(LocalDate date, String pattern) {
         if (date == null || pattern == null) {
             return null;
         }
-        SimpleDateFormat dateFormat = newDateFormat(pattern);
-        return dateFormat.format(date);
+        return date.format(DateTimeFormatter.ofPattern(pattern, Locale.SIMPLIFIED_CHINESE));
     }
 
 

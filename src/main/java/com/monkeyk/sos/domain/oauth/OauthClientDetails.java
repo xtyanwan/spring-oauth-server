@@ -3,7 +3,7 @@ package com.monkeyk.sos.domain.oauth;
 import com.monkeyk.sos.infrastructure.DateUtils;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * @author Shengzhao Li
@@ -13,7 +13,7 @@ public class OauthClientDetails implements Serializable {
 
     private static final long serialVersionUID = -6947822646185526939L;
 
-    private Date createTime = DateUtils.now();
+    private LocalDateTime createTime = DateUtils.now();
     private boolean archived = false;
 
     private String clientId;
@@ -87,11 +87,11 @@ public class OauthClientDetails implements Serializable {
         return trusted;
     }
 
-    public Date createTime() {
+    public LocalDateTime createTime() {
         return createTime;
     }
 
-    public OauthClientDetails createTime(Date createTime) {
+    public OauthClientDetails createTime(LocalDateTime createTime) {
         this.createTime = createTime;
         return this;
     }

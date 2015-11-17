@@ -16,6 +16,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.ZoneId;
 
 /**
  * 2015/11/16
@@ -45,7 +46,7 @@ public class OauthClientDetailsRowMapper implements RowMapper<OauthClientDetails
         clientDetails.refreshTokenValidity(getInteger(rs, "refresh_token_validity"));
 
         clientDetails.additionalInformation(rs.getString("additional_information"));
-        clientDetails.createTime(rs.getTimestamp("create_time"));
+        clientDetails.createTime(rs.getTimestamp("create_time").toLocalDateTime());
         clientDetails.archived(rs.getBoolean("archived"));
 
         clientDetails.trusted(rs.getBoolean("trusted"));
