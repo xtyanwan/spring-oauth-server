@@ -160,8 +160,10 @@
                 <li><p><del>(113) - Upgrade spring, spring security version to > 4.0</del></p></li>
                 <li><p><del>将项目添加到在线测试服务器</del></p></li>
                 <li><p><del>(115) - Sync update spring-oauth-client version with spring-oauth-server</del></p></li>
-                <li><p>(116) - Remove mybatis dependency</p></li>
-                <li><p><em>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a></em></p></li>
+                <li><p><del>(116) - Remove mybatis dependency</del></p></li>
+                <li><p><del>Upgrade JAVA to 1.8; Servlet 3.0</del></p></li>
+                <li><p><del>Oauth table add index </del></p></li>
+                <!--<li><p><em>若你有任何的功能或建议需要在新版本中实现, 请点此<a href="http://andaily.com/blog/?page_id=183">告诉我</a></em></p></li>-->
             </ol>
        </li>
        <li>
