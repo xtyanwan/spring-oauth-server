@@ -223,6 +223,7 @@
             以后的更新将同步github与gitosc.
         </p></li>
         <li><p><em>2015-11-09</em>        开始开发 0.4-beta 版本</p></li>
+        <li><p><em>2015-11-18</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4-beta/">0.4-beta</a> 版本</p></li>
     </ol>
 </p>
 
