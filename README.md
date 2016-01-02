@@ -149,7 +149,7 @@
 <ul>
        <li>
             <p>
-                Version: <strong>0.4</strong> [pending]
+                Version: <strong>0.4</strong> [finished]
                 <br/>
                 Date: 2015-11-09 / 2015-11-30
             </p>
@@ -224,6 +224,7 @@
         </p></li>
         <li><p><em>2015-11-09</em>        开始开发 0.4-beta 版本</p></li>
         <li><p><em>2015-11-18</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4-beta/">0.4-beta</a> 版本</p></li>
+        <li><p><em>2016-01-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4/">0.4</a> 版本</p></li>
     </ol>
 </p>
 
@@ -308,6 +309,8 @@
     支付宝: monkeyking1987@126.com (**钊)
     <br/>
     快意江湖 -- 100元
+    <br/>
+    yufan -- 100元
 </p>
 
 <hr/>
