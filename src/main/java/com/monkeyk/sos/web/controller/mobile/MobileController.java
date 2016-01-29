@@ -25,7 +25,7 @@ public class MobileController {
 
     @RequestMapping("user_info")
     @ResponseBody
-    public UserJsonDto userInfo() throws Exception {
+    public UserJsonDto userInfo() {
         return userService.loadCurrentUserJsonDto();
     }
 

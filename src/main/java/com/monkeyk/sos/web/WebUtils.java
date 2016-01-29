@@ -10,6 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 public abstract class WebUtils {
 
 
+    private static ThreadLocal<String> ipThreadLocal = new ThreadLocal<>();
+
+
+    public static void setIp(String ip) {
+        ipThreadLocal.set(ip);
+    }
+
+    public static String getIp() {
+        return ipThreadLocal.get();
+    }
+
     //private
     private WebUtils() {
     }
@@ -36,7 +47,7 @@ public abstract class WebUtils {
     }
 
     private static boolean isUnAvailableIp(String ip) {
-        return (StringUtils.isEmpty(ip) || "unknown".equalsIgnoreCase(ip));
+        return StringUtils.isEmpty(ip) || "unknown".equalsIgnoreCase(ip);
     }
 
 }
