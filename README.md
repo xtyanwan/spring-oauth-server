@@ -149,6 +149,18 @@
 <ul>
        <li>
             <p>
+                Version: <strong>0.5</strong> [planning]
+                <br/>
+                Date: 2016-02-19 / ------
+            </p>
+            <ol>
+                <li><p>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解</p></li>
+                <li><p>(138) - OAuth 'token' Restful API</p></li>
+                <li><p>(139) - User Overview/ user add/archive</p></li>
+            </ol>
+       </li>
+       <li>
+            <p>
                 Version: <strong>0.4</strong> [finished]
                 <br/>
                 Date: 2015-11-09 / 2015-11-30
