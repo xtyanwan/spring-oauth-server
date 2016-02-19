@@ -238,6 +238,7 @@
         <li><p><em>2015-11-09</em>        开始开发 0.4-beta 版本</p></li>
         <li><p><em>2015-11-18</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4-beta/">0.4-beta</a> 版本</p></li>
         <li><p><em>2016-01-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4/">0.4</a> 版本</p></li>
+        <li><p><em>2016-02-19</em>        Add 0.5 version development planning</p></li>
     </ol>
 </p>
 
