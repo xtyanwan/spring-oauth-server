@@ -15,11 +15,8 @@ import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import com.monkeyk.sos.domain.oauth.OauthRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -63,28 +60,25 @@ public class OauthRepositoryJdbc implements OauthRepository {
         final String sql = " insert into oauth_client_details(client_id,resource_ids,client_secret,scope,authorized_grant_types,web_server_redirect_uri," +
                 " authorities,access_token_validity,refresh_token_validity,additional_information,trusted,autoapprove) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 
-        this.jdbcTemplate.update(sql, new PreparedStatementSetter() {
-            @Override
-            public void setValues(PreparedStatement ps) throws SQLException {
-                ps.setString(1, clientDetails.clientId());
-                ps.setString(2, clientDetails.resourceIds());
+        this.jdbcTemplate.update(sql, ps -> {
+            ps.setString(1, clientDetails.clientId());
+            ps.setString(2, clientDetails.resourceIds());
 
-                ps.setString(3, clientDetails.clientSecret());
-                ps.setString(4, clientDetails.scope());
+            ps.setString(3, clientDetails.clientSecret());
+            ps.setString(4, clientDetails.scope());
 
-                ps.setString(5, clientDetails.authorizedGrantTypes());
-                ps.setString(6, clientDetails.webServerRedirectUri());
+            ps.setString(5, clientDetails.authorizedGrantTypes());
+            ps.setString(6, clientDetails.webServerRedirectUri());
 
-                ps.setString(7, clientDetails.authorities());
-                ps.setObject(8, clientDetails.accessTokenValidity());
+            ps.setString(7, clientDetails.authorities());
+            ps.setObject(8, clientDetails.accessTokenValidity());
 
-                ps.setObject(9, clientDetails.refreshTokenValidity());
-                ps.setString(10, clientDetails.additionalInformation());
+            ps.setObject(9, clientDetails.refreshTokenValidity());
+            ps.setString(10, clientDetails.additionalInformation());
 
-                ps.setBoolean(11, clientDetails.trusted());
-                ps.setString(12, clientDetails.autoApprove());
+            ps.setBoolean(11, clientDetails.trusted());
+            ps.setString(12, clientDetails.autoApprove());
 
-            }
         });
     }
 }
