@@ -14,6 +14,7 @@
 
     <meta name="viewport" content="width=device-width,user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="shortcut icon" href="${contextPath}/resources/favicon.ico"/>
 
     <title><decorator:title default=""/> - Spring Security&Oauth2</title>
 
