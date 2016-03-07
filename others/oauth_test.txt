@@ -37,6 +37,24 @@ http://localhost:8080/spring-oauth-server/unity/dashboard.htm?access_token=3420d
 http://localhost:8080/spring-oauth-server/oauth/token?client_id=mobile-client&client_secret=mobile&grant_type=refresh_token&refresh_token=b36f4978-a172-4aa8-af89-60f58abe3ba1
 
 
+Restful OAuth2 Test [POST]
+URL: /oauth2/rest_token
+ContentType: application/json
+
+DEMO URL: http://localhost:8080/spring-oauth-server/oauth2/rest_token
+Request Body: {"grant_type":"client_credentials","scope":"read","client_id":"credentials","client_secret":"credentials","username":"user","password":"123"}
+
+Response Body:
+{
+    "access_token": "cd165ebc-562d-45df-8488-9f1ba947553e",
+    "token_type": "bearer",
+    "expires_in": 43193,
+    "scope": "read"
+}
+
+
+
+
 更多的测试请访问
 http://git.oschina.net/mkk/spring-oauth-client
 

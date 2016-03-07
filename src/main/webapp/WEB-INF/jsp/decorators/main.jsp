@@ -29,7 +29,7 @@
     <div>
         <hr/>
         <p class="text-center text-muted">
-            &copy; 2013 - 2015
+            &copy; 2013 - 2016
             <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a> from <a
                 href="http://git.oschina.net/shengzhao/spring-oauth-server" target="_blank">spring-oauth-server</a>
         </p>
