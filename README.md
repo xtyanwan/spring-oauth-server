@@ -157,6 +157,7 @@
                 <li><p>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解</p></li>
                 <li><p>(138) - OAuth 'token' Restful API</p></li>
                 <li><p>(139) - User Overview/ user add/archive</p></li>
+                <li><p>(143) - Add project API document</p></li>
             </ol>
             <br/>
        </li>
