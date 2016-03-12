@@ -1,6 +1,7 @@
 package com.monkeyk.sos.service.impl;
 
 import com.monkeyk.sos.domain.dto.UserJsonDto;
+import com.monkeyk.sos.domain.dto.UserOverviewDto;
 import com.monkeyk.sos.domain.shared.security.WdcyUserDetails;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
@@ -47,6 +48,12 @@ public class UserServiceImpl implements UserService {
             final WdcyUserDetails userDetails = (WdcyUserDetails) principal;
             return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
         }
+    }
+
+    @Override
+    public UserOverviewDto loadUserOverviewDto(UserOverviewDto overviewDto) {
+
+        return overviewDto;
     }
 
 
