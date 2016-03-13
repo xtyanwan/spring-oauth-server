@@ -337,5 +337,5 @@
 </p>
 <p>
  <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
- 或访问<a href="http://monkeyk.com/kso/" target="_blank">http://monkeyk.com/kso/</a>
+ 或访问 <a href="http://monkeyk.com/kso/" target="_blank">http://monkeyk.com/kso/</a>
 </p>
