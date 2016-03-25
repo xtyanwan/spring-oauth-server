@@ -17,6 +17,8 @@ import com.monkeyk.sos.infrastructure.AbstractRepositoryTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 import static org.testng.AssertJUnit.assertNull;
@@ -43,6 +45,21 @@ public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
         assertNotNull(user);
         assertNotNull(user.email());
 
+
+    }
+
+    @Test
+    public void findUsersByUsername() {
+        User user = userRepository.findByGuid("oood");
+        assertNull(user);
+
+        user = new User("user", "123", "123", "ewo@honyee.cc");
+        userRepository.saveUser(user);
+
+        final List<User> list = userRepository.findUsersByUsername(user.username());
+        assertNotNull(list);
+
+        assertEquals(list.size(), 1);
 
     }
 

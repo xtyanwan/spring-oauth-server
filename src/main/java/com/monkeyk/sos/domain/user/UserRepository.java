@@ -2,6 +2,8 @@ package com.monkeyk.sos.domain.user;
 
 import com.monkeyk.sos.domain.shared.Repository;
 
+import java.util.List;
+
 /**
  * @author Shengzhao Li
  */
@@ -16,4 +18,5 @@ public interface UserRepository extends Repository {
 
     User findByUsername(String username);
 
+    List<User> findUsersByUsername(String username);
 }

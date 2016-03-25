@@ -17,7 +17,6 @@ import com.monkeyk.sos.domain.user.User;
 import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -101,5 +100,13 @@ public class UserDto implements Serializable {
 
     public void setPrivileges(List<Privilege> privileges) {
         this.privileges = privileges;
+    }
+
+    public static List<UserDto> toDtos(List<User> users) {
+        List<UserDto> dtos = new ArrayList<>(users.size());
+        for (User user : users) {
+            dtos.add(new UserDto(user));
+        }
+        return dtos;
     }
 }

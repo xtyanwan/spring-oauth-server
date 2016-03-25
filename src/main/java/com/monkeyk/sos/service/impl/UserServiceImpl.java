@@ -1,5 +1,6 @@
 package com.monkeyk.sos.service.impl;
 
+import com.monkeyk.sos.domain.dto.UserDto;
 import com.monkeyk.sos.domain.dto.UserJsonDto;
 import com.monkeyk.sos.domain.dto.UserOverviewDto;
 import com.monkeyk.sos.domain.shared.security.WdcyUserDetails;
@@ -16,6 +17,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Shengzhao Li
@@ -52,7 +54,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserOverviewDto loadUserOverviewDto(UserOverviewDto overviewDto) {
-
+        List<User> users = userRepository.findUsersByUsername(overviewDto.getUsername());
+        overviewDto.setUserDtos(UserDto.toDtos(users));
         return overviewDto;
     }
 
