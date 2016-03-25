@@ -80,9 +80,15 @@ public class UserRepositoryJdbc implements UserRepository {
         });
 
         //get user id
+        final Integer id = this.jdbcTemplate.queryForObject("select id from user_ where guid = ?", new Object[]{user.guid()}, Integer.class);
 
         //insert privileges
-
+        for (final Privilege privilege : user.privileges()) {
+            this.jdbcTemplate.update("insert into user_privilege(user_id, privilege) values (?,?)", ps -> {
+                ps.setInt(1, id);
+                ps.setString(2, privilege.name());
+            });
+        }
 
     }
 
