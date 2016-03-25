@@ -1,6 +1,7 @@
 package com.monkeyk.sos.service.impl;
 
 import com.monkeyk.sos.domain.dto.UserDto;
+import com.monkeyk.sos.domain.dto.UserFormDto;
 import com.monkeyk.sos.domain.dto.UserJsonDto;
 import com.monkeyk.sos.domain.dto.UserOverviewDto;
 import com.monkeyk.sos.domain.shared.security.WdcyUserDetails;
@@ -57,6 +58,19 @@ public class UserServiceImpl implements UserService {
         List<User> users = userRepository.findUsersByUsername(overviewDto.getUsername());
         overviewDto.setUserDtos(UserDto.toDtos(users));
         return overviewDto;
+    }
+
+    @Override
+    public boolean isExistedUsername(String username) {
+        final User user = userRepository.findByUsername(username);
+        return user != null;
+    }
+
+    @Override
+    public String saveUser(UserFormDto formDto) {
+        User user = formDto.newUser();
+        userRepository.saveUser(user);
+        return user.guid();
     }
 
 

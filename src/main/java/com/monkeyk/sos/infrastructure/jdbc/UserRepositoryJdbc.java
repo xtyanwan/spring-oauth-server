@@ -78,6 +78,12 @@ public class UserRepositoryJdbc implements UserRepository {
 
             ps.setString(7, user.phone());
         });
+
+        //get user id
+
+        //insert privileges
+
+
     }
 
     @Override

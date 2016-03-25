@@ -15,6 +15,9 @@
 
 <h2>User Overview</h2>
 
+<div class="pull-right">
+    <a href="form/plus" class="btn btn-success btn-sm">Add User</a>
+</div>
 <form action="" class="form-inline">
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Type username" name="username"
