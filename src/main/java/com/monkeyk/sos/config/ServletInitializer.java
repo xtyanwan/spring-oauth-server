@@ -23,12 +23,12 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return new Class[]{WebSecurityConfigurer.class};
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{MkkWebMvcConfigurer.class};
+        return new Class[]{WebMvcConfigurer.class};
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
 //        servletContext.setAttribute("webAppRootKey", "spring-oauth-server");
         servletContext.setInitParameter("webAppRootKey", "spring-oauth-server");
-        servletContext.setInitParameter("contextConfigLocation", "classpath:spring/*.xml");
+//        servletContext.setInitParameter("contextConfigLocation", "classpath:spring/*.xml");
         servletContext.setInitParameter("log4jConfigLocation", "/WEB-INF/log4j.xml");
 
         //Add Filters
