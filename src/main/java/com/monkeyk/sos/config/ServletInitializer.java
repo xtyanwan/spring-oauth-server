@@ -28,7 +28,7 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return new Class[]{MkkWebMvcConfigurer.class};
     }
 
     @Override
