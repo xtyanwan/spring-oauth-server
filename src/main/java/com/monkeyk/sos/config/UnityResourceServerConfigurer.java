@@ -15,8 +15,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
  * @author Shengzhao Li
  */
 //  unity-resource
-@Configuration
-@EnableResourceServer
+//@Configuration
+//@EnableResourceServer
 public class UnityResourceServerConfigurer extends ResourceServerConfigurerAdapter {
 
 

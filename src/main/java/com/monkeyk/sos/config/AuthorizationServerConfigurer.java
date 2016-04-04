@@ -20,8 +20,8 @@ import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
  * @author Shengzhao Li
  */
 //AuthorizationServer
-@Configuration
-@EnableAuthorizationServer
+//@Configuration
+//@EnableAuthorizationServer
 public class AuthorizationServerConfigurer extends AuthorizationServerConfigurerAdapter {
 
 //    @Autowired

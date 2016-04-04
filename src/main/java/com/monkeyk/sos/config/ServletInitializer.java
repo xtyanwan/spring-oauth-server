@@ -2,8 +2,11 @@ package com.monkeyk.sos.config;
 
 import com.monkeyk.sos.web.filter.CharacterEncodingIPFilter;
 import com.opensymphony.sitemesh.webapp.SiteMeshFilter;
+import org.springframework.util.ClassUtils;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.filter.DelegatingFilterProxy;
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 import org.springframework.web.util.Log4jConfigListener;
 
 import javax.servlet.ServletContext;
@@ -18,21 +21,8 @@ import javax.servlet.ServletException;
  *
  * @author Shengzhao Li
  */
-public class ServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ServletInitializer extends AbstractDispatcherServletInitializer {
 
-
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ContextConfigurer.class,
-                WebSecurityConfigurer.class,
-                AuthorizationServerConfigurer.class,
-                UnityResourceServerConfigurer.class};
-    }
-
-    @Override
-    protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{WebMvcConfigurer.class};
-    }
 
     @Override
     protected String[] getServletMappings() {
@@ -66,5 +56,17 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
         servletContext.addListener(Log4jConfigListener.class);
 
+    }
+
+    @Override
+    protected WebApplicationContext createRootApplicationContext() {
+        return null;
+    }
+
+    @Override
+    protected WebApplicationContext createServletApplicationContext() {
+        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.scan(ClassUtils.getPackageName(getClass()));
+        return context;
     }
 }
