@@ -11,9 +11,6 @@ import org.springframework.security.access.vote.AuthenticatedVoter;
 import org.springframework.security.access.vote.RoleVoter;
 import org.springframework.security.access.vote.UnanimousBased;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.ProviderManager;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,7 +20,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.OAuth2RequestFactory;
 import org.springframework.security.oauth2.provider.approval.UserApprovalHandler;
-import org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter;
 import org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
@@ -31,14 +27,12 @@ import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHand
 import org.springframework.security.oauth2.provider.error.OAuth2AuthenticationEntryPoint;
 import org.springframework.security.oauth2.provider.expression.OAuth2WebSecurityExpressionHandler;
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
-import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.security.oauth2.provider.vote.ScopeVoter;
 
 import javax.sql.DataSource;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * 2016/4/3
@@ -114,14 +108,14 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     }
 
 
-    @Bean(name = "tokenServices")
-    public DefaultTokenServices tokenServices(TokenStore tokenStore, ClientDetailsService clientDetailsService) {
-        final DefaultTokenServices tokenServices = new DefaultTokenServices();
-        tokenServices.setTokenStore(tokenStore);
-        tokenServices.setClientDetailsService(clientDetailsService);
-        tokenServices.setSupportRefreshToken(true);
-        return tokenServices;
-    }
+//    @Bean(name = "tokenServices")
+//    public DefaultTokenServices tokenServices(TokenStore tokenStore, ClientDetailsService clientDetailsService) {
+//        final DefaultTokenServices tokenServices = new DefaultTokenServices();
+//        tokenServices.setTokenStore(tokenStore);
+//        tokenServices.setClientDetailsService(clientDetailsService);
+//        tokenServices.setSupportRefreshToken(true);
+//        return tokenServices;
+//    }
 
     @Bean(name = "oAuth2RequestFactory")
     public OAuth2RequestFactory oAuth2RequestFactory(ClientDetailsService clientDetailsService) {
@@ -158,13 +152,13 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     }
 
 
-    @Bean(name = "oauth2AuthenticationManager")
-    public AuthenticationManager oauth2AuthenticationManager(ClientDetailsUserDetailsService detailsService) {
-        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        daoAuthenticationProvider.setUserDetailsService(detailsService);
-        List<AuthenticationProvider> providers = Arrays.asList(daoAuthenticationProvider);
-        return new ProviderManager(providers);
-    }
+//    @Bean(name = "oauth2AuthenticationManager")
+//    public AuthenticationManager oauth2AuthenticationManager(ClientDetailsUserDetailsService detailsService) {
+//        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
+//        daoAuthenticationProvider.setUserDetailsService(detailsService);
+//        List<AuthenticationProvider> providers = Arrays.asList(daoAuthenticationProvider);
+//        return new ProviderManager(providers);
+//    }
 
 
     @Bean(name = "oauth2AccessDecisionManager")
@@ -182,14 +176,22 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     }
 
 
-    @Bean(name = "clientCredentialsTokenEndpointFilter")
-    public ClientCredentialsTokenEndpointFilter clientCredentialsTokenEndpointFilter(AuthenticationManager oauth2AuthenticationManager) {
-        ClientCredentialsTokenEndpointFilter clientCredentialsTokenEndpointFilter = new ClientCredentialsTokenEndpointFilter();
-        clientCredentialsTokenEndpointFilter.setAuthenticationManager(oauth2AuthenticationManager);
-        return clientCredentialsTokenEndpointFilter;
-    }
+//    @Bean(name = "clientCredentialsTokenEndpointFilter")
+//    public ClientCredentialsTokenEndpointFilter clientCredentialsTokenEndpointFilter(AuthenticationManager oauth2AuthenticationManager) {
+//        ClientCredentialsTokenEndpointFilter clientCredentialsTokenEndpointFilter = new ClientCredentialsTokenEndpointFilter();
+//        clientCredentialsTokenEndpointFilter.setAuthenticationManager(oauth2AuthenticationManager);
+//        return clientCredentialsTokenEndpointFilter;
+//    }
 
 
-
-
+//    @Configuration
+//    @EnableGlobalMethodSecurity(prePostEnabled = true, proxyTargetClass = true)
+//    protected static class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
+//
+//
+//        @Override
+//        protected MethodSecurityExpressionHandler createExpressionHandler() {
+//            return new OAuth2MethodSecurityExpressionHandler();
+//        }
+//    }
 }

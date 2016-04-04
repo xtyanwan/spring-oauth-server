@@ -23,7 +23,10 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ContextConfigurer.class, WebSecurityConfigurer.class};
+        return new Class[]{ContextConfigurer.class,
+                WebSecurityConfigurer.class,
+                AuthorizationServerConfigurer.class,
+                UnityResourceServerConfigurer.class};
     }
 
     @Override
