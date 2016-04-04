@@ -184,14 +184,5 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 //    }
 
 
-//    @Configuration
-//    @EnableGlobalMethodSecurity(prePostEnabled = true, proxyTargetClass = true)
-//    protected static class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
-//
-//
-//        @Override
-//        protected MethodSecurityExpressionHandler createExpressionHandler() {
-//            return new OAuth2MethodSecurityExpressionHandler();
-//        }
-//    }
+
 }
