@@ -17,7 +17,8 @@
 </ol>
 <hr/>
 
-<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/</a></strong>
+<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config/</a></strong>
+<strong>MongoDB版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb/</a></strong>
 <h3>
    Oauth客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
