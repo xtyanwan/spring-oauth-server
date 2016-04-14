@@ -14,11 +14,14 @@
  <li>Spring Security (4.0.1.RELEASE)</li>
  <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
+ <li>MySQL (5.6.23)</li>
 </ol>
 <hr/>
 
-<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config/</a></strong>
-<strong>MongoDB版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb/</a></strong>
+<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a></strong>
+<br/>
+<strong>MongoDB版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
+<hr/>
 <h3>
    Oauth客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
