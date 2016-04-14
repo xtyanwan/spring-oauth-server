@@ -57,10 +57,10 @@
         <a href="${contextPath}/user/overview">User</a>
     </li>
     <li>
-        <a href="${contextPath}/unity/dashboard">Unity</a>
+        <a href="${contextPath}/unity/dashboard?access_token=[Access_token]">Unity</a>
     </li>
     <li>
-        <a href="${contextPath}/m/dashboard">Mobile</a>
+        <a href="${contextPath}/m/dashboard?access_token=[Access_token]">Mobile</a>
     </li>
 </ul>
 </body>

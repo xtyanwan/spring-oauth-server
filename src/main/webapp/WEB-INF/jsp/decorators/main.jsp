@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="shortcut icon" href="${contextPath}/resources/favicon.ico"/>
 
-    <title><decorator:title default=""/> - Spring Security&Oauth2 [MongoDB]</title>
+    <title><decorator:title default=""/> - SOS [MongoDB]</title>
 
     <link href="${contextPath}/resources/bootstrap.min.css" rel="stylesheet"/>
     <decorator:head/>
