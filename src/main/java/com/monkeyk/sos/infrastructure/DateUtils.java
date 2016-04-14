@@ -3,6 +3,7 @@ package com.monkeyk.sos.infrastructure;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -19,8 +20,8 @@ public abstract class DateUtils {
     private DateUtils() {
     }
 
-    public static LocalDateTime now() {
-        return LocalDateTime.now();
+    public static Date now() {
+        return new Date();
     }
 
 
@@ -28,10 +29,13 @@ public abstract class DateUtils {
         return toDateTime(date, DEFAULT_DATE_TIME_FORMAT);
     }
 
+    public static String toDateTime(Date date) {
+        return toDateTime(LocalDateTime.from(date.toInstant()), DEFAULT_DATE_TIME_FORMAT);
+    }
+
     public static String toDateTime(LocalDateTime dateTime, String pattern) {
         return dateTime.format(DateTimeFormatter.ofPattern(pattern, Locale.SIMPLIFIED_CHINESE));
     }
-
 
 
     public static String toDateText(LocalDate date, String pattern) {

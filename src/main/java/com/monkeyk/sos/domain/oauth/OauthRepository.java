@@ -13,7 +13,13 @@ public interface OauthRepository extends Repository {
 
     List<OauthClientDetails> findAllOauthClientDetails();
 
-    void updateOauthClientDetailsArchive(String clientId, boolean archive);
+    boolean updateOauthClientDetailsArchive(String clientId, boolean archive);
 
     void saveOauthClientDetails(OauthClientDetails clientDetails);
+
+    boolean removeOauthClientDetails(OauthClientDetails clientDetails);
+
+    void saveAuthorizationCode(AuthorizationCode authorizationCode);
+
+    AuthorizationCode removeAuthorizationCode(String code);
 }

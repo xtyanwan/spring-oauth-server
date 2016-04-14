@@ -6,6 +6,8 @@ import com.monkeyk.sos.domain.user.User;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author Shengzhao Li
@@ -13,6 +15,7 @@ import java.util.List;
 public class UserJsonDto implements Serializable {
 
 
+    private static final long serialVersionUID = 3323307820018705154L;
     private String guid;
     private boolean archived;
 
@@ -33,10 +36,8 @@ public class UserJsonDto implements Serializable {
         this.phone = user.phone();
         this.email = user.email();
 
-        final List<Privilege> privilegeList = user.privileges();
-        for (Privilege privilege : privilegeList) {
-            this.privileges.add(privilege.name());
-        }
+        final Set<Privilege> privilegeList = user.privileges();
+        this.privileges.addAll(privilegeList.stream().map(Privilege::name).collect(Collectors.toList()));
     }
 
     public boolean isArchived() {

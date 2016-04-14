@@ -14,9 +14,13 @@ public interface UserRepository extends Repository {
 
     void saveUser(User user);
 
-    void updateUser(User user);
+    boolean updateUser(User user);
 
     User findByUsername(String username);
+
+    List<User> findAllUsers();
+
+    boolean removeUser(User user);
 
     List<User> findUsersByUsername(String username);
 }

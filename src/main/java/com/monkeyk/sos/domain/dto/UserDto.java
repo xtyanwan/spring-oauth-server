@@ -13,11 +13,14 @@ package com.monkeyk.sos.domain.dto;
 
 import com.monkeyk.sos.domain.user.Privilege;
 import com.monkeyk.sos.domain.user.User;
+import com.monkeyk.sos.infrastructure.DateUtils;
 
 import java.io.Serializable;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * 2016/3/12
@@ -37,7 +40,7 @@ public class UserDto implements Serializable {
 
     private String createTime;
 
-    private List<Privilege> privileges = new ArrayList<>();
+    private Set<Privilege> privileges = new HashSet<>();
 
 
     public UserDto() {
@@ -51,7 +54,7 @@ public class UserDto implements Serializable {
         this.email = user.email();
 
         this.privileges = user.privileges();
-        this.createTime = user.createTime().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        this.createTime = DateUtils.toDateTime(user.createTime());
     }
 
     public String getCreateTime() {
@@ -94,19 +97,17 @@ public class UserDto implements Serializable {
         this.email = email;
     }
 
-    public List<Privilege> getPrivileges() {
+    public Set<Privilege> getPrivileges() {
         return privileges;
     }
 
-    public void setPrivileges(List<Privilege> privileges) {
+    public void setPrivileges(Set<Privilege> privileges) {
         this.privileges = privileges;
     }
 
     public static List<UserDto> toDtos(List<User> users) {
         List<UserDto> dtos = new ArrayList<>(users.size());
-        for (User user : users) {
-            dtos.add(new UserDto(user));
-        }
+        dtos.addAll(users.stream().map(UserDto::new).collect(Collectors.toList()));
         return dtos;
     }
 }

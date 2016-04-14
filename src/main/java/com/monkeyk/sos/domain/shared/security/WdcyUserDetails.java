@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author Shengzhao Li
@@ -40,10 +42,8 @@ public class WdcyUserDetails implements UserDetails {
             this.grantedAuthorities.add(new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.UNITY.name()));
             this.grantedAuthorities.add(new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.MOBILE.name()));
         } else {
-            final List<Privilege> privileges = user.privileges();
-            for (Privilege privilege : privileges) {
-                this.grantedAuthorities.add(new SimpleGrantedAuthority(ROLE_PREFIX + privilege.name()));
-            }
+            final Set<Privilege> privileges = user.privileges();
+            this.grantedAuthorities.addAll(privileges.stream().map(privilege -> new SimpleGrantedAuthority(ROLE_PREFIX + privilege.name())).collect(Collectors.toList()));
         }
     }
 
@@ -94,9 +94,6 @@ public class WdcyUserDetails implements UserDetails {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("{user=").append(user);
-        sb.append('}');
-        return sb.toString();
+        return "{user=" + user + '}';
     }
 }
