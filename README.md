@@ -1,4 +1,5 @@
 #spring-oauth-server
+MongoDB版本
 
 
 <strong>Spring与Oauth2的整合示例</strong>
@@ -14,10 +15,14 @@
  <li>Spring Security (4.0.1.RELEASE)</li>
  <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
+ <li>MongoDB (2.6.6)</li>
 </ol>
 <hr/>
 
-<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/</a></strong>
+<strong>MySQL版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/">master</a></strong>
+<br/>
+<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a></strong>
+<hr/>
 <h3>
    Oauth客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
