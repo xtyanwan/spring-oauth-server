@@ -1,7 +1,7 @@
 package com.monkeyk.sos.infrastructure;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
@@ -30,19 +30,11 @@ public abstract class DateUtils {
     }
 
     public static String toDateTime(Date date) {
-        return toDateTime(LocalDateTime.from(date.toInstant()), DEFAULT_DATE_TIME_FORMAT);
+        return toDateTime(date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime(), DEFAULT_DATE_TIME_FORMAT);
     }
 
     public static String toDateTime(LocalDateTime dateTime, String pattern) {
         return dateTime.format(DateTimeFormatter.ofPattern(pattern, Locale.SIMPLIFIED_CHINESE));
-    }
-
-
-    public static String toDateText(LocalDate date, String pattern) {
-        if (date == null || pattern == null) {
-            return null;
-        }
-        return date.format(DateTimeFormatter.ofPattern(pattern, Locale.SIMPLIFIED_CHINESE));
     }
 
 

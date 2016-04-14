@@ -14,6 +14,7 @@ package com.monkeyk.sos.infrastructure.mongo;
 
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Sort;
@@ -85,7 +86,10 @@ public class UserRepositoryMongo extends AbstractMongoSupport implements UserRep
 
     @Override
     public List<User> findUsersByUsername(String username) {
-        Query query = new Query(Criteria.where("username").is(username));
+        Query query = new Query();
+        if (StringUtils.isNotEmpty(username)) {
+            query.addCriteria(Criteria.where(username).regex("/*" + username + "/*"));
+        }
         return mongoTemplate().find(query, User.class);
     }
 }

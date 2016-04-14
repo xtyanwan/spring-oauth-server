@@ -20,7 +20,7 @@
         <fasterxml.jackson.version>2.5.4</fasterxml.jackson.version>
         <aspectj.version>1.8.6</aspectj.version>
 
-        <test.skip>false</test.skip>
+        <test.skip>true</test.skip>
     </properties>
 
     <developers>
