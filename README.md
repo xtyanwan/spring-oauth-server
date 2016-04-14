@@ -36,21 +36,19 @@ MongoDB版本
 <hr/>
 
 <p>
-<strong>如何使用?</strong>
+<strong>如何使用MongoDB版本?</strong>
 <ol>
 <li>
-项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MySql(开发用的mysql版本号为5.6)
+项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MongoDB(开发用的MongoDB版本号为2.6.6)
 </li>
 <li>
 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/repository/archive?ref=master">下载</a>(或clone)项目到本地
 </li>
 <li>
-创建MySQL数据库(如数据库名oauth2), 并运行相应的SQL脚本(脚本文件位于others/database目录),
-<br/>
-   运行脚本的顺序: initial_db.ddl -> oauth.ddl -> initial_data.ddl
+    MongoDB中创建数据库<code>spring-oauth-server</code>,并添加账号
 </li>
 <li>
-修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
+修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的MongoDB连接信息(包括username, password等)
 </li>
 <li>
 将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080);
@@ -161,9 +159,10 @@ MongoDB版本
             </p>
             <ol>
                 <li><p>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解</p></li>
-                <li><p>(138) - OAuth 'token' Restful API</p></li>
-                <li><p>(139) - User Overview/ user add/archive</p></li>
+                <li><p><del>(138) - OAuth 'token' Restful API</del></p></li>
+                <li><p><del>(139) - User Overview/ user add/archive</del></p></li>
                 <li><p>(143) - Add project API document</p></li>
+                <li><p><del>(144) - Add MongoDB branch</del></p></li>
             </ol>
             <br/>
        </li>
@@ -247,6 +246,7 @@ MongoDB版本
         <li><p><em>2016-01-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4/">0.4</a> 版本</p></li>
         <li><p><em>2016-02-19</em>        Add 0.5 version development planning</p></li>
         <li><p><em>2016-04-03</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a> branch</p></li>
+        <li><p><em>2016-04-14</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
     </ol>
 </p>
 
