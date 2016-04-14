@@ -17,6 +17,10 @@ java config版本 (developing)
 </ol>
 <hr/>
 
+<strong>MySQL版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/">master</a></strong>
+<br/>
+<strong>MongoDB版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
+<hr/>
 <h3>
    Oauth客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
