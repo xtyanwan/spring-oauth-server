@@ -1,5 +1,6 @@
 #spring-oauth-server
 java config版本 (developing)
+<strong>注意: config版本处于开发中...</strong>
 
 <strong>Spring与Oauth2的整合示例</strong>
 
