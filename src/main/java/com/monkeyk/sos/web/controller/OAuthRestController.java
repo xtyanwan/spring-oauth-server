@@ -82,7 +82,7 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
 
         TokenRequest tokenRequest = oAuth2RequestFactory.createTokenRequest(parameters, authenticatedClient);
 
-        if (clientId != null && !clientId.equals("")) {
+        if (clientId != null && !"".equals(clientId)) {
             // Only validate the client details if a client authenticated during this
             // request.
             if (!clientId.equals(tokenRequest.getClientId())) {
@@ -100,7 +100,7 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
         if (!StringUtils.hasText(grantType)) {
             throw new InvalidRequestException("Missing grant type");
         }
-        if (grantType.equals("implicit")) {
+        if ("implicit".equals(grantType)) {
             throw new InvalidGrantException("Implicit grant type not supported from token endpoint");
         }
 
@@ -163,7 +163,6 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
         LOG.info("Handling error: " + e.getClass().getSimpleName() + ", " + e.getMessage());
         return getExceptionTranslator().translate(e);
     }
-
 
 
     private boolean isRefreshTokenRequest(Map<String, String> parameters) {
