@@ -296,6 +296,11 @@
                 <a href="http://oltu.apache.org/">Apache Oltu</a>, Java版的 Oauth参考实现, 建议去了解了解
             </p>
        </li>
+       <li>
+            <p>
+                <a href="http://andaily.com/blog/?p=440">OIDC–基于OAuth2的下一代身份认证授权协议</a>
+            </p>
+       </li>
 </ul>
 
 
