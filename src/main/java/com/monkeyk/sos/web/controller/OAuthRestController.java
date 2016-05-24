@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.http.ResponseEntity;
@@ -59,7 +60,10 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
 
     @Autowired
     private ClientDetailsService clientDetailsService;
+
+    // consumerTokenServices,defaultAuthorizationServerTokenServices
     @Autowired
+    @Qualifier("defaultAuthorizationServerTokenServices")
     private AuthorizationServerTokenServices tokenServices;
     @Autowired
     private AuthorizationCodeServices authorizationCodeServices;

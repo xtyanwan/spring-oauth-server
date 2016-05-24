@@ -2,11 +2,8 @@ package com.monkeyk.sos.config;
 
 import com.monkeyk.sos.web.filter.CharacterEncodingIPFilter;
 import com.opensymphony.sitemesh.webapp.SiteMeshFilter;
-import org.springframework.util.ClassUtils;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.filter.DelegatingFilterProxy;
-import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.springframework.web.util.Log4jConfigListener;
 
 import javax.servlet.ServletContext;
@@ -21,7 +18,7 @@ import javax.servlet.ServletException;
  *
  * @author Shengzhao Li
  */
-public class ServletInitializer extends AbstractDispatcherServletInitializer {
+public class ServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
     @Override
@@ -58,15 +55,25 @@ public class ServletInitializer extends AbstractDispatcherServletInitializer {
 
     }
 
+//    @Override
+//    protected WebApplicationContext createRootApplicationContext() {
+//        return createServletApplicationContext();
+//    }
+//
+//    @Override
+//    protected WebApplicationContext createServletApplicationContext() {
+//        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+//        context.scan(ClassUtils.getPackageName(getClass()));
+//        return context;
+//    }
+
     @Override
-    protected WebApplicationContext createRootApplicationContext() {
-        return createServletApplicationContext();
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[]{ContextConfigurer.class, WebSecurityConfigurer.class, OAuth2ServerConfig.class};
     }
 
     @Override
-    protected WebApplicationContext createServletApplicationContext() {
-        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.scan(ClassUtils.getPackageName(getClass()));
-        return context;
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[]{WebMvcConfigurer.class};
     }
 }

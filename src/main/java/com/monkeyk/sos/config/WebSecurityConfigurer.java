@@ -30,6 +30,7 @@ import org.springframework.security.oauth2.provider.request.DefaultOAuth2Request
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.security.oauth2.provider.vote.ScopeVoter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.sql.DataSource;
 import java.util.Arrays;
@@ -49,10 +50,19 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserService userService;
 
+
+    @Autowired
+    public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userService);
+//        auth.inMemoryAuthentication().withUser("marissa").password("koala").roles("USER").and().withUser("paul")
+//                .password("emu").roles("USER");
+    }
+
+
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.expressionHandler(new OAuth2WebSecurityExpressionHandler());
         web.ignoring().antMatchers("/resources/**");
+        web.expressionHandler(new OAuth2WebSecurityExpressionHandler());
     }
 
     @Override
@@ -67,20 +77,22 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/oauth/**").hasAnyRole("ROLE_USER", "ROLE_UNITY", "ROLE_MOBILE")
-                .antMatchers("/**").anonymous()
+//                .antMatchers("/**").anonymous()
                 .and()
                 .exceptionHandling().accessDeniedPage("/login.jsp?authorization_error=2")
                 .and()
-                .csrf().disable()
-                .formLogin().loginPage("/login.jsp")
-                .failureUrl("/login.jsp?authentication_error=1")
-                .defaultSuccessUrl("/index.jsp")
-                .loginProcessingUrl("/login.do")
-                .and()
-                .logout().logoutUrl("/logout.do")
+                .csrf()
+                .requireCsrfProtectionMatcher(new AntPathRequestMatcher("/oauth/authorize"))
+                .disable()
+                .logout()
+                .logoutUrl("/logout.do")
                 .logoutSuccessUrl("/index.jsp")
                 .and()
-                .anonymous();
+                .formLogin()
+                .loginProcessingUrl("/login.do")
+                .failureUrl("/login.jsp?authentication_error=1")
+                .loginPage("/login.jsp")
+                .defaultSuccessUrl("/index.jsp");
 
 
     }
