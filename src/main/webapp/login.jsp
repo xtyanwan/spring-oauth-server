@@ -45,35 +45,6 @@
     </div>
 </div>
 
-<div>
-    <p>You can use the users to login as follow:</p>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Username</th>
-            <th>Password</th>
-            <th>Privileges</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>admin</td>
-            <td>admin</td>
-            <td>All privileges, allow visit [Mobile] and [Unity] resources</td>
-        </tr>
-        <tr>
-            <td>unity</td>
-            <td>unity</td>
-            <td>Only allow visit [Unity] resource, support grant_type:
-                <em>authorization_code,refresh_token,implicit</em></td>
-        </tr>
-        <tr>
-            <td>mobile</td>
-            <td>mobile</td>
-            <td>Only allow visit [Mobile] resource, support grant_type: <em>password,refresh_token</em></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+
 </body>
 </html>

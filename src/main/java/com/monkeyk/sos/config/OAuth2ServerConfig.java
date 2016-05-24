@@ -13,10 +13,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.approval.UserApprovalHandler;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
-import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 
 /**
  * 2016/4/4
@@ -26,11 +25,13 @@ import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHand
 @Configuration
 public class OAuth2ServerConfig {
 
+    private static final String UNITY_RESOURCE_ID = "unity-resource";
+    private static final String MOBILE_RESOURCE_ID = "mobile-resource";
 
     //  unity-resource
     @Configuration
     @EnableResourceServer
-    protected static class UnityResourceServerConfigurer extends ResourceServerConfigurerAdapter {
+    protected static class UnityResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
 
         @Autowired
@@ -38,26 +39,22 @@ public class OAuth2ServerConfig {
 
         @Override
         public void configure(ResourceServerSecurityConfigurer resources) {
-            resources.resourceId("unity-resource").stateless(false);
+            resources.resourceId(UNITY_RESOURCE_ID).stateless(false);
         }
 
         @Override
         public void configure(HttpSecurity http) throws Exception {
-//        final DefaultWebSecurityExpressionHandler expressionHandler = new DefaultWebSecurityExpressionHandler();
-//        expressionHandler.setExpressionParser();
 
             http.sessionManagement()
-                    .sessionCreationPolicy(SessionCreationPolicy.NEVER)
+                    .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                     .and()
                     .requestMatchers().antMatchers("/unity/**")
                     .and()
                     .authorizeRequests()
-//                .expressionHandler(expressionHandler)
                     .antMatchers("/unity/**")
-//                .access("hasRole('ROLE_UNITY') and hasRole('SCOPE_READ')")
-                    .access("#oauth2.clientHasRole('ROLE_UNITY') and #oauth2.isClient() and #oauth2.hasScope('read')")
-                    .accessDecisionManager(oauth2AccessDecisionManager)
-                    .and().csrf().disable();
+                    .access("#oauth2.hasScope('read') or (!#oauth2.isOAuth() and hasRole('ROLE_UNITY'))");
+//                    .accessDecisionManager(oauth2AccessDecisionManager)
+//                    .and().csrf().disable();
 
         }
 
@@ -67,41 +64,57 @@ public class OAuth2ServerConfig {
     //AuthorizationServer
     @Configuration
     @EnableAuthorizationServer
-    protected static class AuthorizationServerConfigurer extends AuthorizationServerConfigurerAdapter {
+    protected static class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
 //    @Autowired
 //    private DefaultTokenServices tokenServices;
+
+        @Autowired
+        private TokenStore tokenStore;
 
         @Autowired
         private UserApprovalHandler userApprovalHandler;
 
         @Autowired
         private AuthorizationCodeServices authorizationCodeServices;
-        @Autowired
-        private ClientDetailsService clientDetailsService;
-        @Autowired
-        private OAuth2AccessDeniedHandler oauth2AccessDeniedHandler;
+//        @Autowired
+//        private ClientDetailsService clientDetailsService;
+//        @Autowired
+//        private OAuth2AccessDeniedHandler oauth2AccessDeniedHandler;
 //        @Autowired
 //        private OAuth2AuthenticationEntryPoint oAuth2AuthenticationEntryPoint;
 
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-            clients.withClientDetails(clientDetailsService);
+//            clients.withClientDetails(clientDetailsService);
+            clients.inMemory().withClient("unity-client")
+                    .resourceIds(UNITY_RESOURCE_ID)
+                    .authorizedGrantTypes("authorization_code", "refresh_token", "implicit")
+                    .authorities("ROLE_UNITY")
+                    .scopes("read")
+                    .secret("unity")
+                    .and()
+                    .withClient("mobile-client")
+                    .resourceIds(MOBILE_RESOURCE_ID)
+                    .authorizedGrantTypes("password", "refresh_token")
+                    .authorities("ROLE_CLIENT")
+                    .scopes("read")
+                    .secret("mobile");
         }
 
 
         @Override
         public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-            endpoints.userApprovalHandler(userApprovalHandler)
-//                .tokenServices(tokenServices)
+            endpoints.tokenStore(tokenStore)
+                    .userApprovalHandler(userApprovalHandler)
                     .authorizationCodeServices(authorizationCodeServices);
         }
 
         @Override
         public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-            security.accessDeniedHandler(oauth2AccessDeniedHandler)
+//            security.accessDeniedHandler(oauth2AccessDeniedHandler)
 //                    .authenticationEntryPoint(oAuth2AuthenticationEntryPoint)
-                    .allowFormAuthenticationForClients();
+//                    .allowFormAuthenticationForClients();
             security.realm("spring-oauth-server_realm");
         }
 

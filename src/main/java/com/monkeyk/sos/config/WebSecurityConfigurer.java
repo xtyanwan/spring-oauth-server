@@ -66,7 +66,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/oauth/**").hasAnyRole("USER,UNITY,MOBILE")
+                .antMatchers("/oauth/**").hasAnyRole("ROLE_USER", "ROLE_UNITY", "ROLE_MOBILE")
                 .antMatchers("/**").anonymous()
                 .and()
                 .exceptionHandling().accessDeniedPage("/login.jsp?authorization_error=2")
@@ -182,7 +182,6 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 //        clientCredentialsTokenEndpointFilter.setAuthenticationManager(oauth2AuthenticationManager);
 //        return clientCredentialsTokenEndpointFilter;
 //    }
-
 
 
 }

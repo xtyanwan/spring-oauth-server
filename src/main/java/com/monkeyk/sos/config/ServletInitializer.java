@@ -60,7 +60,7 @@ public class ServletInitializer extends AbstractDispatcherServletInitializer {
 
     @Override
     protected WebApplicationContext createRootApplicationContext() {
-        return null;
+        return createServletApplicationContext();
     }
 
     @Override
