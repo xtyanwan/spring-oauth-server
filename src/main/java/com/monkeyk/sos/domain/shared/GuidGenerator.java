@@ -1,5 +1,7 @@
 package com.monkeyk.sos.domain.shared;
 
+import org.springframework.security.oauth2.common.util.RandomValueStringGenerator;
+
 import java.util.UUID;
 
 /**
@@ -7,6 +9,7 @@ import java.util.UUID;
  */
 public abstract class GuidGenerator {
 
+    private static RandomValueStringGenerator defaultClientSecretGenerator = new RandomValueStringGenerator(32);
 
     /**
      * private constructor
@@ -16,5 +19,10 @@ public abstract class GuidGenerator {
 
     public static String generate() {
         return UUID.randomUUID().toString().replaceAll("-", "");
+    }
+
+
+    public static String generateClientSecret() {
+        return defaultClientSecretGenerator.generate();
     }
 }

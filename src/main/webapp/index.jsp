@@ -32,13 +32,17 @@
         <li>
             <p>
                 菜单 Unity 与 Mobile 需要Oauth 验证后才能访问(即受保护的resource); <br/>
-                Unity 需要 [ROLE_UNITY] 权限, Mobile 需要 [ROLE_MOBILE] 权限.
+                Unity 需要 [ROLE_UNITY] 权限(resourceId:
+                <mark>unity-resource</mark>
+                ), Mobile 需要 [ROLE_MOBILE] 权限(resourceId:
+                <mark>mobile-resource</mark>
+                ).
             </p>
         </li>
         <li>
             <p>
                 在使用之前, 建议先了解OAuth2支持的5类<code>grant_type</code>, 请访问 <a href="https://andaily.com/blog/?p=103"
-                                                                        target="_blank">https://andaily.com/blog/?p=103</a>
+                                                                       target="_blank">https://andaily.com/blog/?p=103</a>
             </p>
         </li>
         <li>
