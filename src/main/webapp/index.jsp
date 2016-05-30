@@ -63,5 +63,19 @@
         <a href="${contextPath}/m/dashboard">Mobile</a>
     </li>
 </ul>
+<div class="well well-sm">
+    <p>
+        <strong>说明</strong>: Unity与Mobile菜单需要先获取到<code>access_token</code>后才能正常访问; 可以尝试在URL后面任意添加access_token参数值试试效果,
+        <br/>
+        如: <a href="${contextPath}/m/dashboard?access_token=i_am_testing_access_token">${contextPath}/m/dashboard?access_token=i_am_testing_access_token</a>
+    </p>
+
+    <p>
+        请求受保护的资源时传递
+        <mark>Access Token</mark>
+        有两种方式, 方式一在URL参数中添加<code>access_token</code>, 方式二在请求的Header中添加 <em>Authorization</em>, 其值为 <em>bearer
+        your_access_token</em>
+    </p>
+</div>
 </body>
 </html>

@@ -19,6 +19,12 @@
     <title><decorator:title default=""/> - Spring Security&Oauth2</title>
 
     <link href="${contextPath}/resources/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial;
+        }
+    </style>
+
     <decorator:head/>
 
 </head>
