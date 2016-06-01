@@ -327,7 +327,7 @@
                         <mark>application/json</mark>
                     </p>
                     <div>
-                        请求参数说明:
+                        请求Body参数说明:
                         <table class="table table-bordered">
                             <thead>
                             <tr>
@@ -376,11 +376,11 @@
                             </tr>
                             </tbody>
                         </table>
-                        请求示例:
+                        请求Body示例:
                         <p>
                             <code>{"client_id":"test1234","client_secret":"test1234","grant_type":"password","scope":"read","username":"mobile","password":"mobile"}</code>
                         </p>
-
+                        或
                         <p>
                             <code>{"client_id":"test1234","client_secret":"test1234","grant_type":"password","scope":"read"}</code>
                         </p>
@@ -404,6 +404,91 @@
                                 异常 [401]<br/>
                                 <mark>
                                     {"error":"invalid_grant","error_description":"Bad credentials"}
+                                </mark>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="well well-sm" id="refreshToken">
+            <h3>刷新access_token (grant_type=refresh_token)
+                <small class="badge">public</small>
+            </h3>
+
+            <p class="text-muted">用于在access_token要过期时换取新的access_token (grant_type需要有refresh_token)</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>
+                        请求URI: <code>/oauth/token</code> <span
+                            class="label label-warning">POST</span>
+                    </p>
+
+                    <div>
+                        请求参数说明:
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>参数名</th>
+                                <th>参数值</th>
+                                <th>必须?</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>client_id</td>
+                                <td>{client_id}</td>
+                                <td>是</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>client_secret</td>
+                                <td>{client_secret}</td>
+                                <td>是</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>grant_type</td>
+                                <td>refresh_token</td>
+                                <td>是</td>
+                                <td>固定值</td>
+                            </tr>
+                            <tr>
+                                <td>refresh_token</td>
+                                <td>{refresh_token}</td>
+                                <td>是</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        请求示例:
+                        <p>
+                            <code>http://localhost:8080/spring-oauth-server/oauth/token?client_id=test1234&client_secret=test1234&grant_type=refresh_token&refresh_token=1156ebfe-e303-4572-9fb5-4459a5d46610</code>
+                        </p>
+
+                    </div>
+                    <br/>
+
+                    <strong>响应</strong>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>
+                                正常 [200]<br/>
+                                <mark>
+                                    {"access_token":"b12cace6-7ce4-4fa8-b127-cf537d15b213","token_type":"bearer","refresh_token":"2b2de701-53e7-4b57-8301-e4a06ee49698","expires_in":43199,"scope":"read"}
+                                </mark>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>
+                                异常 [401]<br/>
+                                <mark>
+                                    {"error":"invalid_grant","error_description":"Invalid refresh token:
+                                    1156ebfe-e303-4572-9fb5-4459a5d46610"}
                                 </mark>
                             </p>
                         </li>
