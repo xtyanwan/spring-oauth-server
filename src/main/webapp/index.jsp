@@ -66,15 +66,36 @@
 菜单
 <ul>
     <li>
-        <a href="${contextPath}/user/overview">User</a>
+        <p>
+            <a href="resources/api/SOS_API-0.5.html" target="_blank">API</a> <span
+                class="text-muted">- 查看提供的API文档</span>
+        </p>
     </li>
     <li>
-        <a href="${contextPath}/unity/dashboard">Unity</a>
+        <p>
+            <a href="client_details">client_details</a> <span class="text-muted">- 管理ClientDetails</span>
+        </p>
     </li>
     <li>
-        <a href="${contextPath}/m/dashboard">Mobile</a>
+        <p>
+            <a href="${contextPath}/user/overview">User</a> <span class="text-muted">- 管理User</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="${contextPath}/unity/dashboard">Unity</a> <span class="text-muted">- Unity 资源(resource), 需要具有 [ROLE_UNITY] 权限(resourceId:
+                <mark>unity-resource</mark>才能访问</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="${contextPath}/m/dashboard">Mobile</a> <span class="text-muted">- Mobile资源(resource), 需要具有 [ROLE_MOBILE] 权限(resourceId:
+                <mark>mobile-resource</mark>才能访问</span>
+        </p>
     </li>
 </ul>
+<br/>
+
 <div class="well well-sm">
     <p>
         <strong>说明</strong>: Unity与Mobile菜单需要先获取到<code>access_token</code>后才能正常访问; 可以尝试在URL后面任意添加access_token参数值试试效果,
