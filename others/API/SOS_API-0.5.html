@@ -378,7 +378,11 @@
                         </table>
                         请求示例:
                         <p>
-                            <code>http://localhost:8080/spring-oauth-server/oauth/token?client_id=test1234&client_secret=test1234&grant_type=client_credentials&scope=read</code>
+                            <code>{"client_id":"test1234","client_secret":"test1234","grant_type":"password","scope":"read","username":"mobile","password":"mobile"}</code>
+                        </p>
+
+                        <p>
+                            <code>{"client_id":"test1234","client_secret":"test1234","grant_type":"password","scope":"read"}</code>
                         </p>
 
                     </div>
@@ -391,7 +395,7 @@
                             <p>
                                 正常 [200]<br/>
                                 <mark>
-                                    {"access_token":"e5ea7620-5459-4d53-a7a0-6888bbb76f62","token_type":"bearer","expires_in":43199,"scope":"read"}
+                                    {"access_token":"e2996930-8398-44fd-8de5-7d1b1624ced7","token_type":"bearer","refresh_token":"2b2de701-53e7-4b57-8301-e4a06ee49698","expires_in":43008,"scope":"read"}
                                 </mark>
                             </p>
                         </li>
@@ -399,7 +403,7 @@
                             <p>
                                 异常 [401]<br/>
                                 <mark>
-                                    &lt;oauth&gt;&lt;error_description&gt;Bad client credentials&lt;/error_description&gt;&lt;error&gt;invalid_client&lt;/error&gt;&lt;/oauth&gt;
+                                    {"error":"invalid_grant","error_description":"Bad credentials"}
                                 </mark>
                             </p>
                         </li>
