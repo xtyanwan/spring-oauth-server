@@ -13,7 +13,9 @@
 
 </head>
 <body>
-<h2>Spring Security&Oauth2 is work!</h2>
+<h2>Spring Security&Oauth2
+    <small class="badge" title="Version">0.5</small>
+</h2>
 
 <p>
     <a href="${contextPath}/login.jsp">Login</a>
