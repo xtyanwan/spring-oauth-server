@@ -156,13 +156,13 @@
             <p>
                 Version: <strong>0.5</strong> [planning]
                 <br/>
-                Date: 2016-02-19 / ------
+                Date: 2016-02-19 / 2016-06-02
             </p>
             <ol>
-                <li><p>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解</p></li>
+                <li><p><del>(118) - Add java-config(零配置) 的支持, 以及启用 新的注解</del></p></li>
                 <li><p><del>(138) - OAuth 'token' Restful API</del></p></li>
                 <li><p><del>(139) - User Overview/ user add/archive</del></p></li>
-                <li><p>(143) - Add project API document</p></li>
+                <li><p><del>(143) - Add project API document</del></p></li>
                 <li><p><del>(144) - Add MongoDB branch</del></p></li>
             </ol>
             <br/>
@@ -248,6 +248,7 @@
         <li><p><em>2016-02-19</em>        Add 0.5 version development planning</p></li>
         <li><p><em>2016-04-03</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a> branch</p></li>
         <li><p><em>2016-04-14</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
+        <li><p><em>2016-06-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.5/">0.5</a> 版本</p></li>
     </ol>
 </p>
 
