@@ -28,8 +28,8 @@
             <li class="list-group-item"><a href="#getTokenCred">获取access_token (grant_type=client_credentials)</a></li>
             <li class="list-group-item"><a href="#getTokenRest">获取access_token (Restful API)</a></li>
             <li class="list-group-item"><a href="#refreshToken">刷新access_token (grant_type=refresh_token)</a></li>
-            <li class="list-group-item"><a href="#">获取当前用户信息 (Unity)</a></li>
-            <li class="list-group-item"><a href="#">获取当前用户信息 (Mobile)</a></li>
+            <li class="list-group-item"><a href="#userInfoUnity">获取当前用户信息 (ROLE_UNITY)</a></li>
+            <li class="list-group-item"><a href="#userInfoMobile">获取当前用户信息 (ROLE_MOBILE)</a></li>
         </ul>
     </div>
     <div class="col-md-9">
@@ -489,6 +489,130 @@
                                 <mark>
                                     {"error":"invalid_grant","error_description":"Invalid refresh token:
                                     1156ebfe-e303-4572-9fb5-4459a5d46610"}
+                                </mark>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="well well-sm" id="userInfoUnity">
+            <h3>获取当前用户信息 (ROLE_UNITY)</h3>
+
+            <p class="text-muted">使用access_token获取用户信息, 需要有 ROLE_UNITY 权限</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>
+                        请求URI: <code>/unity/user_info</code> <span
+                            class="label label-info">GET</span>
+                    </p>
+
+                    <div>
+                        请求参数说明:
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>参数名</th>
+                                <th>参数值</th>
+                                <th>必须?</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="4">无</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        请求示例:
+                        <p>
+                            <code>http://localhost:8080/spring-oauth-server/unity/user_info?access_token=b12cace6-7ce4-4fa8-b127-cf537d15b213</code>
+                        </p>
+
+                    </div>
+                    <br/>
+
+                    <strong>响应</strong>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>
+                                正常 [200]<br/>
+                                <mark>
+                                    {"guid":"55b713df1c6f423e842ad68668523c49","archived":false,"username":"unity","phone":"","email":"unity@wdcy.cc","privileges":["UNITY"]}
+                                </mark>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>
+                                异常 [401]<br/>
+                                <mark>
+                                    &lt;oauth&gt;&lt;error_description&gt;Invalid access token:
+                                    2c612eb7-a22b-45f0-8b2e-cd6f9e3667722&lt;/error_description&gt;&lt;error&gt;invalid_token&lt;/error&gt;&lt;/oauth&gt;
+                                </mark>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="well well-sm" id="userInfoMobile">
+            <h3>获取当前用户信息 (ROLE_MOBILE)</h3>
+
+            <p class="text-muted">使用access_token获取用户信息, 需要有 ROLE_MOBILE 权限</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>
+                        请求URI: <code>/m/user_info</code> <span
+                            class="label label-info">GET</span>
+                    </p>
+
+                    <div>
+                        请求参数说明:
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>参数名</th>
+                                <th>参数值</th>
+                                <th>必须?</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="4">无</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        请求示例:
+                        <p>
+                            <code>http://localhost:8080/spring-oauth-server/m/user_info?access_token=b12cace6-7ce4-4fa8-b127-cf537d15b213</code>
+                        </p>
+
+                    </div>
+                    <br/>
+
+                    <strong>响应</strong>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>
+                                正常 [200]<br/>
+                                <mark>
+                                    {"guid":"612025cb3f964a64a48bbdf77e53c2c1","archived":false,"username":"mobile","phone":"","email":"mobile@wdcy.cc","privileges":["MOBILE"]}
+                                </mark>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>
+                                异常 [401]<br/>
+                                <mark>
+                                    &lt;oauth&gt;&lt;error_description&gt;Invalid access token:
+                                    2c612eb7-a22b-45f0-8b2e-cd6f9e3667722&lt;/error_description&gt;&lt;error&gt;invalid_token&lt;/error&gt;&lt;/oauth&gt;
                                 </mark>
                             </p>
                         </li>
