@@ -46,7 +46,7 @@
 </div>
 
 <div>
-    <p>You can use the users to login as follow:</p>
+    <p>你可以使用以下几个初始的账号进行登录:</p>
     <table class="table table-bordered">
         <thead>
         <tr>
