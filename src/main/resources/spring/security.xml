@@ -34,6 +34,12 @@
         <csrf disabled="true"/>
     </http>
 
+    <beans:bean id="clientCredentialsTokenEndpointFilter"
+                class="org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter">
+        <beans:property name="authenticationManager" ref="oauth2AuthenticationManager"/>
+    </beans:bean>
+
+
     <!--unity http configuration-->
     <http pattern="/unity/**" create-session="never" entry-point-ref="oauth2AuthenticationEntryPoint"
           access-decision-manager-ref="oauth2AccessDecisionManager" use-expressions="false">
@@ -57,11 +63,6 @@
         <access-denied-handler ref="oauth2AccessDeniedHandler"/>
         <csrf disabled="true"/>
     </http>
-
-    <beans:bean id="clientCredentialsTokenEndpointFilter"
-                class="org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter">
-        <beans:property name="authenticationManager" ref="oauth2AuthenticationManager"/>
-    </beans:bean>
 
     <!--unity resource server filter-->
     <oauth2:resource-server id="unityResourceServer" resource-id="unity-resource" token-services-ref="tokenServices"/>
