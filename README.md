@@ -154,7 +154,7 @@
 <ul>
        <li>
             <p>
-                Version: <strong>0.5</strong> [planning]
+                Version: <strong>0.5</strong> [finished]
                 <br/>
                 Date: 2016-02-19 / 2016-06-02
             </p>
