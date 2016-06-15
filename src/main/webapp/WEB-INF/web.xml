@@ -31,6 +31,42 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--GzipFilter -->
+    <filter>
+        <filter-name>gzipFilter</filter-name>
+        <filter-class>
+            net.sf.ehcache.constructs.web.filter.GzipFilter
+        </filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.css</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.png</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.gif</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.jpeg</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.jpg</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>gzipFilter</filter-name>
+        <url-pattern>*.js</url-pattern>
+    </filter-mapping>
+
 
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>
