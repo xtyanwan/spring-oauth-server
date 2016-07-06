@@ -261,13 +261,14 @@
         <li><p><em>2016-04-03</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a> branch</p></li>
         <li><p><em>2016-04-14</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
         <li><p><em>2016-06-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.5/">0.5</a> 版本</p></li>
+        <li><p><em>2016-07-06</em>        Add 0.6 version planning</p></li>
     </ol>
 </p>
 
 
 <hr/>
 <strong>更多资源</strong>
-<p>以下是在学习工作中收集的更多关于Oauth的资源,对深入理解与运用Oauth有帮助</p>
+<p>以下是在学习工作中收集的更多关于OAuth的资源,对深入理解与运用OAuth有帮助</p>
 <ul>
        <li>
             <p>

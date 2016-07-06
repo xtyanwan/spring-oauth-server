@@ -6,10 +6,10 @@
 
     <groupId>com.monkeyk</groupId>
     <artifactId>spring-oauth-server</artifactId>
-    <version>0.5</version>
+    <version>0.6-beta</version>
     <name>spring-oauth-server</name>
     <packaging>war</packaging>
-    <description>Spring Oauth Server</description>
+    <description>Spring OAuth Server</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -62,16 +62,11 @@
                     <warSourceExcludes>*/classes/spring-oauth-server.properties</warSourceExcludes>
                     <packagingExcludes>*/classes/spring-oauth-server.properties</packagingExcludes>
                     <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>
-                            <Implementation-BuildNumber>
-                                ${project.version}
-                            </Implementation-BuildNumber>
-                            <Implementation-Title>
-                                ${project.name}
-                            </Implementation-Title>
-                            <Implementation-Version>
-                                ${project.version}
-                            </Implementation-Version>
+                            <Implementation-BuildNumber>${project.version}</Implementation-BuildNumber>
+                            <Implementation-Title>${project.name}</Implementation-Title>
+                            <Implementation-Version>${project.version}</Implementation-Version>
                         </manifestEntries>
                     </archive>
                 </configuration>
