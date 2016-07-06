@@ -13,8 +13,8 @@
 
 </head>
 <body>
-<h2>Spring Security&Oauth2
-    <small class="badge" title="Version">0.5</small>
+<h2>Spring Security&OAuth2
+    <small class="badge" title="Version">0.6-beta</small>
 </h2>
 
 <p>
@@ -28,12 +28,12 @@
     <ol>
         <li>
             <p>
-                菜单 User 是不需要Oauth 验证即可访问的(即公开的resource); 用于管理用户信息(添加,删除等).
+                菜单 User 是不需要OAuth 验证即可访问的(即公开的resource); 用于管理用户信息(添加,删除等).
             </p>
         </li>
         <li>
             <p>
-                菜单 Unity 与 Mobile 需要Oauth 验证后才能访问(即受保护的resource); <br/>
+                菜单 Unity 与 Mobile 需要OAuth 验证后才能访问(即受保护的resource); <br/>
                 Unity 需要 [ROLE_UNITY] 权限(resourceId:
                 <mark>unity-resource</mark>
                 ), Mobile 需要 [ROLE_MOBILE] 权限(resourceId:
