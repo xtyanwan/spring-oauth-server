@@ -112,10 +112,10 @@
 <strong>功能扩展</strong>
 <ol>
     <li>
-        <code>oauth_code存入数据库的配置</code>,  请下载文件 <a href="https://git.oschina.net/shengzhao/spring-oauth-server/attach_files/download?i=4858&u=http%3A%2F%2Ffiles.git.oschina.net%2Fgroup1%2FM00%2F00%2F31%2FcHwGbFQXzC-AeseiAAfnNw23X70580.jpg%3Ftoken%3De81934223d99a0fddc02639017b568a6%26ts%3D1421151523%26filename%3Doauth_code%E5%AD%98%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%85%8D%E7%BD%AE.jpg">oauth_code存入数据库的配置.jpg</a>
+        <code>oauth_code存入数据库的配置</code>,  请下载文件 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">oauth_code存入数据库的配置.jpg</a>
     </li>
     <li>
-        <code>改变token过期的时间的配置</code>, 请下载文件<a href="https://git.oschina.net/shengzhao/spring-oauth-server/attach_files/download?i=6589&u=http%3A%2F%2Ffiles.git.oschina.net%2Fgroup1%2FM00%2F00%2F43%2FcHwGbFRpuk6ANN2CAANJ-Rkiz_c649.jpg%3Ftoken%3D686e6d5b1e9ab04446dbfeb977c3b7a1%26ts%3D1421151523%26filename%3D%E6%94%B9%E5%8F%98token%E8%BF%87%E6%9C%9F%E7%9A%84%E6%97%B6%E9%97%B4%E7%9A%84%E9%85%8D%E7%BD%AE.jpg">改变token过期的时间的配置.jpg</a>
+        <code>改变token过期的时间的配置</code>, 请下载文件<a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">改变token过期的时间的配置.jpg</a>
     </li>
     <li>
         <code>自定义 grant_type</code>, 默认情况支持的grant_type包括 [password,authorization_code,refresh_token,implicit], 若不需要其中的某些grant_type,
@@ -152,6 +152,18 @@
 项目的开发管理使用开源项目 <a href="http://git.oschina.net/mkk/andaily-developer">andaily-developer</a>.
 </p>
 <ul>
+       <li>
+            <p>
+                Version: <strong>0.6</strong> [planning]
+                <br/>
+                Date: 2016-07-07 / ---
+            </p>
+            <ol>
+                <li><p>(150) - 修改OAUTH错误时返回JSON数据</p></li>
+                <li><p>(151) - 数据添加Ehcache缓存支持</p></li>
+            </ol>
+            <br/>
+       </li>
        <li>
             <p>
                 Version: <strong>0.5</strong> [finished]
