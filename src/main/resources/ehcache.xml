@@ -12,12 +12,61 @@
     <defaultCache
             maxElementsInMemory="10000"
             eternal="false"
-            timeToIdleSeconds="120"
-            timeToLiveSeconds="120"
+            timeToIdleSeconds="240"
+            timeToLiveSeconds="240"
             overflowToDisk="true"
             maxElementsOnDisk="10000000"
             diskPersistent="false"
-            diskExpiryThreadIntervalSeconds="120"
+            diskExpiryThreadIntervalSeconds="240"
             memoryStoreEvictionPolicy="LRU"/>
+
+
+    <cache name="clientDetailsCache"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="240"
+           timeToLiveSeconds="240"
+           overflowToDisk="true"
+           maxElementsOnDisk="10000000"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="240"
+           memoryStoreEvictionPolicy="LRU"/>
+
+
+    <cache name="accessTokenCache"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="240"
+           timeToLiveSeconds="240"
+           overflowToDisk="true"
+           maxElementsOnDisk="10000000"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="240"
+           memoryStoreEvictionPolicy="LRU"/>
+
+
+    <cache name="authorizationCodeCache"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="240"
+           timeToLiveSeconds="240"
+           overflowToDisk="true"
+           maxElementsOnDisk="10000000"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="240"
+           memoryStoreEvictionPolicy="LRU"/>
+
+
+    <cache name="userCache"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="240"
+           timeToLiveSeconds="240"
+           overflowToDisk="true"
+           maxElementsOnDisk="10000000"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="240"
+           memoryStoreEvictionPolicy="LRU"/>
+
 
 </ehcache>
