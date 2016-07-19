@@ -362,7 +362,7 @@
 
 <hr/>
 <p>
- 关注更多我的开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
+ 关注更多我的开源项目请访问 <a href="https://andaily.com/my_projects.html">https://andaily.com/my_projects.html</a>
 </p>
 
 <p>
@@ -370,7 +370,7 @@
 </p>
 <p>
  <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
- 或访问 <a href="http://monkeyk.com/kso/" target="_blank">http://monkeyk.com/kso/</a>
+ 或访问 <a href="https://monkeyk.com/kso/" target="_blank">https://monkeyk.com/kso/</a>
 </p>
 <p>
     <img src="http://77g1is.com1.z0.glb.clouddn.com/wechat_qrcode.jpg"/>
