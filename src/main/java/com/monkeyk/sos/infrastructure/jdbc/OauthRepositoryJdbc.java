@@ -13,7 +13,10 @@ package com.monkeyk.sos.infrastructure.jdbc;
 
 import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import com.monkeyk.sos.domain.oauth.OauthRepository;
+import com.monkeyk.sos.infrastructure.CacheConstants;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -28,7 +31,6 @@ import java.util.List;
 public class OauthRepositoryJdbc implements OauthRepository {
 
 
-
     private static OauthClientDetailsRowMapper oauthClientDetailsRowMapper = new OauthClientDetailsRowMapper();
 
 
@@ -37,6 +39,7 @@ public class OauthRepositoryJdbc implements OauthRepository {
 
 
     @Override
+    @Cacheable(value = CacheConstants.CLIENT_DETAILS_CACHE, key = "#clientId")
     public OauthClientDetails findOauthClientDetails(String clientId) {
         final String sql = " select * from oauth_client_details where  client_id = ? ";
         final List<OauthClientDetails> list = this.jdbcTemplate.query(sql, new Object[]{clientId}, oauthClientDetailsRowMapper);
@@ -50,6 +53,7 @@ public class OauthRepositoryJdbc implements OauthRepository {
     }
 
     @Override
+    @CacheEvict(value = CacheConstants.CLIENT_DETAILS_CACHE, key = "#clientId")
     public void updateOauthClientDetailsArchive(String clientId, boolean archive) {
         final String sql = " update oauth_client_details set archived = ? where client_id = ? ";
         this.jdbcTemplate.update(sql, archive, clientId);

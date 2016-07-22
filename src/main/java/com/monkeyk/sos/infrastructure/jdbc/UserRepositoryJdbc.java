@@ -14,8 +14,11 @@ package com.monkeyk.sos.infrastructure.jdbc;
 import com.monkeyk.sos.domain.user.Privilege;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
+import com.monkeyk.sos.infrastructure.CacheConstants;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -93,6 +96,7 @@ public class UserRepositoryJdbc implements UserRepository {
     }
 
     @Override
+    @CacheEvict(value = CacheConstants.USER_CACHE, key = "#user.username()")
     public void updateUser(final User user) {
         final String sql = " update user_ set username = ?, password = ?, phone = ?,email = ? where guid = ? ";
         this.jdbcTemplate.update(sql, ps -> {
@@ -107,6 +111,7 @@ public class UserRepositoryJdbc implements UserRepository {
     }
 
     @Override
+    @Cacheable(value = CacheConstants.USER_CACHE, key = "#username")
     public User findByUsername(String username) {
         final String sql = " select * from user_ where username = ? and archived = 0 ";
         final List<User> list = this.jdbcTemplate.query(sql, new Object[]{username}, userRowMapper);
