@@ -1,28 +1,15 @@
-/*
- * Copyright (c) 2015 MONKEYK Information Technology Co. Ltd
- * www.monkeyk.com
- * All rights reserved.
- *
- * This software is the confidential and proprietary information of
- * MONKEYK Information Technology Co. Ltd ("Confidential Information").
- * You shall not disclose such Confidential Information and shall use
- * it only in accordance with the terms of the license agreement you
- * entered into with MONKEYK Information Technology Co. Ltd.
- */
 package com.monkeyk.sos.infrastructure.jdbc;
 
 import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import com.monkeyk.sos.domain.oauth.OauthRepository;
-
-import static com.monkeyk.sos.infrastructure.CacheConstants.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
+import static com.monkeyk.sos.infrastructure.CacheConstants.CLIENT_DETAILS_CACHE;
 
 /**
  * 2015/11/16
@@ -41,7 +28,6 @@ public class OauthRepositoryJdbc implements OauthRepository {
 
 
     @Override
-    @Cacheable(value = CLIENT_DETAILS_CACHE, key = "#clientId")
     public OauthClientDetails findOauthClientDetails(String clientId) {
         final String sql = " select * from oauth_client_details where  client_id = ? ";
         final List<OauthClientDetails> list = this.jdbcTemplate.query(sql, new Object[]{clientId}, oauthClientDetailsRowMapper);

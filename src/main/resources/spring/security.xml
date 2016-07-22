@@ -123,8 +123,12 @@
     </beans:bean>
 
 
+    <!--<beans:bean id="jdbcAuthorizationCodeServices"-->
+    <!--class="org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices">-->
+    <!--<beans:constructor-arg index="0" ref="dataSource"/>-->
+    <!--</beans:bean>-->
     <beans:bean id="jdbcAuthorizationCodeServices"
-                class="org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices">
+                class="com.monkeyk.sos.infrastructure.jdbc.SOSAuthorizationCodeServices">
         <beans:constructor-arg index="0" ref="dataSource"/>
     </beans:bean>
 

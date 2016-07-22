@@ -1,8 +1,15 @@
 package com.monkeyk.sos.domain.oauth;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.oauth2.common.exceptions.InvalidClientException;
+import org.springframework.security.oauth2.provider.ClientDetails;
+import org.springframework.security.oauth2.provider.NoSuchClientException;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 
 import javax.sql.DataSource;
+
+import static com.monkeyk.sos.infrastructure.CacheConstants.CLIENT_DETAILS_CACHE;
 
 /**
  * Add  <i>archived = 0</i> condition
@@ -22,4 +29,28 @@ public class CustomJdbcClientDetailsService extends JdbcClientDetailsService {
     }
 
 
+    @Override
+    @Cacheable(value = CLIENT_DETAILS_CACHE, key = "#clientId")
+    public ClientDetails loadClientByClientId(String clientId) throws InvalidClientException {
+        return super.loadClientByClientId(clientId);
+    }
+
+
+    @Override
+    @CacheEvict(value = CLIENT_DETAILS_CACHE, key = "#clientDetails.getClientId()")
+    public void updateClientDetails(ClientDetails clientDetails) throws NoSuchClientException {
+        super.updateClientDetails(clientDetails);
+    }
+
+    @Override
+    @CacheEvict(value = CLIENT_DETAILS_CACHE, key = "#clientId")
+    public void updateClientSecret(String clientId, String secret) throws NoSuchClientException {
+        super.updateClientSecret(clientId, secret);
+    }
+
+    @Override
+    @CacheEvict(value = CLIENT_DETAILS_CACHE, key = "#clientId")
+    public void removeClientDetails(String clientId) throws NoSuchClientException {
+        super.removeClientDetails(clientId);
+    }
 }
