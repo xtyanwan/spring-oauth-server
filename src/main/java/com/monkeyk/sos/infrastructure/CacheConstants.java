@@ -12,22 +12,27 @@ package com.monkeyk.sos.infrastructure;
 public abstract class CacheConstants {
 
     /**
-     * client Details Cache
+     * client Details Cache, key is clientId
      */
     public static final String CLIENT_DETAILS_CACHE = "clientDetailsCache";
 
     /**
-     * access Token Cache
+     * access Token Cache, key is token
      */
     public static final String ACCESS_TOKEN_CACHE = "accessTokenCache";
 
     /**
-     * authorization Code Cache
+     * OAuth2Authentication Cache, key is token
+     */
+    public static final String OAUTH2_AUTHENTICATION_CACHE = "OAuth2AuthenticationCache";
+
+    /**
+     * authorization Code Cache, key is code
      */
     public static final String AUTHORIZATION_CODE_CACHE = "authorizationCodeCache";
 
     /**
-     * user Cache
+     * user Cache, key is username
      */
     public static final String USER_CACHE = "userCache";
 

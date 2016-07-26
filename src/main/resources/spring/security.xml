@@ -92,7 +92,7 @@
 
     <!--Config token services-->
     <!--<beans:bean id="tokenStore" class="org.springframework.security.oauth2.provider.token.InMemoryTokenStore"/>-->
-    <beans:bean id="tokenStore" class="org.springframework.security.oauth2.provider.token.store.JdbcTokenStore">
+    <beans:bean id="tokenStore" class="com.monkeyk.sos.domain.oauth.CustomJdbcTokenStore">
         <beans:constructor-arg index="0" ref="dataSource"/>
     </beans:bean>
 
