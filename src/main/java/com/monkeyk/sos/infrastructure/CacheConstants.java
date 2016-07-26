@@ -22,9 +22,9 @@ public abstract class CacheConstants {
     public static final String ACCESS_TOKEN_CACHE = "accessTokenCache";
 
     /**
-     * OAuth2Authentication Cache, key is token
+     * refresh Token Cache, key is token
      */
-    public static final String OAUTH2_AUTHENTICATION_CACHE = "OAuth2AuthenticationCache";
+    public static final String REFRESH_TOKEN_CACHE = "refreshTokenCache";
 
     /**
      * authorization Code Cache, key is code

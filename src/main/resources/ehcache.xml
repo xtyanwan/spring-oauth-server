@@ -70,4 +70,16 @@
            memoryStoreEvictionPolicy="LRU"/>
 
 
+    <cache name="refreshTokenCache"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="240"
+           timeToLiveSeconds="240"
+           overflowToDisk="true"
+           maxElementsOnDisk="10000000"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="240"
+           memoryStoreEvictionPolicy="LRU"/>
+
+
 </ehcache>
