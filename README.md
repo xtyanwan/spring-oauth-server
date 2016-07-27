@@ -15,6 +15,7 @@
  <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
  <li>MySQL (5.6.23)</li>
+ <li>EhCache (2.0.4)</li>
 </ol>
 <hr/>
 
@@ -159,7 +160,7 @@
                 Date: 2016-07-07 / ---
             </p>
             <ol>
-                <li><p>(150) - 修改OAUTH错误时返回JSON数据</p></li>
+                <li><p><del>(150) - 修改OAUTH错误时返回JSON数据</del></p></li>
                 <li><p>(151) - 数据添加Ehcache缓存支持</p></li>
             </ol>
             <br/>
