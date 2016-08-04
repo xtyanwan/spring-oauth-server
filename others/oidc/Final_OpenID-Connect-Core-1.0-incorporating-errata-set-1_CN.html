@@ -1352,24 +1352,23 @@
 <a name="rfc.section.1.3"></a>
 
 <h3>1.3.&nbsp;
-    Overview</h3>
+    概述</h3>
 
-<p>The OpenID Connect protocol, in abstract, follows the following
-    steps.
+<p>OpenID Connect 协议可以抽象为以下几个步骤
 </p>
 
 <p>
 </p>
 <ol class="text">
-    <li>The RP (Client) sends a request to the OpenID Provider (OP).
+    <li>RP (客户端) 发送请求给 OpenID 提供商 (OP).
     </li>
-    <li>The OP authenticates the End-User and obtains authorization.
+    <li>提供商(OP) 认证最终用户(End-User) 并获取授权.
     </li>
-    <li>The OP responds with an ID Token and usually an Access Token.
+    <li>提供商(OP) 响应一个 ID Token 与一个 Access Token.
     </li>
-    <li>The RP can send a request with the Access Token to the UserInfo Endpoint.
+    <li> RP 使用 Access Token 发送一个请求给 UserInfo Endpoint.
     </li>
-    <li>The UserInfo Endpoint returns Claims about the End-User.
+    <li>UserInfo Endpoint 返回有关最终用户(End-User)的 Claims.
     </li>
 </ol>
 <p>
@@ -1377,7 +1376,7 @@
 </p>
 
 <p>
-    These steps are illustrated in the following diagram:
+    这些步骤如下图所示:
 
 </p>
 
