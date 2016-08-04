@@ -925,21 +925,15 @@
 </p>
 
 <p>
-    OpenID Connect implements authentication as an extension to the
-    OAuth 2.0 authorization process.
-    Use of this extension is requested by Clients by including
-    the <tt>openid</tt> scope value
-    in the Authorization Request.
-    Information about the authentication performed is returned
-    in a <a class="info" href="#JWT">JSON Web Token
-    (JWT)<span> (</span><span class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” July&nbsp;2014.</span><span>)</span></a>
+    OpenID Connect在OAuth 2.0授权流程的基础上,扩展实现了认证功能.
+    在客户端(Clients)发起授权请求时扩展了请求的范围(scope)值包含<tt>openid</tt>.
+    认证执行返回的信息是一个<a class="info" href="#JWT">JSON Web Token
+    (JWT)<span> (</span><span class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” 2014年7月.</span><span>)</span></a>
     [JWT]
-    called an ID Token (see <a class="info" href="#IDToken">Section&nbsp;2<span> (</span><span
+    名叫 ID Token (详见 <a class="info" href="#IDToken">第2节<span> (</span><span
         class="info">ID Token</span><span>)</span></a>).
-    OAuth 2.0 Authentication Servers implementing OpenID Connect
-    are also referred to as OpenID Providers (OPs).
-    OAuth 2.0 Clients using OpenID Connect
-    are also referred to as Relying Parties (RPs).
+    OAuth 2.0 认证服务端实现了 OpenID Connect 功能也被称作 OpenID 提供商 (OPs).
+    OAuth 2.0 客户端(Clients) 使用 OpenID Connect 功能也被称作依赖方 (RPs).
 
 </p>
 
