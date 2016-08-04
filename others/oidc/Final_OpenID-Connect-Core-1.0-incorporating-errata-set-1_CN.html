@@ -396,7 +396,7 @@
 <h3>摘要</h3>
 
 <p>
-    OpenID Connect 1.0 是一个基于OAuth 2.0的简单身份认证协议. 它允许客户端(Client)在一个授权服务器(Authorization Server)上执行认证(authentication),
+    OpenID Connect 1.0 是一个在OAuth 2.0之上的简单身份认证协议. 它允许客户端(Client)在一个授权服务器(Authorization Server)上执行认证(authentication),
     并验证最终用户(End-User)的身份, 同时以互操作性和类似REST方式获取最终用户的基本配置信息.
 </p>
 
@@ -873,7 +873,7 @@
     <a href="#Acknowledgements">附录&nbsp;B.</a>&nbsp;
     致谢<br>
     <a href="#Notices">附录&nbsp;C.</a>&nbsp;
-    提示<br>
+    声明<br>
     <a href="#rfc.authors">§</a>&nbsp;
     作者地址<br>
 </p>
@@ -891,35 +891,30 @@
 <a name="rfc.section.1"></a>
 
 <h3>1.&nbsp;
-    Introduction</h3>
+    介绍</h3>
 
 <p>
-    OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0
+    OpenID Connect 1.0 是一个在OAuth 2.0之上的简单身份认证
     <a class="info" href="#RFC6749">[RFC6749]<span> (</span><span
-            class="info">Hardt, D., “The OAuth 2.0 Authorization Framework,” October&nbsp;2012.</span><span>)</span></a>
-    protocol. It enables Clients to verify the identity of the End-User based
-    on the authentication performed by an Authorization Server, as well as to
-    obtain basic profile information about the End-User in an interoperable and
-    REST-like manner.
+            class="info">Hardt, D., “OAuth 2.0 授权框架,” 2012年10月.</span><span>)</span></a>
+    协议. 它允许客户端(Client)在一个授权服务器(Authorization Server)上执行认证(authentication),
+    并验证最终用户(End-User)的身份, 同时以互操作性和类似REST方式获取最终用户的基本配置信息.
 
 </p>
 
 <p>
-    The OpenID Connect Core 1.0 specification defines
-    the core OpenID Connect functionality:
-    authentication built on top of OAuth 2.0 and
-    the use of Claims to communicate information about the End-User.
-    It also describes the security and privacy considerations for using OpenID Connect.
+    OpenID Connect Core 1.0 规范定义了核心的OpenID Connect功能:
+    身份认证构建在OAuth 2.0之上并且使用Claims来传递最终用户(End-User)相关信息.
+    它同时描述安全与隐私考虑使用OpenID Connect.
 
 </p>
 
 <p>
-    As background,
-    the <a class="info" href="#RFC6749">OAuth 2.0 Authorization
-    Framework<span> (</span><span
-            class="info">Hardt, D., “The OAuth 2.0 Authorization Framework,” October&nbsp;2012.</span><span>)</span></a>
+    在背后,
+    <a class="info" href="#RFC6749">OAuth 2.0授权框架<span> (</span><span
+            class="info">Hardt, D., “The OAuth 2.0 授权框架,” 2012年10月.</span><span>)</span></a>
     [RFC6749]
-    and <a class="info" href="#RFC6750">OAuth 2.0 Bearer Token Usage<span> (</span><span
+    与 <a class="info" href="#RFC6750">OAuth 2.0 Bearer Token使用<span> (</span><span
         class="info">Jones, M. and D. Hardt, “The OAuth 2.0 Authorization Framework: Bearer Token Usage,” October&nbsp;2012.</span><span>)</span></a>
     [RFC6750]
     specifications provide a general framework for third-party applications
