@@ -1712,35 +1712,33 @@
     认证</h3>
 
 <p>
-    OpenID Connect performs authentication to log in the End-User
-    or to determine that the End-User is already logged in.
-    OpenID Connect returns the result of the Authentication
-    performed by the Server to the Client in a secure manner
-    so that the Client can rely on it.
-    For this reason, the Client is called Relying Party (RP) in this case.
+    OpenID Connect执行认证表现为最终用户的登录
+    或判断最终用户已经登录.
+    OpenID Connect返回的认证结果由服务端向客户端使用
+    一种安全的机制执行的,这样客户端可以信赖它.
+    因为这个原因, 客户端在这种情况下被称为依赖方(RP).
 
 </p>
 
 <p>
-    The Authentication result is returned in an
-    ID Token, as defined in <a class="info" href="#IDToken">Section&nbsp;2<span> (</span><span
+    认证的结果是返回一个
+    ID Token, 详见 <a class="info" href="#IDToken">第2节<span> (</span><span
         class="info">ID Token</span><span>)</span></a>.
-    It has Claims expressing such information as the Issuer,
-    the Subject Identifier, when the authentication expires, etc.
+    它的Claims表达了诸如发行人(Issuer)的信息,
+    对象标识()Subject Identifier), 当认证过期时 等等.
 
 </p>
 
 <p>
-    Authentication can follow one of three paths:
-    the Authorization Code Flow (<tt>response_type=code</tt>),
-    the Implicit Flow (<tt>response_type=id_token&nbsp;token</tt>
-    or <tt>response_type=id_token</tt>), or
-    the Hybrid Flow (using other Response Type values defined in
+    认证包括下列的三种方式之一:
+    授权码流程(Authorization Code Flow) (<tt>response_type=code</tt>),
+    隐式流程(Implicit Flow) (<tt>response_type=id_token&nbsp;token</tt>
+    或 <tt>response_type=id_token</tt>), 或
+    混合流程(Hybrid Flow) (使用其他的在
     <a class="info" href="#OAuth.Responses">OAuth 2.0 Multiple
         Response Type Encoding Practices<span> (</span><span class="info">de Medeiros, B., Ed., Scurtescu, M., Tarjan, P., and M. Jones, “OAuth 2.0 Multiple Response Type Encoding Practices,” February&nbsp;2014.</span><span>)</span></a>
-    [OAuth.Responses]).
-    The flows determine how the ID Token and Access Token
-    are returned to the Client.
+    [OAuth.Responses] 中定义的响应类型).
+    这些流程将决定ID Token与Access Token是如何返回给客户端的.
 
 </p>
 
