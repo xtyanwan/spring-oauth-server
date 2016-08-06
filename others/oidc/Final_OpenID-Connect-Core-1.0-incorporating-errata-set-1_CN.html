@@ -1415,13 +1415,12 @@
     ID Token</h3>
 
 <p>
-    The primary extension that OpenID Connect makes to OAuth 2.0
-    to enable End-Users to be Authenticated
-    is the ID Token data structure.
-    The ID Token is a security token that contains Claims about the
-    Authentication of an End-User by an Authorization Server when using a Client,
-    and potentially other requested Claims.
-    The ID Token is represented as a
+    OpenID Connect的主要扩展是允许使用OAuth2.0的
+    最终用户(End-Users)通过ID Token数据结构进行身份认证.
+    ID Token是一个安全的令牌它包含客户端去授权服务器
+    进行最终用户(End-User)的认证相关的Claims,
+    和其他潜在的请求Claims.
+    ID Token的具体表现为
     <a class="info" href="#JWT">JSON Web Token
         (JWT)<span> (</span><span class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” July&nbsp;2014.</span><span>)</span></a>
     [JWT].
@@ -1429,8 +1428,8 @@
 </p>
 
 <p>
-    The following Claims are used within the ID Token
-    for all OAuth 2.0 flows used by OpenID Connect:
+    下列的Claims是用于ID Token中的包括在
+    所有OAuth2.0流程中使用OpenID Connect:
 
 </p>
 
@@ -1620,41 +1619,40 @@
 </p>
 
 <p>
-    ID Tokens MAY contain other Claims.
-    Any Claims used that are not understood MUST be ignored.
-    See Sections
+    ID Tokens 允许(MAY)包括其他的Claims.
+    任何不被理解的Claims必须(MUST)被忽略.
+    查看
     <a class="info" href="#CodeIDToken">3.1.3.6<span> (</span><span
             class="info">ID Token</span><span>)</span></a>,
     <a class="info"
        href="#HybridIDToken">3.3.2.11<span> (</span><span
             class="info">ID Token</span><span>)</span></a>,
     <a class="info" href="#StandardClaims">5.1<span> (</span><span
-            class="info">Standard Claims</span><span>)</span></a>, and
+            class="info">Standard Claims</span><span>)</span></a>, 与
     <a class="info"
        href="#SelfIssuedResponse">7.4<span> (</span><span
             class="info">Self-Issued OpenID Provider Response</span><span>)</span></a>
-    for additional Claims defined by this specification.
+    章节了解本规范中定义的其他Claims.
 
 </p>
 
 <p>
-    ID Tokens MUST be signed using <a class="info"
+    ID Token必须(MUST)使用 <a class="info"
                                       href="#JWS">JWS<span> (</span><span
         class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Signature (JWS),” July&nbsp;2014.</span><span>)</span></a>
-    [JWS] and optionally both signed and then
-    encrypted using <a class="info"
+    [JWS] 进行签名与额外的方式进行相互签名
+    且各自使用 <a class="info"
                        href="#JWS">JWS<span> (</span><span
         class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Signature (JWS),” July&nbsp;2014.</span><span>)</span></a>
-    [JWS] and <a class="info" href="#JWE">JWE<span> (</span><span
+    [JWS] 与 <a class="info" href="#JWE">JWE<span> (</span><span
         class="info">Jones, M., Rescorla, E., and J. Hildebrand, “JSON Web Encryption (JWE),” July&nbsp;2014.</span><span>)</span></a>
-    [JWE] respectively, thereby providing
-    authentication, integrity,
-    non-repudiation, and optionally, confidentiality,
-    per <a class="info"
+    [JWE] 进行加密, 从而提供认证, 完整性, 不可否认,
+    与可选性, 保密性,
+    详见 <a class="info"
            href="#SigningOrder">Section&nbsp;16.14<span> (</span><span
         class="info">Signing and Encryption Order</span><span>)</span></a>.
-    If the ID Token is encrypted, it MUST be signed then encrypted,
-    with the result being a Nested JWT, as defined in <a class="info"
+    如果 ID Token 是加密的, 它必须(MUST) 被签名然后加密,
+    其结果是一个Nested JWT, 被称作 <a class="info"
                                                          href="#JWT">[JWT]<span> (</span><span
         class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” July&nbsp;2014.</span><span>)</span></a>.
     ID Tokens MUST NOT use <tt>none</tt>
