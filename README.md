@@ -161,7 +161,8 @@
             </p>
             <ol>
                 <li><p><del>(150) - 修改OAUTH错误时返回JSON数据</del></p></li>
-                <li><p>(151) - 数据添加Ehcache缓存支持</p></li>
+                <li><p><del>(151) - 数据添加Ehcache缓存支持</del></p></li>
+                <li><p>(158) - 对配置,代码必要的地方添加注释,方便理解</p></li>
             </ol>
             <br/>
        </li>
