@@ -3,7 +3,7 @@
 
 <strong>Spring与Oauth2的整合示例</strong>
 
-项目用Maven管理
+项目用Maven管理, 字符编码: UTF-8
 
 
 使用的技术与版本号
