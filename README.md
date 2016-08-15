@@ -1,7 +1,7 @@
 #spring-oauth-server
 
 
-<strong>Spring与Oauth2的整合示例</strong>
+<strong>Spring与OAuth2的整合</strong>
 
 项目用Maven管理, 字符编码: UTF-8
 

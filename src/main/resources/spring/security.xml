@@ -8,8 +8,15 @@
                         http://www.springframework.org/schema/security
                         http://www.springframework.org/schema/security/spring-security-4.0.xsd http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2-2.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
+
+    <!--
+     Spring Security + OAuth 的主配置文件
+    -->
+
+    <!-- 若需要调试, 可将debug 标签注释取消 -->
     <!--<debug/>-->
 
+    <!--  静态资源, 忽略 -->
     <!--static url pattern-->
     <http pattern="/resources/**" security="none"/>
     <http pattern="/oauth/rest_token" security="none"/>
@@ -20,9 +27,16 @@
     https://github.com/spring-projects/spring-security-oauth/blob/master/docs/oauth2.md
     -->
 
+    <!--
+        Spring MVC的注解配置, 注意: 该配置不能放置在 mkk-servlet.xml 文件中
+    -->
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
 
+    <!--
+     OAuth2 URL: /oauth/token   的处理与配置
+     一般使用时这里不需要修改, 直接使用即可
+    -->
     <http pattern="/oauth/token" create-session="stateless" authentication-manager-ref="oauth2AuthenticationManager"
           entry-point-ref="oauth2AuthenticationEntryPoint" use-expressions="false">
         <intercept-url pattern="/oauth/token" access="IS_AUTHENTICATED_FULLY"/>
