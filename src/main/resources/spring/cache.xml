@@ -7,6 +7,11 @@
      http://www.springframework.org/schema/cache
      http://www.springframework.org/schema/cache/spring-cache.xsd">
 
+    <!--
+        缓存的配置, 使用Spring cache + EhCache.
+        在使用时使用Spring cache 注解,如 @Cacheable
+        ehcache.xml 配置主要的缓存设置
+    -->
     <cache:annotation-driven/>
 
     <!-- cache manager -->
