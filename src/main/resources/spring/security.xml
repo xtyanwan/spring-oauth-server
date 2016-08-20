@@ -48,12 +48,22 @@
         <csrf disabled="true"/>
     </http>
 
+    <!--
+        处理grant_type=client_credentials 的逻辑
+        只从请求中获取client_id与client_secret
+    -->
     <beans:bean id="clientCredentialsTokenEndpointFilter"
                 class="org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter">
         <beans:property name="authenticationManager" ref="oauth2AuthenticationManager"/>
     </beans:bean>
 
 
+    <!--
+        对具体的资源(resource)的安全配置逻辑, 包括ROLE, Scope等
+        可根据具体的需求添加, 每一类URL pattern 对应具体的resource
+        /unity/**  处理资源 unityResourceServer
+        /m/**  处理资源 mobileResourceServer
+    -->
     <!--unity http configuration-->
     <http pattern="/unity/**" create-session="never" entry-point-ref="oauth2AuthenticationEntryPoint"
           access-decision-manager-ref="oauth2AccessDecisionManager" use-expressions="false">
@@ -78,6 +88,11 @@
         <csrf disabled="true"/>
     </http>
 
+    <!--
+        每一个资源(resource)的定义, resource-id必须唯一, OauthClientDetails中的resourceIds属性的值由此来的,
+        允许一个Client有多个resource-id, 由逗号(,)分隔
+        每一个定义会在Security Flow中添加一个位于 PRE_AUTH_FILTER 之前的Filter
+    -->
     <!--unity resource server filter-->
     <oauth2:resource-server id="unityResourceServer" resource-id="unity-resource" token-services-ref="tokenServices"/>
 
@@ -99,6 +114,9 @@
 
     <!--</oauth2:client-details-service>-->
 
+    <!--
+        管理 ClientDetails
+    -->
     <beans:bean id="clientDetailsService" class="com.monkeyk.sos.domain.oauth.CustomJdbcClientDetailsService">
         <beans:constructor-arg index="0" ref="dataSource"/>
     </beans:bean>
@@ -137,6 +155,9 @@
     </beans:bean>
 
 
+    <!--
+        管理 Authorization code
+    -->
     <!--<beans:bean id="jdbcAuthorizationCodeServices"-->
     <!--class="org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices">-->
     <!--<beans:constructor-arg index="0" ref="dataSource"/>-->
@@ -146,7 +167,11 @@
         <beans:constructor-arg index="0" ref="dataSource"/>
     </beans:bean>
 
-
+    <!--
+        Security OAuth Flow的核心配置
+        每一个配置对应一类具体的grant_type
+        可根据需求删除或禁用
+    -->
     <oauth2:authorization-server client-details-service-ref="clientDetailsService" token-services-ref="tokenServices"
                                  user-approval-handler-ref="oauthUserApprovalHandler"
                                  user-approval-page="oauth_approval"
@@ -172,6 +197,10 @@
         <authentication-provider user-service-ref="oauth2ClientDetailsUserService"/>
     </authentication-manager>
 
+    <!--
+        扩展Spring Security 默认的 AccessDecisionManager
+        添加对OAuth中 scope 的检查与校验
+    -->
     <beans:bean id="oauth2AccessDecisionManager" class="org.springframework.security.access.vote.UnanimousBased">
         <beans:constructor-arg>
             <beans:list>
