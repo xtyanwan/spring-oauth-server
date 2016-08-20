@@ -47,6 +47,9 @@ import java.util.Map;
  * 2016/3/8
  * <p/>
  * Restful OAuth API
+ * <p/>
+ * 扩展默认的OAuth 功能,  提供 Restful API,
+ * 可用于在获取access_token时调用
  *
  * @author Shengzhao Li
  * @see org.springframework.security.oauth2.provider.endpoint.TokenEndpoint

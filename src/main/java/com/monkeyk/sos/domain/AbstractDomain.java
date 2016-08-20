@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
+ * 定义抽象的 Domain父类, 将公共属性放于些
+ *
  * @author Shengzhao Li
  */
 public abstract class AbstractDomain implements Serializable {
@@ -17,9 +19,13 @@ public abstract class AbstractDomain implements Serializable {
      */
     protected int id;
 
+    /**
+     * 用于实现逻辑删除
+     */
     protected boolean archived;
     /**
      * Domain business guid.
+     * 业务Id
      */
     protected String guid = GuidGenerator.generate();
 

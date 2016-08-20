@@ -13,6 +13,8 @@ import static com.monkeyk.sos.infrastructure.CacheConstants.REFRESH_TOKEN_CACHE;
 
 /**
  * 2016/7/26
+ * <p/>
+ * 扩展默认的 TokenStore, 增加对缓存的支持
  *
  * @author Shengzhao Li
  */

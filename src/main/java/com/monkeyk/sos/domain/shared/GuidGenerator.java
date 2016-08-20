@@ -5,6 +5,8 @@ import org.springframework.security.oauth2.common.util.RandomValueStringGenerato
 import java.util.UUID;
 
 /**
+ * 随机数生成处理工具
+ *
  * @author Shengzhao Li
  */
 public abstract class GuidGenerator {

@@ -6,6 +6,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 /**
+ * 日期处理工具类
+ *
  * @author Shengzhao Li
  */
 public abstract class DateUtils {
@@ -31,7 +33,6 @@ public abstract class DateUtils {
     public static String toDateTime(LocalDateTime dateTime, String pattern) {
         return dateTime.format(DateTimeFormatter.ofPattern(pattern, Locale.SIMPLIFIED_CHINESE));
     }
-
 
 
     public static String toDateText(LocalDate date, String pattern) {

@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 定义用户
+ *
  * @author Shengzhao Li
  */
 public class User extends AbstractDomain {

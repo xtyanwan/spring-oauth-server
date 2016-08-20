@@ -5,6 +5,8 @@ import org.apache.commons.lang.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * Web 层工具类
+ *
  * @author Shengzhao Li
  */
 public abstract class WebUtils {

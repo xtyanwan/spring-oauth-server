@@ -12,7 +12,10 @@ import javax.sql.DataSource;
 import static com.monkeyk.sos.infrastructure.CacheConstants.CLIENT_DETAILS_CACHE;
 
 /**
- * Add  <i>archived = 0</i> condition
+ * 扩展 默认的 ClientDetailsService, 增加逻辑删除判断( archived = 0)
+ * SQL中添加  <i>archived = 0</i> 条件
+ * <p/>
+ * 增加缓存支持
  *
  * @author Shengzhao Li
  */

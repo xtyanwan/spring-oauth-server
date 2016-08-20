@@ -6,6 +6,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
+ * 定义OAuth中的 Client, 也称 ClientDetails
+ *
  * @author Shengzhao Li
  */
 public class OauthClientDetails implements Serializable {
