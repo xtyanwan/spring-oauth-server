@@ -1909,16 +1909,15 @@
 
 </p>
 
-<p>The Authorization Code Flow returns an Authorization Code to the
-    Client, which can then exchange it for an ID Token and an Access Token directly.
-    This provides the benefit of not exposing any tokens to the
-    User Agent and possibly other malicious applications with access
-    to the User Agent.
-    The Authorization Server can also
-    authenticate the Client before exchanging the Authorization Code for an
-    Access Token. The Authorization Code flow is suitable for Clients that
-    can securely maintain a Client Secret between themselves and the
-    Authorization Server.
+<p>
+    授权码(Authorization Code)流程先给客户端返回一个授权码(Authorization Code),
+    然后使用授权码直接去交换一个ID Token与Access Token.
+    该流程的好处在于不会给用户代理(User Agent)暴露任何的令牌(tokens)
+    与防止其他可能的恶意程序进入用户代理(User Agent).
+    在使用授权码(Authorization Code)交换一个令牌(Access Token)之前,
+    授权服务器(Authorization Server)能够认证客户端.
+    授权码(Authorization Code)流程适用于客户端(Clients)能安全地在自己与
+    授权服务器(Authorization Server)之间维护一个客户端密码(Client Secret).
 </p>
 <a name="CodeFlowSteps"></a><br>
 <hr>
@@ -1932,7 +1931,7 @@
 <a name="rfc.section.3.1.1"></a>
 
 <h3>3.1.1.&nbsp;
-    Authorization Code Flow Steps</h3>
+    授权码(Authorization Code)认证流程步骤</h3>
 
 <p>The Authorization Code Flow goes through the following
     steps.
