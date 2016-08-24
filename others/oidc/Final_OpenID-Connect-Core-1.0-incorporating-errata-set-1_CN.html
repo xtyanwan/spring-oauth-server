@@ -928,7 +928,8 @@
     OpenID Connect在OAuth 2.0授权流程的基础上,扩展实现了认证功能.
     在客户端(Clients)发起授权请求时扩展了请求的范围(scope)值包含<tt>openid</tt>.
     认证执行返回的信息是一个<a class="info" href="#JWT">JSON Web Token
-    (JWT)<span> (</span><span class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” 2014年7月.</span><span>)</span></a>
+    (JWT)<span> (</span><span
+            class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” 2014年7月.</span><span>)</span></a>
     [JWT]
     名叫 ID Token (详见 <a class="info" href="#IDToken">第2节<span> (</span><span
         class="info">ID Token</span><span>)</span></a>).
@@ -974,7 +975,7 @@
 <p>关键字 "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
     "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", 与 "OPTIONAL" 在该文档中已被定义,
     详见 <a class="info"
-                                                      href="#RFC2119">RFC
+          href="#RFC2119">RFC
         2119<span> (</span><span class="info">Bradner, S., “Key words for use in RFCs to Indicate Requirement Levels,” 1997年3月.</span><span>)</span></a>
     [RFC2119]部分.
 </p>
@@ -984,7 +985,7 @@
     这些引用值仅被解释为字面意思,
     引号不能(MUST NOT)作为值的一部分.
     在该文档的 HTML 版本中,
-    被解释为字面意思的值将用  <tt>固定宽度的字体</tt> 来表示.
+    被解释为字面意思的值将用 <tt>固定宽度的字体</tt> 来表示.
 
 </p>
 
@@ -1034,7 +1035,7 @@
     (JWS)<span> (</span><span class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Signature (JWS),” July&nbsp;2014.</span><span>)</span></a>
     [JWS],
     措辞 "User Agent" 被定义在 <a class="info"
-                                        href="#RFC2616">RFC
+                            href="#RFC2616">RFC
     2616<span> (</span><span class="info">Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., and T. Berners-Lee, “Hypertext Transfer Protocol -- HTTP/1.1,” June&nbsp;1999.</span><span>)</span></a>
     [RFC2616],
     措辞 "Response Mode" 被定义在
@@ -1329,8 +1330,8 @@
 <p>
     若对这些术语的背景与使用想了解更多,请查看
     <a class="info" href="#RFC4949">Internet Security Glossary,
-    Version 2<span> (</span><span
-            class="info">Shirey, R., “Internet Security Glossary, Version 2,” August&nbsp;2007.</span><span>)</span></a>
+        Version 2<span> (</span><span
+                class="info">Shirey, R., “Internet Security Glossary, Version 2,” August&nbsp;2007.</span><span>)</span></a>
     [RFC4949],
     <a class="info" href="#ISO29115">ISO/IEC 29115 Entity
         Authentication Assurance<span> (</span><span class="info">International Organization for Standardization, “ISO/IEC 29115:2013 -- 	  Information technology - Security techniques - Entity authentication 	  assurance framework,” March&nbsp;2013.</span><span>)</span></a>
@@ -1638,22 +1639,22 @@
 
 <p>
     ID Token必须(MUST)使用 <a class="info"
-                                      href="#JWS">JWS<span> (</span><span
+                          href="#JWS">JWS<span> (</span><span
         class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Signature (JWS),” July&nbsp;2014.</span><span>)</span></a>
     [JWS] 进行签名与额外的方式进行相互签名
     且各自使用 <a class="info"
-                       href="#JWS">JWS<span> (</span><span
+             href="#JWS">JWS<span> (</span><span
         class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Signature (JWS),” July&nbsp;2014.</span><span>)</span></a>
     [JWS] 与 <a class="info" href="#JWE">JWE<span> (</span><span
         class="info">Jones, M., Rescorla, E., and J. Hildebrand, “JSON Web Encryption (JWE),” July&nbsp;2014.</span><span>)</span></a>
     [JWE] 进行加密, 从而提供认证, 完整性, 不可否认,
     与可选性, 保密性,
     详见 <a class="info"
-           href="#SigningOrder">Section&nbsp;16.14<span> (</span><span
+          href="#SigningOrder">Section&nbsp;16.14<span> (</span><span
         class="info">Signing and Encryption Order</span><span>)</span></a>.
     如果 ID Token 是加密的, 它必须(MUST) 被签名然后加密,
     其结果是一个Nested JWT, 被称作 <a class="info"
-                                                         href="#JWT">[JWT]<span> (</span><span
+                             href="#JWT">[JWT]<span> (</span><span
         class="info">Jones, M., Bradley, J., and N. Sakimura, “JSON Web Token (JWT),” July&nbsp;2014.</span><span>)</span></a>.
     ID Tokens MUST NOT use <tt>none</tt>
     as the <tt>alg</tt> value
@@ -1864,7 +1865,8 @@
 <table border="0" cellpadding="0" cellspacing="2" align="center">
     <tbody>
     <tr>
-        <td align="center"><font face="monaco, MS Sans Serif" size="1"><b>&nbsp;OpenID Connect "response_type" 值&nbsp;</b></font><br>
+        <td align="center"><font face="monaco, MS Sans Serif" size="1"><b>&nbsp;OpenID Connect "response_type"
+            值&nbsp;</b></font><br>
         </td>
     </tr>
     </tbody>
@@ -1873,9 +1875,9 @@
 
 <p>
     <tt>code</tt> 响应类型值是在
-     <a class="info" href="#RFC6749">OAuth
-    2.0<span> (</span><span
-            class="info">Hardt, D., “The OAuth 2.0 Authorization Framework,” October&nbsp;2012.</span><span>)</span></a>
+    <a class="info" href="#RFC6749">OAuth
+        2.0<span> (</span><span
+                class="info">Hardt, D., “The OAuth 2.0 Authorization Framework,” October&nbsp;2012.</span><span>)</span></a>
     [RFC6749]中定义,
     其他的响应类型值定义在
     <a class="info" href="#OAuth.Responses">OAuth 2.0 Multiple
@@ -1933,33 +1935,36 @@
 <h3>3.1.1.&nbsp;
     授权码(Authorization Code)认证流程步骤</h3>
 
-<p>The Authorization Code Flow goes through the following
-    steps.
+<p>
+    授权码(Authorization Code)认证流程步骤如下.
 </p>
 
 <p>
 </p>
 <ol class="text">
-    <li>Client prepares an Authentication Request containing the desired
-        request parameters.
+    <li>
+        客户端(Client)准备一个包括所需请求参数的认证请求(Authentication Request).
     </li>
-    <li>Client sends the request to the Authorization Server.
+    <li>
+        客户端(Client)发送该请求给授权服务器(Authorization Server).
     </li>
-    <li>Authorization Server Authenticates the End-User.
+    <li>
+        授权服务器(Authorization Server)认证(Authenticates)最终用户(End-User).
     </li>
-    <li>Authorization Server obtains End-User Consent/Authorization.
+    <li>
+        授权服务器(Authorization Server)获取最终用户(End-User)的同意/授权.
     </li>
-    <li>Authorization Server sends the End-User back to the Client with
-        an Authorization Code.
+    <li>
+        授权服务器(Authorization Server)发送一个最终用户(End-User)的授权码(Authorization Code)给客户端(Client).
     </li>
-    <li>Client requests a response using the Authorization Code at the
-        Token Endpoint.
+    <li>
+        客户端(Client)使用授权码(Authorization Code)向Token Endpoint发送请求并获取响应.
     </li>
-    <li>Client receives a response that contains an ID Token
-        and Access Token in the response body.
+    <li>
+        客户端(Client)从响应的响应体中获取一个ID Token与Access Token.
     </li>
-    <li>Client validates the ID token and retrieves the End-User's
-        Subject Identifier.
+    <li>
+        客户端(Client)校验ID令牌(ID token)并取回最终用户(End-User)的主体标识符(Subject Identifier).
     </li>
 </ol>
 <p>
