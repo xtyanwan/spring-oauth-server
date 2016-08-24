@@ -1993,10 +1993,10 @@
 </p>
 
 <p>
-    Communication with the Authorization Endpoint MUST utilize TLS.
-    See <a class="info"
+    与授权端点(Authorization Endpoint)的通信必须(MUST)使用TLS连接.
+    详见 <a class="info"
            href="#TLSRequirements">Section&nbsp;16.17<span> (</span><span
-        class="info">TLS Requirements</span><span>)</span></a> for more information on using TLS.
+        class="info">TLS的必要性</span><span>)</span></a> 获取更多使用TLS的信息.
 
 </p>
 <a name="AuthRequest"></a><br>
@@ -2011,38 +2011,37 @@
 <a name="rfc.section.3.1.2.1"></a>
 
 <h3>3.1.2.1.&nbsp;
-    Authentication Request</h3>
+    认证请求</h3>
 
 <p>
-    An Authentication Request is
-    an OAuth 2.0 Authorization Request that requests that the End-User
-    be authenticated by the Authorization Server.
+    一个认证请求(Authentication Request)是一个最终用户(End-User)
+    被授权服务器(Authorization Server)进行认证的
+    OAuth 2.0的授权请求(Authorization Request).
 
 </p>
 
-<p>Authorization Servers MUST support the use of the HTTP <tt>GET</tt> and
-    <tt>POST</tt> methods defined in <a class="info"
+<p>
+    授权服务器(Authorization Servers)必须(MUST)支持使用 HTTP定义的 <tt>GET</tt> 与
+    <tt>POST</tt> 请求方式 <a class="info"
                                         href="#RFC2616">RFC
-        2616<span> (</span><span class="info">Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., and T. Berners-Lee, “Hypertext Transfer Protocol -- HTTP/1.1,” June&nbsp;1999.</span><span>)</span></a>
-    [RFC2616] at the
-    Authorization Endpoint.
-    Clients MAY use the HTTP <tt>GET</tt> or
-    <tt>POST</tt> methods to send the
-    Authorization Request to the Authorization Server. If using the HTTP
-    <tt>GET</tt> method, the request parameters are serialized using
-    URI Query String Serialization, per <a class="info"
+        2616<span> (</span><span class="info">Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., and T. Berners-Lee, “超文本传输协议 -- HTTP/1.1,” June&nbsp;1999.</span><span>)</span></a>
+    [RFC2616] 在授权端点(Authorization Endpoint).
+    客户端(Clients)可以(MAY)使用HTTP的 <tt>GET</tt> 或
+    <tt>POST</tt> 请求方式发送授权请求(Authorization Request)
+    到授权服务器(Authorization Server). 如果使用 HTTP的
+    <tt>GET</tt> 请求方式, 则请求参数使用
+    查询字符(Query String)序列化, 参照 <a class="info"
                                            href="#QuerySerialization">Section&nbsp;13.1<span> (</span><span
-            class="info">Query String Serialization</span><span>)</span></a>.
-    If using the HTTP <tt>POST</tt>
-    method, the request parameters are serialized using
-    Form Serialization, per <a class="info"
+            class="info">Query String Serialization</span><span>)</span></a> 进行序列化.
+    如果使用 HTTP的 <tt>POST</tt>
+    请求方式, 则请求参数使用
+    表单(Form)序列化, 参照 <a class="info"
                                href="#FormSerialization">Section&nbsp;13.2<span> (</span><span
-            class="info">Form Serialization</span><span>)</span></a>.
+            class="info">Form Serialization</span><span>)</span></a> 进行序列化.
 </p>
 
 <p>
-    OpenID Connect uses the following OAuth 2.0 request parameters with
-    the Authorization Code Flow:
+    在授权码(Authorization Code)流程中, OpenID Connect使用了OAuth 2.0协议中的请求参数如下:
 
 </p>
 
@@ -2128,11 +2127,10 @@
 </p>
 
 <p>
-    OpenID Connect also uses the following OAuth 2.0 request parameter,
-    which is defined in
+    OpenID Connect也使用了OAuth2.0协议中定义在
     <a class="info" href="#OAuth.Responses">OAuth 2.0 Multiple
         Response Type Encoding Practices<span> (</span><span class="info">de Medeiros, B., Ed., Scurtescu, M., Tarjan, P., and M. Jones, “OAuth 2.0 Multiple Response Type Encoding Practices,” February&nbsp;2014.</span><span>)</span></a>
-    [OAuth.Responses]:
+    [OAuth.Responses] 中的以下请求参数:
 
 </p>
 
@@ -2158,7 +2156,7 @@
 </p>
 
 <p>
-    This specification also defines the following request parameters:
+    本协议也定义了以下的请求参数:
 
 </p>
 
@@ -2422,8 +2420,8 @@
 </p>
 
 <p>
-    Other parameters MAY be sent.
-    See Sections <a class="info"
+    其他的一些参数也可能(MAY)被发送.
+    详见以下章节 <a class="info"
                     href="#ImplicitAuthorizationEndpoint">3.2.2<span> (</span><span
         class="info">Authorization Endpoint</span><span>)</span></a>,
     <a class="info" href="#HybridAuthorizationEndpoint">3.3.2<span> (</span><span
@@ -2434,21 +2432,20 @@
     <a class="info" href="#ClaimsParameter">5.5<span> (</span><span
             class="info">Requesting Claims using the "claims" Request Parameter</span><span>)</span></a>,
     <a class="info" href="#JWTRequests">6<span> (</span><span
-            class="info">Passing Request Parameters as JWTs</span><span>)</span></a>, and
+            class="info">Passing Request Parameters as JWTs</span><span>)</span></a>, 与
     <a class="info"
        href="#RegistrationParameter">7.2.1<span> (</span><span
             class="info">Providing Information with the "registration" Request Parameter</span><span>)</span></a>
-    for additional Authorization Request parameters and parameter values
-    defined by this specification.
+    获取更多在本协议中定义的可用于授权请求(Authorization Request)时的参数与参数值.
 
 </p>
 
 <p>
-    The following is a non-normative example
-    HTTP 302 redirect response by the Client, which triggers
-    the User Agent to make an Authentication Request
-    to the Authorization Endpoint
-    (with line wraps within values for display purposes only):
+    下面是一个使用HTTP 302重定向响应到
+    客户端(Client)的非规范性(non-normative)的示例,
+    这将在用户代理(User Agent)发送一个认证请求(Authentication Request)
+    到授权端点(Authorization Endpoint)时触发
+    (仅为了更好的显示使用了换行):
 
 </p>
 
@@ -2462,10 +2459,10 @@
 </pre>
 </div>
 <p>
-    The following is the non-normative example request
-    that would be sent by the User Agent to the Authorization Server
-    in response to the HTTP 302 redirect response by the Client above
-    (with line wraps within values for display purposes only):
+    下面是一个非规范性(non-normative)的请求示例,
+    在授权服务器(Authorization Server)响应HTTP 302重定向响应给客户端(Client)之前
+    用户代理(User Agent)发送的请求
+    (仅为了更好的显示使用了换行):
 
 </p>
 
