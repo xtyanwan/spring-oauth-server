@@ -17,6 +17,7 @@ public class OauthUserApprovalHandler extends TokenStoreUserApprovalHandler {
     private OauthService oauthService;
 
     public OauthUserApprovalHandler() {
+        // Do nothing
     }
 
 

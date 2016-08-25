@@ -14,6 +14,10 @@ public abstract class WebUtils {
 
     private static ThreadLocal<String> ipThreadLocal = new ThreadLocal<>();
 
+    //private
+    private WebUtils() {
+    }
+
 
     public static void setIp(String ip) {
         ipThreadLocal.set(ip);
@@ -21,10 +25,6 @@ public abstract class WebUtils {
 
     public static String getIp() {
         return ipThreadLocal.get();
-    }
-
-    //private
-    private WebUtils() {
     }
 
 
