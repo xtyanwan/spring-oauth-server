@@ -2566,46 +2566,31 @@
 <a name="rfc.section.3.1.2.3"></a>
 
 <h3>3.1.2.3.&nbsp;
-    Authorization Server Authenticates End-User</h3>
+    授权服务器认证最终用户(End-User)</h3>
 
 <p>
-    If the request is valid, the Authorization Server attempts
-    to Authenticate the End-User or determines whether the End-User is Authenticated,
-    depending upon the request parameter values used.
-    The methods used by the Authorization Server to Authenticate the End-User
-    (e.g. username and password, session cookies, etc.)
-    are beyond the scope of this specification.
-    An Authentication user interface MAY be displayed by
-    the Authorization Server, depending upon the request parameter values used
-    and the authentication methods used.
+    若请求是有效的, 则授权服务器(Authorization Server)将根据请求所包括的参数值尝试
+    验证最终用户(End-User)或决定最终用户(End-User)是否是已验证的.
+    至于授权服务器(Authorization Server)采用什么方式来认证最终用户(如账号与密码, session cookies 等)
+    已经超出本协议规范的范围.
+    根据使用的请求参数值与使用的认证方式, 一个验证用户接口(interface)
+    也许(MAY)被授权服务器(Authorization Server)对外开放.
 
 </p>
 
-<p>The Authorization Server MUST attempt to Authenticate the
-    End-User in the following cases:
-</p>
-<ul class="text">
-    <li>The End-User is not already Authenticated.
-    </li>
-    <li>The Authentication Request contains the <tt>prompt</tt> parameter with the value
-        <tt>login</tt>. In this case, the
-        Authorization Server MUST reauthenticate the End-User
-        even if the End-User is already authenticated.
-    </li>
-</ul>
 <p>
-
-</p>
-
-<p>The Authorization Server MUST NOT interact with the End-User
-    in the following case:
+    在下列情况中,授权服务器(Authorization Server)必须(MUST)对
+    最终用户进行认证:
 </p>
 <ul class="text">
-    <li>The Authentication Request contains the <tt>prompt</tt> parameter with the value
-        <tt>none</tt>. In this case,
-        the Authorization Server MUST return
-        an error if an End-User
-        is not already Authenticated or could not be silently Authenticated.
+    <li>
+        尚未进行认证的最终用户(End-User).
+    </li>
+    <li>
+        认证请求(Authentication Request)中包含 <tt>prompt</tt> 参数并且值为
+        <tt>login</tt>. 在这种情况下,
+        授权服务器(Authorization Server)必须(MUST)重新认证(reauthenticate)
+        最终用户(End-User)即使最终用户已经被认证过.
     </li>
 </ul>
 <p>
@@ -2613,13 +2598,29 @@
 </p>
 
 <p>
-    When interacting with the End-User,
-    the Authorization Server MUST employ appropriate measures against
-    Cross-Site Request Forgery and Clickjacking as, described in
-    Sections 10.12 and 10.13 of <a class="info" href="#RFC6749">OAuth
+    在下列情况中,授权服务器(Authorization Server)必须不能(MUST NOT)与
+    最终用户(End-User)进行交互(interact):
+</p>
+<ul class="text">
+    <li>
+        认证请求(Authentication Request)中包含 <tt>prompt</tt> 参数并且值为
+        <tt>none</tt>. 在这种情况下,
+        如果一个最终用户(End-User)还没被验证或没有使用静默方式(silently)认证,
+        则授权服务器(Authorization Server)必须(MUST)返回一个错误(error).
+    </li>
+</ul>
+<p>
+
+</p>
+
+<p>
+    当与最终用户(End-User)进行交互(interacting)时,
+    授权服务器(Authorization Server)必须(MUST)对
+    跨站伪造请求(Cross-Site Request Forgery)与点击劫持(Clickjacking)采取适当的措施,
+    关于这部分的描述请参考 <a class="info" href="#RFC6749">OAuth
     2.0<span> (</span><span
             class="info">Hardt, D., “The OAuth 2.0 Authorization Framework,” October&nbsp;2012.</span><span>)</span></a>
-    [RFC6749].
+    [RFC6749] 中10.12 与 10.13 章节.
 
 </p>
 <a name="Consent"></a><br>
