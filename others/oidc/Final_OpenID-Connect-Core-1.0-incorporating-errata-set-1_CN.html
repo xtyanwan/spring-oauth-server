@@ -2498,22 +2498,20 @@
 </p>
 <ol class="text">
     <li>
-        The Authorization Server MUST validate all the
-        OAuth 2.0 parameters according to the OAuth 2.0 specification.
+        授权服务器(Authorization Server)必须(MUST)验证所有OAuth2.0规范中的参数.
 
     </li>
     <li>
-        Verify that a <tt>scope</tt> parameter is present
-        and contains the <tt>openid</tt> scope value.
-        (If no <tt>openid</tt> scope value is present,
-        the request may still be a valid OAuth 2.0 request,
-        but is not an OpenID Connect request.)
+        验证当前请求中的 <tt>scope</tt> 参数和
+        包含 <tt>openid</tt> 的scope值.
+        (如果当前没有 <tt>openid</tt> scope值,
+        该请求也应该是一个OAuth2.0的请求,
+        但不是一个OpenID Connect请求.)
 
     </li>
     <li>
-        The Authorization Server MUST verify that all the REQUIRED parameters
-        are present
-        and their usage conforms to this specification.
+        授权服务器(Authorization Server)必须(MUST)验证请求中所有必要(REQUIRED)的参数
+        并要符合本规范的使用.
 
     </li>
     <li>
@@ -2542,16 +2540,16 @@
 </p>
 
 <p>
-    As specified in <a class="info" href="#RFC6749">OAuth 2.0<span> (</span><span
+    在 <a class="info" href="#RFC6749">OAuth 2.0<span> (</span><span
         class="info">Hardt, D., “The OAuth 2.0 Authorization Framework,” October&nbsp;2012.</span><span>)</span></a>
-    [RFC6749],
-    Authorization Servers SHOULD ignore unrecognized request parameters.
+    [RFC6749] 协议中规定,
+    授权服务器(Authorization Servers)应该(SHOULD)忽略无法识别的请求参数.
 
 </p>
 
 <p>
-    If the Authorization Server encounters any error,
-    it MUST return an error response, per <a class="info"
+    如果授权服务器(Authorization Server)遇到任何的错误(error),
+    它必须(MUST)返回一个错误(error)的响应, 详见 <a class="info"
                                              href="#AuthError">Section&nbsp;3.1.2.6<span> (</span><span
         class="info">Authentication Error Response</span><span>)</span></a>.
 
