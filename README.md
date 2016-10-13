@@ -283,7 +283,7 @@
 
 <hr/>
 <strong>更多资源</strong>
-<p>以下是在学习工作中收集的更多关于OAuth的资源,对深入理解与运用OAuth有帮助</p>
+<p>以下是在学习工作中收集的更多关于OAuth2的资源,对深入理解与运用OAuth2有帮助</p>
 <ul>
        <li>
             <p>
@@ -322,7 +322,7 @@
        </li>
        <li>
             <p>
-                <a href="http://oltu.apache.org/">Apache Oltu</a>, Java版的 Oauth参考实现, 建议去了解了解
+                <a href="http://oltu.apache.org/">Apache Oltu</a>, Java版的 OAuth参考实现, 建议去了解了解
             </p>
        </li>
        <li>
@@ -340,7 +340,7 @@
 
 <hr/>
 <h4>
-    与项目相关的技术文章请访问 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a> (不断更新与Oauth相关的文章)
+    与项目相关的技术文章请访问 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a> (不断更新与OAuth2相关的文章)
 </h4>
 <p>
     <strong>问答与讨论</strong>
@@ -360,6 +360,7 @@
     <li><p>Honyee Management System (企业管理系统)</p></li>
     <li><p>AoLin Open Platform (国际物流开发平台)</p></li>
     <li><p>IDS (移动安全产品)</p></li>
+    <li><p>IDP (统一身份认证平台)</p></li>
     <li><p>......</p></li>
 </ul>
 
