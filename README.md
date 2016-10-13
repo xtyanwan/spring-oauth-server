@@ -20,17 +20,17 @@
 <hr/>
 
 <strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a></strong>
-<br/>
+
 <strong>MongoDB版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
 <hr/>
 <h3>
-   Oauth客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
+   OAuth2客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
 <h3>
    在线测试访问地址 <a href="https://andaily.com/spring-oauth-server/">https://andaily.com/spring-oauth-server/</a>
 </h3>
 <h4>
-   Shiro与OLTU整合的Oauth2项目 <a href="http://git.oschina.net/mkk/oauth2-shiro">http://git.oschina.net/mkk/oauth2-shiro</a>
+   Shiro与OLTU整合的OAuth2项目 <a href="http://git.oschina.net/mkk/oauth2-shiro">http://git.oschina.net/mkk/oauth2-shiro</a>
    (相比spring-oauth-server, 该项目入门门槛相对较低, 代码更加透明, 理解更容易,可扩展性更强, 且模块化开发)
 </h4>
 <hr/>
@@ -69,8 +69,8 @@
 
 <hr/>
 <strong>grant_type</strong>
-<br/>
-说明Oauth支持的grant_type(授权方式)与功能
+
+说明OAuth2支持的grant_type(授权方式)与功能
 <ol>
     <li><code>authorization_code</code> -- 授权码模式(即先登录获取code,再获取token)</li>
     <li><code>password</code> -- 密码模式(将用户名,密码传过去,直接获取token)</li>
@@ -276,6 +276,7 @@
         <li><p><em>2016-04-14</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
         <li><p><em>2016-06-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.5/">0.5</a> 版本</p></li>
         <li><p><em>2016-07-06</em>        Add 0.6 version planning</p></li>
+        <li><p><em>2016-10-13</em>        发布0.6版本</p></li>
     </ol>
 </p>
 
