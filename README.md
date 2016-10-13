@@ -155,14 +155,26 @@
 <ul>
        <li>
             <p>
-                Version: <strong>0.6</strong> [planning]
+                Version: <strong>1.0</strong> [planning]
                 <br/>
-                Date: 2016-07-07 / ---
+                Date: --- / ---
+            </p>
+            <ol>
+                <li><p>------</p></li>
+            </ol>
+            <br/>
+       </li>
+       <li>
+            <p>
+                Version: <strong>0.6</strong> [finished]
+                <br/>
+                Date: 2016-07-07 / 2016-10-13
             </p>
             <ol>
                 <li><p><del>(150) - 修改OAUTH错误时返回JSON数据</del></p></li>
                 <li><p><del>(151) - 数据添加Ehcache缓存支持</del></p></li>
                 <li><p><del>(158) - 对配置,代码必要的地方添加注释,方便理解</del></p></li>
+                <li><p><del>添加OIDC协议文档</del></p></li>
             </ol>
             <br/>
        </li>
