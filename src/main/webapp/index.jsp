@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Spring Security&OAuth2
-    <small class="badge" title="Version">0.6-beta</small>
+    <small class="badge" title="Version">0.6</small>
 </h2>
 
 <p>
@@ -67,7 +67,7 @@
 <ul>
     <li>
         <p>
-            <a href="resources/api/SOS_API-0.5.html" target="_blank">API</a> <span
+            <a href="resources/api/SOS_API-0.6.html" target="_blank">API</a> <span
                 class="text-muted">- 查看提供的API文档</span>
         </p>
     </li>

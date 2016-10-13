@@ -6,10 +6,10 @@
 
     <groupId>com.monkeyk</groupId>
     <artifactId>spring-oauth-server</artifactId>
-    <version>0.6-beta</version>
+    <version>0.6</version>
     <name>spring-oauth-server</name>
     <packaging>war</packaging>
-    <description>Spring OAuth Server</description>
+    <description>Spring OAuth2 Server</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
