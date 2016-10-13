@@ -170,7 +170,10 @@
     <!--
         Security OAuth Flow的核心配置
         每一个配置对应一类具体的grant_type
-        可根据需求删除或禁用
+        可根据需求删除或禁用, 如: <oauth2:implicit disabled="true"/>
+        默认支持OAuth2提供的5类grant_type, 若不需要任何一类, 将其配置注释掉(或删掉)即可.
+        若需要自定义 authorization url, 在 <oauth2:authorization-server > 配置中添加authorization-endpoint-url,如: authorization-endpoint-url="/oauth2/authorization"
+        若需要自定义 token url, 在 <oauth2:authorization-server > 配置中添加token-endpoint-url配置, 如:token-endpoint-url="/oauth2/my_token"
     -->
     <oauth2:authorization-server client-details-service-ref="clientDetailsService" token-services-ref="tokenServices"
                                  user-approval-handler-ref="oauthUserApprovalHandler"
