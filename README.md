@@ -345,7 +345,7 @@
 <p>
     <strong>问答与讨论</strong>
     <br/>
-    与项目相关的，与Oauth相关的问题与回答，以及各类讨论请访问<br/>
+    与项目相关的，与OAuth2相关的问题与回答，以及各类讨论请访问<br/>
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
 </p>
 
