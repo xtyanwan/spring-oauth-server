@@ -8,7 +8,6 @@ import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeSe
 import javax.sql.DataSource;
 
 import static com.monkeyk.sos.infrastructure.CacheConstants.AUTHORIZATION_CODE_CACHE;
-import static com.monkeyk.sos.infrastructure.CacheConstants.CLIENT_DETAILS_CACHE;
 
 /**
  * 2016/7/23
