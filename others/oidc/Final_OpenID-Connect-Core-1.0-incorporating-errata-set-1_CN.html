@@ -2731,17 +2731,16 @@
 </p>
 
 <p>
-    Unless the Redirection URI is invalid,
-    the Authorization Server returns the Client to
-    the Redirection URI specified in the Authorization Request
-    with the appropriate error and state parameters.
-    Other parameters SHOULD NOT be returned.
+    除非重定向URI(Redirection URI)是无效的,
+    否则授权服务器(Authorization Server)将使用在授权请求(Authorization Request)中指定的重定向URI返回给客户端,
+    包括适当的错误与状态参数.
+    其他的参数可以不用(SHOULD NOT)返回.
 
 </p>
 
 <p>
-    In addition to the error codes defined in Section 4.1.2.1 of
-    OAuth 2.0, this specification also defines the following error codes:
+    除了定义在OAuth2.0协议4.1.2.1章节中的错误码以外,
+    本协议额外定义了以下错误码:
 
 </p>
 
@@ -2848,7 +2847,7 @@
 </p>
 
 <p>
-    The error response parameters are the following:
+    错误(error)响应参数如下:
 
 </p>
 <blockquote class="text">
@@ -2856,30 +2855,29 @@
         <dt>error</dt>
         <dd>
 
-            REQUIRED. Error code.
+            必须的(REQUIRED). 错误码.
 
         </dd>
         <dt>error_description</dt>
         <dd>
 
-            OPTIONAL. Human-readable ASCII
-            encoded text description of the error.
+            可选的(OPTIONAL). 人类可读的使用ASCII编码的
+            对错误的文字描述信息
 
         </dd>
         <dt>error_uri</dt>
         <dd>
 
-            OPTIONAL. URI of a web page that
-            includes additional information about the error.
+            可选的(OPTIONAL). 一个包含关于错误的
+            更多额外信息的万维网URI页面.
 
         </dd>
         <dt>state</dt>
         <dd>
 
-            OAuth 2.0 state value.
-            REQUIRED if the Authorization Request
-            included the <tt>state</tt> parameter. Set
-            to the value received from the Client.
+            OAuth 2.0 状态值.
+            如果授权请求包含参数<tt>state</tt>则是必须的(REQUIRED).
+            设置从客户端收到的值.
 
         </dd>
     </dl>
