@@ -54,6 +54,7 @@
                     <warSourceExcludes>*/classes/spring-oauth-server.properties</warSourceExcludes>
                     <packagingExcludes>*/classes/spring-oauth-server.properties</packagingExcludes>
                     <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>
                             <Implementation-BuildNumber>
                                 ${project.version}
