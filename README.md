@@ -157,12 +157,13 @@
 <ul>
        <li>
             <p>
-                Version: <strong>1.0</strong> [planning]
+                Version: <strong>1.0</strong> [pending]
                 <br/>
-                Date: --- / ---
+                Date: 2017-03-30 / ---
             </p>
             <ol>
-                <li><p>------</p></li>
+                <li><p><del>implicit测试时 取消掉 client secret</del></p></li>
+                <li><p><del>implicit测试时 取消掉 client secret</del></p></li>
             </ol>
             <br/>
        </li>
