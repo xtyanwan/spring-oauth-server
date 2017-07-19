@@ -163,6 +163,7 @@
             </p>
             <ol>
                 <li><p><del>implicit测试时 取消掉 client secret</del></p></li>
+                <li><p>更新UI,为了更易理解与使用</p></li>
                 <li><p>---</p></li>
             </ol>
             <br/>
