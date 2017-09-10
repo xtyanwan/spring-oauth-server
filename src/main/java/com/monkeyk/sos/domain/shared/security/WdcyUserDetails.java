@@ -19,12 +19,27 @@ public class WdcyUserDetails implements UserDetails {
 
     private static final long serialVersionUID = 3957586021470480642L;
 
+
+    /**
+     * 角色权限 前缀
+     *
+     * @see org.springframework.security.access.vote.RoleVoter
+     */
     protected static final String ROLE_PREFIX = "ROLE_";
+
+    /**
+     * 默认的 用户角色
+     * ROLE_USER
+     */
     protected static final GrantedAuthority DEFAULT_USER_ROLE = new SimpleGrantedAuthority(ROLE_PREFIX + Privilege.USER.name());
 
     protected User user;
 
+    /**
+     * 用户的授权集合
+     */
     protected List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+
 
     public WdcyUserDetails() {
     }
@@ -34,6 +49,9 @@ public class WdcyUserDetails implements UserDetails {
         initialAuthorities();
     }
 
+    /**
+     * 初始化用户角色,权限
+     */
     private void initialAuthorities() {
         //Default, everyone have it
         this.grantedAuthorities.add(DEFAULT_USER_ROLE);
@@ -69,21 +87,25 @@ public class WdcyUserDetails implements UserDetails {
         return user.username();
     }
 
+    /* 账户是否未过期 */
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    /*账户是否未锁定 */
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
+    /* 密码是否未过期 */
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
+    /*账户是否启用,默认true (启用)*/
     @Override
     public boolean isEnabled() {
         return true;
@@ -96,9 +118,9 @@ public class WdcyUserDetails implements UserDetails {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("{user=").append(user);
-        sb.append('}');
-        return sb.toString();
+        return "{" +
+                "user=" + user +
+                ", grantedAuthorities=" + grantedAuthorities +
+                '}';
     }
 }
