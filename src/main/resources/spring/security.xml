@@ -224,17 +224,24 @@
         <intercept-url pattern="/oauth/**" access="ROLE_USER,ROLE_UNITY,ROLE_MOBILE"/>
         <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 
+
+        <!-- 配置表单验证 -->
         <form-login authentication-failure-url="/login.jsp?authentication_error=1" default-target-url="/index.jsp"
                     login-page="/login.jsp" login-processing-url="/login.do"/>
         <logout logout-success-url="/index.jsp" logout-url="/logout.do"/>
         <access-denied-handler error-page="/login.jsp?authorization_error=2"/>
         <anonymous/>
+
+        <!--CSRF 不启用; 实际 场景 推荐启用 -->
         <csrf disabled="true"/>
     </http>
 
 
     <authentication-manager alias="authenticationManager">
         <authentication-provider user-service-ref="userService">
+            <!--
+            密码使用 MD5 加密 ; 实际使用时推荐使用 SHA-256, 并使用 salt
+            -->
             <password-encoder hash="md5"/>
         </authentication-provider>
     </authentication-manager>
