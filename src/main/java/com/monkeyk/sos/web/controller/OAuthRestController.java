@@ -34,7 +34,10 @@ import org.springframework.security.oauth2.provider.password.ResourceOwnerPasswo
 import org.springframework.security.oauth2.provider.refresh.RefreshTokenGranter;
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestValidator;
+import org.springframework.security.oauth2.provider.token.AccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
+import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
@@ -53,6 +56,7 @@ import java.util.Map;
  *
  * @author Shengzhao Li
  * @see org.springframework.security.oauth2.provider.endpoint.TokenEndpoint
+ * @see org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint
  */
 @Controller
 public class OAuthRestController implements InitializingBean, ApplicationContextAware {
@@ -67,6 +71,10 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
     @Autowired
     private AuthorizationCodeServices authorizationCodeServices;
 
+    @Autowired
+    private ResourceServerTokenServices resourceServerTokenServices;
+
+
     private AuthenticationManager authenticationManager;
 
     private OAuth2RequestFactory oAuth2RequestFactory;
@@ -74,7 +82,40 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
     private OAuth2RequestValidator oAuth2RequestValidator = new DefaultOAuth2RequestValidator();
     private WebResponseExceptionTranslator providerExceptionHandler = new DefaultWebResponseExceptionTranslator();
 
+    private AccessTokenConverter accessTokenConverter = new DefaultAccessTokenConverter();
 
+
+    /**
+     * Verify access_token
+     *
+     * @param value token
+     * @return Map
+     * @see org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint
+     */
+    @RequestMapping(value = "/oauth/check_token", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, ?> checkToken(@RequestParam("token") String value) {
+
+        OAuth2AccessToken token = resourceServerTokenServices.readAccessToken(value);
+        if (token == null) {
+            throw new InvalidTokenException("Token was not recognised");
+        }
+
+        if (token.isExpired()) {
+            throw new InvalidTokenException("Token has expired");
+        }
+
+        OAuth2Authentication authentication = resourceServerTokenServices.loadAuthentication(token.getValue());
+        return accessTokenConverter.convertAccessToken(token, authentication);
+    }
+
+
+    /**
+     * Restful API for get access_token
+     *
+     * @param parameters Map
+     * @return OAuth2AccessToken
+     */
     @RequestMapping(value = "/oauth/rest_token", method = RequestMethod.POST)
     @ResponseBody
     public OAuth2AccessToken postAccessToken(@RequestBody Map<String, String> parameters) {
@@ -163,6 +204,21 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
 
     @ExceptionHandler(OAuth2Exception.class)
     public ResponseEntity<OAuth2Exception> handleException(OAuth2Exception e) throws Exception {
+        LOG.info("Handling error: " + e.getClass().getSimpleName() + ", " + e.getMessage());
+        return getExceptionTranslator().translate(e);
+    }
+
+
+    /**
+     * Handle InvalidTokenException
+     *
+     * @param e Exception
+     * @return ResponseEntity
+     * @throws Exception
+     * @see org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint#handleException(Exception)
+     */
+    @ExceptionHandler(InvalidTokenException.class)
+    public ResponseEntity<OAuth2Exception> handleInvalidTokenException(InvalidTokenException e) throws Exception {
         LOG.info("Handling error: " + e.getClass().getSimpleName() + ", " + e.getMessage());
         return getExceptionTranslator().translate(e);
     }

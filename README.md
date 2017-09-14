@@ -166,6 +166,7 @@
                 <li><p>更新UI,为了更易理解与使用</p></li>
                 <li><p>增加删除access_token API</p></li>
                 <li><p>增加删除 refresh_token API</p></li>
+                <li><p>增加校验 access_token API: /oauth/check_token</p></li>
                 <li><p>---</p></li>
             </ol>
             <br/>
