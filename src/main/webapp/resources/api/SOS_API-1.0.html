@@ -34,6 +34,7 @@
             </li>
             <li class="list-group-item"><a href="#getTokenCred">获取access_token (grant_type=client_credentials)</a></li>
             <li class="list-group-item"><a href="#getTokenRest">获取access_token (Restful API)</a></li>
+            <li class="list-group-item"><a href="#verifyToken">校验access_token</a></li>
             <li class="list-group-item"><a href="#refreshToken">刷新access_token (grant_type=refresh_token)</a></li>
             <li class="list-group-item"><a href="#userInfoUnity">获取当前用户信息 (ROLE_UNITY)</a></li>
             <li class="list-group-item"><a href="#userInfoMobile">获取当前用户信息 (ROLE_MOBILE)</a></li>
@@ -411,6 +412,77 @@
                                 异常 [401]<br/>
                                 <mark>
                                     {"error":"invalid_grant","error_description":"Bad credentials"}
+                                </mark>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="well well-sm" id="verifyToken">
+            <h3>校验access_token
+                <small class="badge">public</small>
+            </h3>
+
+            <p class="text-muted">校验, 检查access_token的有效性</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>
+                        请求URI: <code>/oauth/check_token</code> <span
+                            class="label label-warning">POST</span>
+                    </p>
+
+                    <div>
+                        请求参数说明:
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>参数名</th>
+                                <th>参数值</th>
+                                <th>必须?</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>token</td>
+                                <td>{access_token}</td>
+                                <td>是</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>client_id</td>
+                                <td>{client_id}</td>
+                                <td>是</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        请求示例:
+                        <p>
+                            <code>http://localhost:8080/spring-oauth-server/oauth/check_token?token=e2996930-8398-44fd-8de5-7d1b1624ced7&client_id=mobile-client</code>
+                        </p>
+
+                    </div>
+                    <br/>
+
+                    <strong>响应</strong>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>
+                                正常 [200]<br/>
+                                <mark>
+                                    {"aud":["mobile-resource"],"exp":1505878459,"user_name":"mobile","authorities":["ROLE_MOBILE","ROLE_USER"],"client_id":"mobile-client","scope":["read","write"]}
+                                </mark>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>
+                                异常 [401]<br/>
+                                <mark>
+                                    {"error":"invalid_token","error_description":"Token was not recognised"}
                                 </mark>
                             </p>
                         </li>

@@ -87,14 +87,18 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
 
     /**
      * Verify access_token
+     * <p/>
+     * Ext. from CheckTokenEndpoint
      *
-     * @param value token
+     * @param value    token
+     * @param clientId client_id
      * @return Map
      * @see org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint
+     * @since 1.0
      */
     @RequestMapping(value = "/oauth/check_token", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, ?> checkToken(@RequestParam("token") String value) {
+    public Map<String, ?> checkToken(@RequestParam("token") String value, @RequestParam("client_id") String clientId) {
 
         OAuth2AccessToken token = resourceServerTokenServices.readAccessToken(value);
         if (token == null) {
@@ -105,7 +109,16 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
             throw new InvalidTokenException("Token has expired");
         }
 
+        ClientDetails clientDetails = clientDetailsService.loadClientByClientId(clientId);
+        if (clientDetails == null) {
+            throw new InvalidClientException("client_id was not recognised");
+        }
+
         OAuth2Authentication authentication = resourceServerTokenServices.loadAuthentication(token.getValue());
+        final String authClientId = authentication.getOAuth2Request().getClientId();
+        if (!clientId.equals(authClientId)) {
+            throw new InvalidClientException("Given client ID does not match authenticated client");
+        }
         return accessTokenConverter.convertAccessToken(token, authentication);
     }
 

@@ -149,6 +149,25 @@
             </div>
         </c:if>
 
+        <div class="panel panel-default">
+            <div class="panel-heading">Verify [access_token]</div>
+            <div class="panel-body">
+                <p class="text-muted">输入access_token 后点击链接地址.</p>
+                access_token: <input type="text" ng-model="accessToken" required="required" size="70"
+                                     placeholder="access_token"/>
+
+                <br/>
+
+                <form action="${contextPath}/oauth/check_token?token={{accessToken}}&client_id={{clientId}}"
+                      method="post" target="_blank">
+                    <button class="btn btn-link" type="submit">
+                        /oauth/check_token?token={{accessToken}}&client_id={{clientId}}
+                    </button>
+                    <span class="label label-warning">POST</span>
+                </form>
+            </div>
+        </div>
+
         <div class="text-center">
             <a href="${contextPath}/client_details" class="btn btn-default">Back</a>
         </div>
@@ -174,6 +193,7 @@
         $scope.password = "mobile";
         //a temp value
         $scope.refreshToken = "1156ebfe-e303-4572-9fb5-4459a5d46610";
+        $scope.accessToken = "e2996930-8398-44fd-8de5-7d1b1624ced7";
 
     }];
 </script>
