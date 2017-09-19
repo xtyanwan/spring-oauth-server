@@ -19,7 +19,9 @@
     <!--  静态资源, 忽略 -->
     <!--static url pattern-->
     <http pattern="/resources/**" security="none"/>
+    <!-- 公开, 扩展的 API, public -->
     <http pattern="/oauth/rest_token" security="none"/>
+    <http pattern="/oauth/check_token" security="none"/>
 
 
     <!--
