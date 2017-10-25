@@ -339,7 +339,7 @@
        </li>
        <li>
             <p>
-                <a href="https://andaily.com/blog/?p=528">正确处理spring-oauth-server中在验证失败或错误时的方式</a>
+                <a href="http://andaily.com/blog/?p=528">正确处理spring-oauth-server中在验证失败或错误时的方式</a>
             </p>
        </li>
 </ul>
@@ -389,7 +389,7 @@
 
 <hr/>
 <p>
- 关注更多我的开源项目请访问 <a href="https://andaily.com/my_projects.html">https://andaily.com/my_projects.html</a>
+ 关注更多我的开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
 </p>
 
 <p>
