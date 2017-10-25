@@ -61,7 +61,7 @@ Response Body:
 
 
 更多的测试请访问
-http://git.oschina.net/mkk/spring-oauth-client
+https://gitee.com/mkk/spring-oauth-client
 
 
 ------------------------------------------------------------------------------------------------
