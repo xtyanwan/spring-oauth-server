@@ -227,15 +227,14 @@
                 <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CANCELED]</p></li>
                 <li><p><del>#74 - oauth mysql ddl add create_time,  default is now()  </del></p></li>
                 <li><p><del>#75 - Add user information API, for <a href="http://git.oschina.net/mkk/spring-oauth-client"><code>spring-oauth-client</code></a> project use
-                    <pre>
-                    URL: /unity/user_info
-                    Login: Yes (ROLE_UNITY)
-                    Data Format: JSON
-
-                    URL: /m/user_info
-                    Login: Yes (ROLE_MOBILE)
-                    Data Format: JSON
-                    </pre>
+        <pre>
+        URL: /unity/user_info
+        Login: Yes (ROLE_UNITY)
+        Data Format: JSON
+        URL: /m/user_info
+        Login: Yes (ROLE_MOBILE)
+        Data Format: JSON
+        </pre>
                     </del></p>
                 </li>
                 <li><p><del>#77 - User add Privilege domain.
@@ -247,7 +246,6 @@
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
                 <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links<del></p></li>
-
             </ol>
        </li>
 </ul>
