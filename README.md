@@ -395,7 +395,6 @@
 </p>
 <h3>
  <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
- 或访问 <a href="https://monkeyk.com/kso/" target="_blank">https://monkeyk.com/kso/</a>
 </h3>
 <p>
     <img src="http://77g1is.com1.z0.glb.clouddn.com/wechat_qrcode.jpg"/>
