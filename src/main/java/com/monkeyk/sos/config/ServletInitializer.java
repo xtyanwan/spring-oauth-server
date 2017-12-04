@@ -1,7 +1,6 @@
 package com.monkeyk.sos.config;
 
 import com.monkeyk.sos.web.filter.CharacterEncodingIPFilter;
-import com.opensymphony.sitemesh.webapp.SiteMeshFilter;
 import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.springframework.web.util.Log4jConfigListener;
@@ -46,8 +45,8 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
         DelegatingFilterProxy securityFilter = new DelegatingFilterProxy("springSecurityFilterChain");
         servletContext.addFilter("springSecurityFilterChain", securityFilter).addMappingForUrlPatterns(null, false, "/*");
 
-        SiteMeshFilter siteMeshFilter = new SiteMeshFilter();
-        servletContext.addFilter("sitemesh", siteMeshFilter).addMappingForUrlPatterns(null, false, "/*");
+//        SiteMeshFilter siteMeshFilter = new SiteMeshFilter();
+//        servletContext.addFilter("sitemesh", siteMeshFilter).addMappingForUrlPatterns(null, false, "/*");
 
         //Add Listeners
 

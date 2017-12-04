@@ -5,16 +5,15 @@ java config版本 (developing)
 <strong>Spring与Oauth2的整合示例</strong>
 
 项目用Maven管理
+<br/>
+Base on Spring-Boot
 
 
 使用的技术与版本号
 <ol>
  <li>JDK (1.8.0_40)</li>
  <li>Servlet (3.1.0)</li>
- <li>Spring (4.1.6.RELEASE)</li>
- <li>Spring Security (4.0.1.RELEASE)</li>
- <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
- <li>Log4j (1.2.14)</li>
+ <li>Spring Boot(1.5.9.RELEASE)</li>
 </ol>
 <hr/>
 
@@ -198,7 +197,6 @@ java config版本 (developing)
                     URL: /unity/user_info
                     Login: Yes (ROLE_UNITY)
                     Data Format: JSON
-
                     URL: /m/user_info
                     Login: Yes (ROLE_MOBILE)
                     Data Format: JSON
@@ -214,7 +212,6 @@ java config版本 (developing)
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
                 <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links<del></p></li>
-
             </ol>
        </li>
 </ul>
