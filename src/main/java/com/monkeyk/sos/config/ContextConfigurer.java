@@ -23,7 +23,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ComponentScan(basePackages = "com.monkeyk.sos")
-@PropertySource(value = {"classpath:spring-oauth-server.properties"})
+//@PropertySource(value = {"classpath:spring-oauth-server.properties"})
 @EnableTransactionManagement()
 public class ContextConfigurer {
 

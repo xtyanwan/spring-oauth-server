@@ -10,6 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 public abstract class WebUtils {
 
 
+    /**
+     * Sync by pom.xml   <version></version>
+     */
+    public static final String VERSION = "2.0.0";
+
+
     private static ThreadLocal<String> ipThreadLocal = new ThreadLocal<>();
 
 
