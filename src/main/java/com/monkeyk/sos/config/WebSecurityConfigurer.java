@@ -65,11 +65,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
         web.expressionHandler(new OAuth2WebSecurityExpressionHandler());
     }
 
-    @Override
-    @Bean(name = "authenticationManager")
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
+
 
 
     @Override
