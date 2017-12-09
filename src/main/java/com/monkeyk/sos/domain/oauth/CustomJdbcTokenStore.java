@@ -31,22 +31,21 @@ public class CustomJdbcTokenStore extends JdbcTokenStore {
         return super.readAccessToken(tokenValue);
     }
 
-
-    @CacheEvict(value = ACCESS_TOKEN_CACHE, key = "#tokenValue")
-    public void removeAccessToken(String tokenValue) {
-        super.removeAccessToken(tokenValue);
+    @CacheEvict(value = ACCESS_TOKEN_CACHE, key = "#token.value")
+    @Override
+    public void removeAccessToken(OAuth2AccessToken token) {
+        super.removeAccessToken(token);
     }
-
 
     @Cacheable(value = REFRESH_TOKEN_CACHE, key = "#token")
     public OAuth2RefreshToken readRefreshToken(String token) {
         return super.readRefreshToken(token);
     }
 
-    @CacheEvict(value = REFRESH_TOKEN_CACHE, key = "#token")
-    public void removeRefreshToken(String token) {
+    @CacheEvict(value = REFRESH_TOKEN_CACHE, key = "#token.value")
+    @Override
+    public void removeRefreshToken(OAuth2RefreshToken token) {
         super.removeRefreshToken(token);
     }
-
 
 }
