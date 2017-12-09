@@ -167,6 +167,7 @@
                 <li><p>增加删除access_token API</p></li>
                 <li><p>增加删除 refresh_token API</p></li>
                 <li><p><del>增加校验 access_token API: /oauth/check_token</del></p></li>
+                <li><p><del>Fix ISSUE #IGNQ9  CustomJdbcTokenStore中的CacheEvict不起作用</del></p></li>
                 <li><p>---</p></li>
             </ol>
             <br/>
