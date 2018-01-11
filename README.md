@@ -340,6 +340,11 @@
             <p>
                 <a href="http://andaily.com/blog/?p=528">正确处理spring-oauth-server中在验证失败或错误时的方式</a>
             </p>
+       </li>       
+       <li>
+            <p>
+                <a href="https://www.oschina.net/translate/spring-security-oauth-docs-oauth2">Spring Security OAuth2 开发指南[中文]</a>
+            </p>
        </li>
 </ul>
 
