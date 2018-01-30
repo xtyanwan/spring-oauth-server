@@ -111,8 +111,8 @@
                     </label>
 
                     <p class="help-block">至少勾选一项grant_type(s), 且不能只单独勾选<code>refresh_token</code>, 若需更多帮助请访问 <a
-                            href="https://andaily.com/blog/?p=103"
-                            target="_blank">https://andaily.com/blog/?p=103</a></p>
+                            href="http://andaily.com/blog/?p=103"
+                            target="_blank">http://andaily.com/blog/?p=103</a></p>
                 </div>
             </div>
 
