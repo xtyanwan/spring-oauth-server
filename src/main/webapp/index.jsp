@@ -43,8 +43,8 @@
         </li>
         <li>
             <p>
-                在使用之前, 建议先了解OAuth2支持的5类<code>grant_type</code>, 请访问 <a href="https://andaily.com/blog/?p=103"
-                                                                       target="_blank">https://andaily.com/blog/?p=103</a>
+                在使用之前, 建议先了解OAuth2支持的5类<code>grant_type</code>, 请访问 <a href="http://andaily.com/blog/?p=103"
+                                                                       target="_blank">http://andaily.com/blog/?p=103</a>
             </p>
         </li>
         <li>
