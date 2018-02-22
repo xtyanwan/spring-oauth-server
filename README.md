@@ -12,8 +12,8 @@ MongoDB版本
  <li>JDK (1.8.0_40)</li>
  <li>Servlet (3.1.0)</li>
  <li>Spring (4.1.6.RELEASE)</li>
- <li>Spring Security (4.0.1.RELEASE)</li>
- <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
+ <li>Spring Security (4.0.4.RELEASE)</li>
+ <li>spring-security-oauth2 (2.0.14.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
  <li>MongoDB (2.6.6)</li>
 </ol>
