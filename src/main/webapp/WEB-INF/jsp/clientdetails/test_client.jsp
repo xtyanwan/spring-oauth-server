@@ -21,7 +21,7 @@
 
     <p>
         针对不同的<code>grant_type</code>提供不同的测试URL,
-        完整的Oauth测试请访问<a href="http://git.oschina.net/mkk/spring-oauth-client" target="_blank">spring-oauth-client</a>项目.
+        完整的Oauth测试请访问<a href="https://gitee.com/mkk/spring-oauth-client" target="_blank">spring-oauth-client</a>项目.
     </p>
 
     <div ng-controller="TestClientCtrl">

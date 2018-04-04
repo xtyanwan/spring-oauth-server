@@ -10,7 +10,7 @@
     <h2>spring-oauth-server 数据库表说明</h2>
 
     <p>以下对<a target="_blank"
-             href="http://git.oschina.net/shengzhao/spring-oauth-server">spring-oauth-server</a>项目中的<code>oauth.ddl</code>文件(位于/others/database目录)中的表字及段进行说明,
+             href="https://gitee.com/shengzhao/spring-oauth-server">spring-oauth-server</a>项目中的<code>oauth.ddl</code>文件(位于/others/database目录)中的表字及段进行说明,
         内容包括字段说明与使用场合</p>
     <table class="table table-bordered table-hover">
         <thead>
@@ -94,7 +94,7 @@
                         在实际应用中, <em>web_server_redirect_uri</em>在注册时是必须填写的, 一般用来处理服务器返回的<code>code</code>,
                         验证<code>state</code>是否合法与通过<code>code</code>去换取<code>access_token</code>值.
                         <br/>
-                        在<a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>项目中,
+                        在<a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>项目中,
                         可具体参考<code>AuthorizationCodeController.java</code>中的<code>authorizationCodeCallback</code>方法.
                     </li>
                     <li>
@@ -121,7 +121,7 @@
                 <br/>
 
                 <p class="help-block">(请在<a
-                        href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>项目中来测试不同grant_type时authorities的变化)
+                        href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>项目中来测试不同grant_type时authorities的变化)
                 </p>
             </td>
         </tr>
@@ -246,7 +246,7 @@
             <td colspan="2">
                 <p class="text-info">
                     <em class="glyphicon glyphicon-info-sign"></em> 该表用于在客户端系统中存储从服务端获取的token数据,
-                    在<a href="http://git.oschina.net/shengzhao/spring-oauth-server">spring-oauth-server</a>项目中未使用到.
+                    在<a href="https://gitee.com/shengzhao/spring-oauth-server">spring-oauth-server</a>项目中未使用到.
                     <br/>
                     对<code>oauth_client_token</code>表的主要操作在<code>JdbcClientTokenServices.java</code>类中, 更多的细节请参考该类.
                 </p>
