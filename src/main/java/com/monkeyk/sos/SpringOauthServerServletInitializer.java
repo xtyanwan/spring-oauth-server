@@ -2,7 +2,7 @@ package com.monkeyk.sos;
 
 import com.monkeyk.sos.web.WebUtils;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -18,8 +18,8 @@ public class SpringOauthServerServletInitializer extends SpringBootServletInitia
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         super.onStartup(servletContext);
-
-        servletContext.setAttribute("sosVersion", WebUtils.VERSION);
+        //主版本号
+        servletContext.setAttribute("mainVersion", WebUtils.VERSION);
     }
 
 

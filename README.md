@@ -13,7 +13,7 @@ Base on Spring-Boot
 <ol>
  <li>JDK (1.8.0_40)</li>
  <li>Servlet (3.1.0)</li>
- <li>Spring Boot(1.5.9.RELEASE)</li>
+ <li>Spring Boot(2.0.1.RELEASE)</li>
 </ol>
 <hr/>
 

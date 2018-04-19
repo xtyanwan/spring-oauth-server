@@ -204,7 +204,7 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         if (this.authenticationManager == null) {
-            this.authenticationManager = (AuthenticationManager) applicationContext.getBean("authenticationManager");
+            this.authenticationManager = (AuthenticationManager) applicationContext.getBean("authenticationManagerBean");
         }
     }
 }
