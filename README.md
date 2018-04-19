@@ -22,10 +22,10 @@ Base on Spring-Boot
 <strong>MongoDB版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
 <hr/>
 <h3>
-   Oauth客户端项目请访问 <a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>
+   OAuth客户端项目请访问 <a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
 <h3>
-   在线测试访问地址 <a href="https://andaily.com/spring-oauth-server/">https://andaily.com/spring-oauth-server/</a>
+   在线测试访问地址 <a href="http://andaily.com/spring-oauth-server/">http://andaily.com/spring-oauth-server/</a>
 </h3>
 <h4>
    Shiro与OLTU整合的OAuth2项目 <a href="https://gitee.com/mkk/oauth2-shiro">https://gitee.com/mkk/oauth2-shiro</a>
@@ -37,18 +37,18 @@ Base on Spring-Boot
 <strong>如何使用?</strong>
 <ol>
 <li>
-项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MySql(开发用的mysql版本号为5.6)
+项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.3.3), 还有MySql(开发用的mysql版本号为5.6)
 </li>
 <li>
 <a href="https://gitee.com/shengzhao/spring-oauth-server/repository/archive?ref=master">下载</a>(或clone)项目到本地
 </li>
 <li>
-创建MySQL数据库(如数据库名oauth2), 并运行相应的SQL脚本(脚本文件位于others/database目录),
+创建MySQL数据库(如数据库名oauth2_boot), 并运行相应的SQL脚本(脚本文件位于others/database目录),
 <br/>
    运行脚本的顺序: initial_db.ddl -> oauth.ddl -> initial_data.ddl
 </li>
 <li>
-修改<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
+修改application.properties(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
 </li>
 <li>
 将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080);
