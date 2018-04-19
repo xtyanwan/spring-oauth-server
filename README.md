@@ -1,4 +1,5 @@
 #spring-oauth-server
+<br/>
 java config版本
 
 <strong>Spring与OAuth2的整合示例</strong>
