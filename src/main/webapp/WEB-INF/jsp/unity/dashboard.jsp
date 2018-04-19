@@ -16,7 +16,7 @@
 
 Principal: <strong>${SPRING_SECURITY_CONTEXT.authentication.principal}</strong>
 <br/>
-<a href="${contextPath}/logout.do">Logout</a>
+<a href="${contextPath}/signout">Logout</a>
 
 </body>
 </html>

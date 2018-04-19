@@ -21,13 +21,13 @@ public class OauthServiceImpl implements OauthService {
     private OauthRepository oauthRepository;
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    @Transactional(readOnly = true)
     public OauthClientDetails loadOauthClientDetails(String clientId) {
         return oauthRepository.findOauthClientDetails(clientId);
     }
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    @Transactional(readOnly = true)
     public List<OauthClientDetailsDto> loadAllOauthClientDetailsDtos() {
         List<OauthClientDetails> clientDetailses = oauthRepository.findAllOauthClientDetails();
         return OauthClientDetailsDto.toDtos(clientDetailses);
@@ -40,7 +40,7 @@ public class OauthServiceImpl implements OauthService {
     }
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    @Transactional(readOnly = true)
     public OauthClientDetailsDto loadOauthClientDetailsDto(String clientId) {
         final OauthClientDetails oauthClientDetails = oauthRepository.findOauthClientDetails(clientId);
         return oauthClientDetails != null ? new OauthClientDetailsDto(oauthClientDetails) : null;

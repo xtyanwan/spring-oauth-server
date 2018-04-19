@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    @Transactional(readOnly = true)
     public UserJsonDto loadCurrentUserJsonDto() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         final Object principal = authentication.getPrincipal();
@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    @Transactional(readOnly = true)
     public UserOverviewDto loadUserOverviewDto(UserOverviewDto overviewDto) {
         List<User> users = userRepository.findUsersByUsername(overviewDto.getUsername());
         overviewDto.setUserDtos(UserDto.toDtos(users));
@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    @Transactional(readOnly = true)
     public boolean isExistedUsername(String username) {
         final User user = userRepository.findByUsername(username);
         return user != null;

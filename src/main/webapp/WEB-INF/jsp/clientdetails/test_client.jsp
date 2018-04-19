@@ -10,7 +10,7 @@
 <head>
     <title>Test [${clientDetailsDto.clientId}]</title>
 
-    <script src="${contextPath}/resources/angular.min.js"></script>
+    <script src="${contextPath}/static/angular.min.js"></script>
 
 </head>
 <body>

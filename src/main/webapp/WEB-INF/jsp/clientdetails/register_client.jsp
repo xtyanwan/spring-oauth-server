@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>注册client</title>
-    <script src="${contextPath}/resources/angular.min.js"></script>
+    <script src="${contextPath}/static/angular.min.js"></script>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
 </p>
 
 <div ng-controller="RegisterClientCtrl">
-        <form:form commandName="formDto" cssClass="form-horizontal">
+        <form:form modelAttribute="formDto" cssClass="form-horizontal">
             <div class="form-group">
                 <label for="clientId" class="col-sm-2 control-label">client_id<em class="text-danger">*</em></label>
 

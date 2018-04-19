@@ -16,9 +16,9 @@
 <h2>Spring Security&OAuth2 is work!</h2>
 
 <p>
-    <a href="${contextPath}/login.jsp">Login</a>
+    <a href="${contextPath}/login">Login</a>
     &nbsp;|&nbsp;
-    <a href="${contextPath}/logout.do">Logout</a>
+    <a href="${contextPath}/signout">Logout</a>
 </p>
 
 <div>
