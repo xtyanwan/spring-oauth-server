@@ -1,4 +1,4 @@
-package com.monkeyk.sos.web.controller.mobile;
+package com.monkeyk.sos.web.controller.resource;
 
 import com.monkeyk.sos.service.dto.UserJsonDto;
 import com.monkeyk.sos.service.UserService;
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Shengzhao Li
  */
 @Controller
-@RequestMapping("/m/")
-public class MobileController {
+@RequestMapping("/unity/")
+public class UnityController {
+
 
     @Autowired
     private UserService userService;
@@ -20,7 +21,7 @@ public class MobileController {
 
     @RequestMapping("dashboard")
     public String dashboard() {
-        return "mobile/dashboard";
+        return "unity/dashboard";
     }
 
     @RequestMapping("user_info")

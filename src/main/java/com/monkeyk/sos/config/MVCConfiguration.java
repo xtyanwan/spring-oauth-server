@@ -1,6 +1,7 @@
 package com.monkeyk.sos.config;
 
 
+import com.monkeyk.sos.web.WebUtils;
 import com.monkeyk.sos.web.filter.CharacterEncodingIPFilter;
 import com.monkeyk.sos.web.filter.SOSSiteMeshFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -44,10 +45,8 @@ public class MVCConfiguration implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         WebMvcConfigurer.super.configureMessageConverters(converters);
-        converters.add(new StringHttpMessageConverter(Charset.forName("UTF-8")));
+        converters.add(new StringHttpMessageConverter(Charset.forName(WebUtils.UTF_8)));
     }
-
-
 
 
     /**
@@ -76,7 +75,6 @@ public class MVCConfiguration implements WebMvcConfigurer {
         registrationBean.setOrder(8899);
         return registrationBean;
     }
-
 
 
 }
