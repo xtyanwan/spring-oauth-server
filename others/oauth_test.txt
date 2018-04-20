@@ -38,11 +38,12 @@ http://localhost:8080/spring-oauth-server/oauth/token?client_id=mobile-client&cl
 
 
 Restful OAuth2 Test [POST]
-URL: /oauth2/rest_token
+URL: /oauth/rest_token
 ContentType: application/json
 
 DEMO URL: http://localhost:8080/spring-oauth-server/oauth2/rest_token
-Request Body: {"grant_type":"client_credentials","scope":"read","client_id":"credentials","client_secret":"credentials","username":"user","password":"123"}
+Request Body:
+{"grant_type":"client_credentials","scope":"read","client_id":"credentials","client_secret":"credentials","username":"user","password":"123"}
 
 Response Body:
 {
@@ -56,7 +57,7 @@ Response Body:
 
 
 更多的测试请访问
-http://git.oschina.net/mkk/spring-oauth-client
+https://gitee.com/mkk/spring-oauth-client
 
 
 ------------------------------------------------------------------------------------------------

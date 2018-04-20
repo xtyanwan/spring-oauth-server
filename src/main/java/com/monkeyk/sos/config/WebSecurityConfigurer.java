@@ -47,12 +47,12 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().ignoringAntMatchers("/oauth/authorize", "/oauth/token");
+        http.csrf().ignoringAntMatchers("/oauth/authorize", "/oauth/token", "/oauth/rest_token");
 
         http.authorizeRequests()
                 .antMatchers("/public/**").permitAll()
                 .antMatchers("/static/**").permitAll()
-                .antMatchers("/oauth2/rest_token*").permitAll()
+                .antMatchers("/oauth/rest_token*").permitAll()
                 .antMatchers("/login*").permitAll()
 
                 .antMatchers("/user/**").hasAnyRole("ADMIN")
