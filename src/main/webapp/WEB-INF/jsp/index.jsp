@@ -5,6 +5,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -13,14 +14,18 @@
 
 </head>
 <body>
-<h2>Spring Security&OAuth2 is work!</h2>
+<h2>Spring Security&OAuth2
+    <small class="badge" title="Version">${mainVersion}</small>
+</h2>
 
-<p>
-    <a href="${contextPath}/login">Login</a>
-    &nbsp;|&nbsp;
-    <a href="${contextPath}/signout">Logout</a>
-</p>
-
+<div>
+    Logged: <span class="text-success">${SPRING_SECURITY_CONTEXT.authentication.principal.username}</span>
+    <form action="${contextPath}/signout" method="post">
+        <tags:csrf/>
+        <button class="btn btn-link" type="submit">Logout</button>
+    </form>
+</div>
+<br/>
 <div>
     操作说明:
     <ol>
@@ -32,7 +37,17 @@
         <li>
             <p>
                 菜单 Unity 与 Mobile 需要OAuth 验证后才能访问(即受保护的resource); <br/>
-                Unity 需要 [ROLE_UNITY] 权限, Mobile 需要 [ROLE_MOBILE] 权限.
+                Unity 需要 [ROLE_UNITY] 权限(resourceId:
+                <mark>unity-resource</mark>
+                ), Mobile 需要 [ROLE_MOBILE] 权限(resourceId:
+                <mark>mobile-resource</mark>
+                ).
+            </p>
+        </li>
+        <li>
+            <p>
+                在使用之前, 建议先了解OAuth2支持的5类<code>grant_type</code>, 请访问 <a href="http://andaily.com/blog/?p=103"
+                                                                       target="_blank">http://andaily.com/blog/?p=103</a>
             </p>
         </li>
         <li>
@@ -54,14 +69,49 @@
 菜单
 <ul>
     <li>
-        <a href="${contextPath}/user/overview">User</a>
+        <p>
+            <a href="${contextPath}/static/api/SOS_API-2.0.html" target="_blank">API</a> <span
+                class="text-muted">- 查看提供的API文档</span>
+        </p>
     </li>
     <li>
-        <a href="${contextPath}/unity/dashboard">Unity</a>
+        <p>
+            <a href="client_details">client_details</a> <span class="text-muted">- 管理ClientDetails</span>
+        </p>
     </li>
     <li>
-        <a href="${contextPath}/m/dashboard">Mobile</a>
+        <p>
+            <a href="${contextPath}/user/overview">User</a> <span class="text-muted">- 管理User</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="${contextPath}/unity/dashboard">Unity</a> <span class="text-muted">- Unity 资源(resource), 需要具有 [ROLE_UNITY] 权限(resourceId:
+                <mark>unity-resource</mark>才能访问</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="${contextPath}/m/dashboard">Mobile</a> <span class="text-muted">- Mobile资源(resource), 需要具有 [ROLE_MOBILE] 权限(resourceId:
+                <mark>mobile-resource</mark>才能访问</span>
+        </p>
     </li>
 </ul>
+<br/>
+
+<div class="well well-sm">
+    <p>
+        <strong>说明</strong>: Unity与Mobile菜单需要先获取到<code>access_token</code>后才能正常访问; 可以尝试在URL后面任意添加access_token参数值试试效果,
+        <br/>
+        如: <a href="${contextPath}/m/dashboard?access_token=i_am_testing_access_token">${contextPath}/m/dashboard?access_token=i_am_testing_access_token</a>
+    </p>
+
+    <p>
+        请求受保护的资源时传递
+        <mark>Access Token</mark>
+        有两种方式, 方式一在URL参数中添加<code>access_token</code>, 方式二在请求的Header中添加 <em>Authorization</em>, 其值为 <em>bearer
+        your_access_token</em>
+    </p>
+</div>
 </body>
 </html>

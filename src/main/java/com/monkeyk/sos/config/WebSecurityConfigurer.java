@@ -47,7 +47,8 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http.csrf().disable()
+        http.csrf().ignoringAntMatchers("/oauth/authorize", "/oauth/token");
+
         http.authorizeRequests()
                 .antMatchers("/public/**").permitAll()
                 .antMatchers("/static/**").permitAll()
@@ -66,10 +67,6 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .usernameParameter("oidc_user")
                 .passwordParameter("oidcPwd")
                 .and()
-                .csrf()
-                .requireCsrfProtectionMatcher(new AntPathRequestMatcher("/oauth/authorize"))
-                .requireCsrfProtectionMatcher(new AntPathRequestMatcher("/oauth/token"))
-                .disable()
                 .logout()
                 .logoutUrl("/signout")
                 .deleteCookies("JSESSIONID")
