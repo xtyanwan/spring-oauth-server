@@ -5,6 +5,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
 <!DOCTYPE HTML>
 <html>
@@ -22,7 +23,7 @@
     Logged: <span class="text-success">${SPRING_SECURITY_CONTEXT.authentication.principal.username}</span>
     <form action="${contextPath}/signout" method="post">
         <tags:csrf/>
-        <button class="btn btn-link" type="submit">Logout</button>
+        <button class="btn btn-default" type="submit">Logout</button>
     </form>
 </div>
 <br/>
@@ -79,11 +80,13 @@
             <a href="client_details">client_details</a> <span class="text-muted">- 管理ClientDetails</span>
         </p>
     </li>
-    <li>
-        <p>
-            <a href="${contextPath}/user/overview">User</a> <span class="text-muted">- 管理User</span>
-        </p>
-    </li>
+    <sec:authorize access="hasRole('ROLE_ADMIN')">
+        <li>
+            <p>
+                <a href="${contextPath}/user/overview">User</a> <span class="text-muted">- 管理User</span>
+            </p>
+        </li>
+    </sec:authorize>
     <li>
         <p>
             <a href="${contextPath}/unity/dashboard">Unity</a> <span class="text-muted">- Unity 资源(resource), 需要具有 [ROLE_UNITY] 权限(resourceId:

@@ -65,14 +65,14 @@
             <tr>
                 <th>Username</th>
                 <th>Password</th>
-                <th>Privileges</th>
+                <th>Remark</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>admin</td>
                 <td>admin</td>
-                <td>All privileges, allow visit [Mobile] and [Unity] resources</td>
+                <td>All privileges, allow visit [Mobile] and [Unity] resources, manage user</td>
             </tr>
             <tr>
                 <td>unity</td>

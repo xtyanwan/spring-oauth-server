@@ -5,19 +5,23 @@ truncate user_privilege;
 -- admin, password is admin  ( All privileges)
 insert into user_(id,guid,create_time,email,password,phone,username,default_user)
 values
-(21,'29f6004fb1b0466f9572b02bf2ac1be8',now(),'admin@andaily.com','$2a$10$XWN7zOvSLDiyxQnX01KMXuf5NTkkuAUtt23YxUMWaIPURcR7bdULi','028-1234567','admin',true);
+(21,'29f6004fb1b0466f9572b02bf2ac1be8',now(),'admin@andaily.com','$2a$10$XWN7zOvSLDiyxQnX01KMXuf5NTkkuAUtt23YxUMWaIPURcR7bdULi','028-1234567','admin',1);
+
+insert into user_privilege(user_id,privilege) values (21,'ADMIN');
+insert into user_privilege(user_id,privilege) values (21,'UNITY');
+insert into user_privilege(user_id,privilege) values (21,'MOBILE');
 
 -- unity, password is unity  ( ROLE_UNITY)
 insert into user_(id,guid,create_time,email,password,phone,username,default_user)
 values
-(22,'55b713df1c6f423e842ad68668523c49',now(),'unity@andaily.com','$2a$10$gq3eUch/h.eHt20LpboSXeeZinzSLBk49K5KD.Ms4/1tOAJIsrrfq','','unity',false);
+(22,'55b713df1c6f423e842ad68668523c49',now(),'unity@andaily.com','$2a$10$gq3eUch/h.eHt20LpboSXeeZinzSLBk49K5KD.Ms4/1tOAJIsrrfq','','unity',0);
 
 insert into user_privilege(user_id,privilege) values (22,'UNITY');
 
 -- mobile, password is mobile  ( ROLE_MOBILE)
 insert into user_(id,guid,create_time,email,password,phone,username,default_user)
 values
-(23,'612025cb3f964a64a48bbdf77e53c2c1',now(),'mobile@andaily.com','$2a$10$BOmMzLDaoiIQ4Q1pCw6Z4u0gzL01B8bNL.0WUecJ2YxTtHVRIA8Zm','','mobile',false);
+(23,'612025cb3f964a64a48bbdf77e53c2c1',now(),'mobile@andaily.com','$2a$10$BOmMzLDaoiIQ4Q1pCw6Z4u0gzL01B8bNL.0WUecJ2YxTtHVRIA8Zm','','mobile',0);
 
 insert into user_privilege(user_id,privilege) values (23,'MOBILE');
 

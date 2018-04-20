@@ -55,7 +55,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .antMatchers("/oauth2/rest_token*").permitAll()
                 .antMatchers("/login*").permitAll()
 
-                .antMatchers("/admin/**").hasAnyRole("ADMIN")
+                .antMatchers("/user/**").hasAnyRole("ADMIN")
 
                 .antMatchers(HttpMethod.GET, "/login*").anonymous()
                 .anyRequest().authenticated()

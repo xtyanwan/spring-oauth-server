@@ -4,7 +4,7 @@ import com.monkeyk.sos.service.dto.UserDto;
 import com.monkeyk.sos.service.dto.UserFormDto;
 import com.monkeyk.sos.service.dto.UserJsonDto;
 import com.monkeyk.sos.service.dto.UserOverviewDto;
-import com.monkeyk.sos.domain.shared.security.WdcyUserDetails;
+import com.monkeyk.sos.domain.shared.security.SOSUserDetails;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
 import com.monkeyk.sos.service.UserService;
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
             throw new UsernameNotFoundException("Not found any user for username[" + username + "]");
         }
 
-        return new WdcyUserDetails(user);
+        return new SOSUserDetails(user);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
                 (principal instanceof String || principal instanceof org.springframework.security.core.userdetails.User)) {
             return loadOauthUserJsonDto((OAuth2Authentication) authentication);
         } else {
-            final WdcyUserDetails userDetails = (WdcyUserDetails) principal;
+            final SOSUserDetails userDetails = (SOSUserDetails) principal;
             return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
         }
     }
