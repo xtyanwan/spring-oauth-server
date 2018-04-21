@@ -56,12 +56,10 @@
 
                 <div class="col-sm-10">
                     <form:select path="resourceIds" cssClass="form-control" id="resourceIds">
-                        <form:option value="unity-resource">unity-resource</form:option>
-                        <form:option value="mobile-resource">mobile-resource</form:option>
-                        <form:option value="unity-resource,mobile-resource">unity-resource,mobile-resource</form:option>
+                        <form:option value="sos-resource">sos-resource</form:option>
                     </form:select>
 
-                    <p class="help-block">resourceIds必须选择; 可选值必须来源于与<code>security.xml</code>中标签<code>&lsaquo;oauth2:resource-server</code>的属性<code>resource-id</code>值
+                    <p class="help-block">resourceIds必须选择; 可选值必须来源于与<code>OAuth2ServerConfiguration.java</code>中固定值
                     </p>
                 </div>
             </div>
@@ -73,7 +71,7 @@
                     <form:select path="scope" id="scope" cssClass="form-control">
                         <form:option value="read">read</form:option>
                         <form:option value="write">write</form:option>
-                        <form:option value="read,write">read write</form:option>
+                        <form:option value="read,write">read,write</form:option>
                     </form:select>
 
                     <p class="help-block">scope必须选择</p>
