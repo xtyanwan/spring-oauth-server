@@ -163,7 +163,7 @@
             </p>
             <ol>
                 <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
-                <li><strong>使用 spring-boot 重构</strong></li>
+                <li><strong><del>使用 spring-boot 重构</del></strong></li>
                 <li><p>---</p></li>
             </ol>
             <br/>
