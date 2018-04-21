@@ -12,7 +12,7 @@
 <body>
 <a href="${pageContext.request.contextPath}/">Home</a>
 
-<h2>Hi Unity
+<h2>Hi Mobile
     <small>你已成功访问 [mobile] 资源</small>
 </h2>
 
