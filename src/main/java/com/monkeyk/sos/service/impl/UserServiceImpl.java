@@ -8,6 +8,9 @@ import com.monkeyk.sos.domain.shared.security.SOSUserDetails;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
 import com.monkeyk.sos.service.UserService;
+import com.monkeyk.sos.web.WebUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -27,6 +30,10 @@ import java.util.List;
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
+
+
+    private static final Logger LOG = LoggerFactory.getLogger(UserServiceImpl.class);
+
 
     @Autowired
     private UserRepository userRepository;
@@ -77,6 +84,7 @@ public class UserServiceImpl implements UserService {
     public String saveUser(UserFormDto formDto) {
         User user = formDto.newUser();
         userRepository.saveUser(user);
+        LOG.debug("{}|Save User: {}", WebUtils.getIp(), user);
         return user.guid();
     }
 

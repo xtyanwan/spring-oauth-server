@@ -4,6 +4,9 @@ import com.monkeyk.sos.service.dto.OauthClientDetailsDto;
 import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import com.monkeyk.sos.domain.oauth.OauthRepository;
 import com.monkeyk.sos.service.OauthService;
+import com.monkeyk.sos.web.WebUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -16,6 +19,9 @@ import java.util.List;
  */
 @Service("oauthService")
 public class OauthServiceImpl implements OauthService {
+
+
+    private static final Logger LOG = LoggerFactory.getLogger(OauthServiceImpl.class);
 
     @Autowired
     private OauthRepository oauthRepository;
@@ -37,6 +43,7 @@ public class OauthServiceImpl implements OauthService {
     @Transactional(propagation = Propagation.REQUIRED)
     public void archiveOauthClientDetails(String clientId) {
         oauthRepository.updateOauthClientDetailsArchive(clientId, true);
+        LOG.debug("{}|Update OauthClientDetails(clientId: {}) archive = true", WebUtils.getIp(), clientId);
     }
 
     @Override
@@ -51,5 +58,7 @@ public class OauthServiceImpl implements OauthService {
     public void registerClientDetails(OauthClientDetailsDto formDto) {
         OauthClientDetails clientDetails = formDto.createDomain();
         oauthRepository.saveOauthClientDetails(clientDetails);
+        LOG.debug("{}|Save OauthClientDetails: {}", WebUtils.getIp(), clientDetails);
     }
+
 }
