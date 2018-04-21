@@ -163,8 +163,7 @@
             </p>
             <ol>
                 <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
-                <li><p>增加删除access_token API</p></li>
-                <li><p>增加删除 refresh_token API</p></li>
+                <li><strong>使用 spring-boot 重构</strong></li>
                 <li><p>---</p></li>
             </ol>
             <br/>
