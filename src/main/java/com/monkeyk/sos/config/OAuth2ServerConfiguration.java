@@ -154,6 +154,7 @@ public class OAuth2ServerConfiguration {
         public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
             endpoints.tokenStore(tokenStore)
                     .authorizationCodeServices(authorizationCodeServices)
+                    .userDetailsService(userDetailsService)
                     .userApprovalHandler(userApprovalHandler())
                     .authenticationManager(authenticationManager);
         }
