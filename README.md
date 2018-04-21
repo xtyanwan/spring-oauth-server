@@ -283,6 +283,7 @@
         <li><p><em>2016-06-02</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.5/">0.5</a> 版本</p></li>
         <li><p><em>2016-07-06</em>        Add 0.6 version planning</p></li>
         <li><p><em>2016-10-13</em>        发布0.6版本</p></li>
+        <li><p><em>2018-04-21</em>        发布2.0.0版本, spring-boot版本</p></li>
     </ol>
 </p>
 
