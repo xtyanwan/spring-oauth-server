@@ -20,14 +20,14 @@
 <h2>注册client</h2>
 
 <div ng-app>
-<p class="help-block">
-    若对Oauth的<code>client_details</code>中的属性及作用不清楚,
-    建议你先查看项目中的<code>db_table_description.html</code>文件(位于others目录)中对表<code>oauth_client_details</code>的说明,
-    或在线访问<a href="http://andaily.com/spring-oauth-server/db_table_description.html" target="_blank">db_table_description.html</a>;
-    因为注册client实际上是向该表中按不同的条件添加数据.
-</p>
+    <p class="help-block">
+        若对Oauth的<code>client_details</code>中的属性及作用不清楚,
+        建议你先查看项目中的<code>db_table_description.html</code>文件(位于others目录)中对表<code>oauth_client_details</code>的说明,
+        或在线访问<a href="http://andaily.com/spring-oauth-server/db_table_description.html" target="_blank">db_table_description.html</a>;
+        因为注册client实际上是向该表中按不同的条件添加数据.
+    </p>
 
-<div ng-controller="RegisterClientCtrl">
+    <div ng-controller="RegisterClientCtrl">
         <form:form modelAttribute="formDto" cssClass="form-horizontal">
             <div class="form-group">
                 <label for="clientId" class="col-sm-2 control-label">client_id<em class="text-danger">*</em></label>
@@ -47,7 +47,10 @@
                     <form:input path="clientSecret" cssClass="form-control" id="clientSecret"
                                 placeholder="client_secret" required="required"/>
 
-                    <p class="help-block">client_secret必须输入,且长度至少8位; 在实际应用中的另一个名称叫appSecret,与client_secret是同一个概念.</p>
+                    <p class="help-block">client_secret必须输入,且长度至少8位; 在实际应用中的另一个名称叫appSecret,与client_secret是同一个概念.
+                        <br/>
+                        <strong class="text-danger">注意: </strong> 由于client_secret 会加密存储, 请先复制并保留client_secret值
+                    </p>
                 </div>
             </div>
             <div class="form-group">

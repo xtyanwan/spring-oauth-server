@@ -3,6 +3,7 @@ package com.monkeyk.sos.service.dto;
 import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import com.monkeyk.sos.domain.shared.GuidGenerator;
 import com.monkeyk.sos.infrastructure.DateUtils;
+import com.monkeyk.sos.infrastructure.PasswordHandler;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.Serializable;
@@ -209,7 +210,8 @@ public class OauthClientDetailsDto implements Serializable {
     public OauthClientDetails createDomain() {
         OauthClientDetails clientDetails = new OauthClientDetails()
                 .clientId(clientId)
-                .clientSecret(clientSecret)
+                // encrypted client secret
+                .clientSecret(PasswordHandler.encode(clientSecret))
                 .resourceIds(resourceIds)
                 .authorizedGrantTypes(authorizedGrantTypes)
                 .scope(scope);
