@@ -157,9 +157,23 @@
 <ul>
        <li>
             <p>
-                Version: <strong>1.0</strong> [pending]
+                Version: <strong>2.0</strong> [pending]
                 <br/>
-                Date: 2017-03-30 / ---
+                Date: 2018-04-09 / 2018-04-21
+            </p>
+            <ol>
+                <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
+                <li><p>增加删除access_token API</p></li>
+                <li><p>增加删除 refresh_token API</p></li>
+                <li><p>---</p></li>
+            </ol>
+            <br/>
+       </li>
+       <li>
+            <p>
+                Version: <strong>1.0</strong> [finished]
+                <br/>
+                Date: 2017-03-30 / 2018-04-04
             </p>
             <ol>
                 <li><p><del>implicit测试时 取消掉 client secret</del></p></li>
