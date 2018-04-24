@@ -19,7 +19,7 @@
 </ol>
 <hr/>
 
-<strong>Spring-Boot版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">config</a></strong>
+<h3>Spring-Boot版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">config</a></h3>
 
 <strong>MongoDB版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
 
@@ -372,6 +372,9 @@
     <br/>
     与项目相关的，与OAuth2相关的问题与回答，以及各类讨论请访问<br/>
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
+</p>
+<p>
+    GitHub项目地址: <a href="https://github.com/monkeyk/spring-oauth-server.git">https://github.com/monkeyk/spring-oauth-server.git</a>
 </p>
 
 
