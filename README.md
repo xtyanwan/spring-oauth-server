@@ -157,14 +157,25 @@
 <ul>
        <li>
             <p>
-                Version: <strong>2.0</strong> [pending]
+                Version: <strong>2.0.1</strong> [pending]
+                <br/>
+                Date: 2018-05-01 / ---
+            </p>
+            <ol>
+                <li><p>增加 /oauth/check_token 可使用   #IJO9H</p></li>
+                <li><p>Fix issue   #IJO9R</p></li>
+            </ol>
+            <br/>
+       </li>       
+       <li>
+            <p>
+                Version: <strong>2.0.0</strong> [finished]
                 <br/>
                 Date: 2018-04-09 / 2018-04-21
             </p>
             <ol>
                 <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
                 <li><strong><del>使用 spring-boot 重构</del></strong></li>
-                <li><p>---</p></li>
             </ol>
             <br/>
        </li>
