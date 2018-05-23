@@ -163,7 +163,7 @@
             </p>
             <ol>
                 <li><p>增加 /oauth/check_token 可使用   #IJO9H</p></li>
-                <li><p>Fix issue   #IJO9R</p></li>
+                <li><p><del>Fix issue   #IJO9R  /oauth/rest_token 接口 client_secret字段没有校验</del></p></li>
             </ol>
             <br/>
        </li>       
