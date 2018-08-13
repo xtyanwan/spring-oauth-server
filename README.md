@@ -56,7 +56,7 @@ Base on Spring-Boot
 注意将项目的 contextPath(根路径) 设置为 'spring-oauth-server'.
 <br/>
    另: 也可通过maven package命令将项目编译为war文件(spring-oauth-server.war),
-         将war放在Tomcat中并启动(注意: 这种方式需要将spring-oauth-server.properties加入到classpath中并正确配置数据库连接信息).
+         将war放在Tomcat中并启动(注意: 这种方式需要将application.properties加入到classpath中并正确配置数据库连接信息).
 </li>
 <li>
 参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
