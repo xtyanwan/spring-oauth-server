@@ -4,6 +4,8 @@ java config版本
 
 <strong>Spring与OAuth2的整合示例</strong>
 
+<em>授权协议：<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/master/LICENSE">GPL-2.0</a></em>
+
 项目用Maven管理
 <br/>
 Base on Spring-Boot
