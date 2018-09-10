@@ -4,7 +4,8 @@
 <strong>Spring与OAuth2的整合</strong>
 
 项目用Maven管理, 字符编码: UTF-8
-<em>授权协议：<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/master/LICENSE">GPL 2.0</a></em>
+
+<em>授权协议：<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/master/LICENSE">GPL-2.0</a></em>
 
 使用的技术与版本号
 <ol>
