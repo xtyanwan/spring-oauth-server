@@ -20,6 +20,10 @@
 </ol>
 <hr/>
 
+<h4>技术视频</h4>
+<a href="http://list.youku.com/albumlist/show/id_51900110.html">http://list.youku.com/albumlist/show/id_51900110.html</a>
+<hr/>
+
 <h3>Spring-Boot版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">config</a></h3>
 
 <strong>MongoDB版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
