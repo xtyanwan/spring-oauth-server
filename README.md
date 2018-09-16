@@ -19,7 +19,7 @@
  <li>EhCache (2.0.4)</li>
 </ol>
 <h4>技术视频</h4>
-<a href="http://list.youku.com/albumlist/show/id_51900110.html">http://list.youku.com/albumlist/show/id_51900110.html</a>
+<a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
 
 <hr/>
 
