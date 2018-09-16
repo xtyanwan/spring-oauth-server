@@ -17,6 +17,9 @@ Base on Spring-Boot
  <li>Servlet (3.1.0)</li>
  <li>Spring Boot(2.0.1.RELEASE)</li>
 </ol>
+<h4>技术视频</h4>
+<a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
+
 <hr/>
 
 <strong>MySQL版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/">master</a></strong>
