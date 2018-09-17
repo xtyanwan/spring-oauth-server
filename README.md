@@ -20,6 +20,7 @@
 </ol>
 <h4>技术视频</h4>
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
+(持续更新...)
 
 <hr/>
 
