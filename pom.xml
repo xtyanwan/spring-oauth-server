@@ -6,7 +6,7 @@
 
     <groupId>com.monkeyk</groupId>
     <artifactId>spring-oauth-server</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>spring-oauth-server</name>
     <packaging>war</packaging>
     <description>Spring OAuth2 Server</description>
