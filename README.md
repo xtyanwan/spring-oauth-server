@@ -15,7 +15,7 @@ Base on Spring-Boot
 <ol>
  <li>JDK (1.8.0_40)</li>
  <li>Servlet (3.1.0)</li>
- <li>Spring Boot(2.0.1.RELEASE)</li>
+ <li>Spring Boot(2.0.2.RELEASE)</li>
 </ol>
 <h4>技术视频</h4>
 <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
