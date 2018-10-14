@@ -170,7 +170,7 @@
                 <li><p>增加 /oauth/check_token 可使用   #IJO9H</p></li>
                 <li><p><del>Fix issue   #IJO9R  /oauth/rest_token 接口 client_secret字段没有校验</del></p></li>
                 <li><p><del>升级spring-boot 版本为 2.0.2.RELEASE</del></p></li>
-                <li><p><del>将项目用视频方式展现出来，更直观.  <a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank>视频链接</a></del></p></li>
+                <li><p><del>将项目用视频方式展现出来，更直观</p></li>
             </ol>
             <br/>
        </li>       
@@ -186,6 +186,17 @@
             </ol>
             <br/>
        </li>
+      <li>
+           <p>
+               Version: <strong>1.1</strong> [pending]
+               <br/>
+               Date: 2018-10-14 / ---
+           </p>
+           <ol>
+               <li><p>---</p></li>
+           </ol>
+           <br/>
+      </li>
        <li>
             <p>
                 Version: <strong>1.0</strong> [finished]
