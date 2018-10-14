@@ -9,35 +9,32 @@ package com.monkeyk.sos.infrastructure;
  *
  * @author Shengzhao Li
  */
-public abstract class CacheConstants {
+public interface CacheConstants {
 
     /**
      * client Details Cache, key is clientId
      */
-    public static final String CLIENT_DETAILS_CACHE = "clientDetailsCache";
+    String CLIENT_DETAILS_CACHE = "clientDetailsCache";
 
     /**
      * access Token Cache, key is token
      */
-    public static final String ACCESS_TOKEN_CACHE = "accessTokenCache";
+    String ACCESS_TOKEN_CACHE = "accessTokenCache";
 
     /**
      * refresh Token Cache, key is token
      */
-    public static final String REFRESH_TOKEN_CACHE = "refreshTokenCache";
+    String REFRESH_TOKEN_CACHE = "refreshTokenCache";
 
     /**
      * authorization Code Cache, key is code
      */
-    public static final String AUTHORIZATION_CODE_CACHE = "authorizationCodeCache";
+    String AUTHORIZATION_CODE_CACHE = "authorizationCodeCache";
 
     /**
      * user Cache, key is username
      */
-    public static final String USER_CACHE = "userCache";
+    String USER_CACHE = "userCache";
 
-
-    private CacheConstants() {
-    }
 
 }

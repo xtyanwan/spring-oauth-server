@@ -5,6 +5,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,11 +18,20 @@
     <small class="badge" title="Version">1.0</small>
 </h2>
 
-<p>
-    <a href="${contextPath}/login.jsp">Login</a>
-    &nbsp;|&nbsp;
-    <a href="${contextPath}/logout.do">Logout</a>
-</p>
+<c:if test="${not empty SPRING_SECURITY_CONTEXT.authentication.principal.username}" var="logged">
+    Logged: <sec:authentication property="principal.username"/>
+    <p>
+        <a href="${contextPath}/logout.do">Logout</a>
+    </p>
+</c:if>
+<c:if test="${not logged}">
+    <p>
+        <a href="${contextPath}/login.jsp">Login</a>
+        &nbsp;|&nbsp;
+        <a href="${contextPath}/logout.do">Logout</a>
+    </p>
+</c:if>
+
 
 <div>
     操作说明:

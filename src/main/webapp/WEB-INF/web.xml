@@ -132,11 +132,11 @@
     </listener>
 
     <!--
-        Spring Context 监听
+        Spring Context 监听, 扩展实现l
     -->
     <!-- Spring context listener -->
     <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        <listener-class>com.monkeyk.sos.web.context.SOSContextLoaderListener</listener-class>
     </listener>
 
 

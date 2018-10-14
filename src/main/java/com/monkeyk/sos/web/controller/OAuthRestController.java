@@ -137,6 +137,16 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
         String clientId = getClientId(parameters);
         ClientDetails authenticatedClient = clientDetailsService.loadClientByClientId(clientId);
 
+        //validate client_secret
+        String clientSecret = getClientSecret(parameters);
+        if (clientSecret == null || clientSecret.equals("")) {
+            throw new InvalidClientException("Bad client credentials");
+        } else {
+            if (!clientSecret.equals(authenticatedClient.getClientSecret())) {
+                throw new InvalidClientException("Bad client credentials");
+            }
+        }
+
         TokenRequest tokenRequest = oAuth2RequestFactory.createTokenRequest(parameters, authenticatedClient);
 
         if (clientId != null && !"".equals(clientId)) {
@@ -149,9 +159,7 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
             }
         }
 
-        if (authenticatedClient != null) {
-            oAuth2RequestValidator.validateScope(tokenRequest, authenticatedClient);
-        }
+        oAuth2RequestValidator.validateScope(tokenRequest, authenticatedClient);
 
         final String grantType = tokenRequest.getGrantType();
         if (!StringUtils.hasText(grantType)) {
@@ -227,7 +235,7 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
      *
      * @param e Exception
      * @return ResponseEntity
-     * @throws Exception
+     * @throws Exception Exception
      * @see org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint#handleException(Exception)
      */
     @ExceptionHandler(InvalidTokenException.class)
@@ -238,17 +246,22 @@ public class OAuthRestController implements InitializingBean, ApplicationContext
 
 
     private boolean isRefreshTokenRequest(Map<String, String> parameters) {
-        return "refresh_token".equals(parameters.get("grant_type")) && parameters.get("refresh_token") != null;
+        return "refresh_token".equals(parameters.get(OAuth2Utils.GRANT_TYPE)) && parameters.get("refresh_token") != null;
     }
 
     private boolean isAuthCodeRequest(Map<String, String> parameters) {
-        return "authorization_code".equals(parameters.get("grant_type")) && parameters.get("code") != null;
+        return "authorization_code".equals(parameters.get(OAuth2Utils.GRANT_TYPE)) && parameters.get("code") != null;
     }
 
 
     protected String getClientId(Map<String, String> parameters) {
-        return parameters.get("client_id");
+        return parameters.get(OAuth2Utils.CLIENT_ID);
     }
+
+    protected String getClientSecret(Map<String, String> parameters) {
+        return parameters.get("client_secret");
+    }
+
 
     private AuthenticationManager getAuthenticationManager() {
         return this.authenticationManager;

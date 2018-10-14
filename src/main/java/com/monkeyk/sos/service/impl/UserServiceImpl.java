@@ -8,16 +8,13 @@ import com.monkeyk.sos.domain.shared.security.WdcyUserDetails;
 import com.monkeyk.sos.domain.user.User;
 import com.monkeyk.sos.domain.user.UserRepository;
 import com.monkeyk.sos.service.UserService;
+import com.monkeyk.sos.service.business.CurrentUserJsonDtoLoader;
+import com.monkeyk.sos.service.business.UserFormSaver;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -43,16 +40,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserJsonDto loadCurrentUserJsonDto() {
-        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        final Object principal = authentication.getPrincipal();
-
-        if (authentication instanceof OAuth2Authentication &&
-                (principal instanceof String || principal instanceof org.springframework.security.core.userdetails.User)) {
-            return loadOauthUserJsonDto((OAuth2Authentication) authentication);
-        } else {
-            final WdcyUserDetails userDetails = (WdcyUserDetails) principal;
-            return new UserJsonDto(userRepository.findByGuid(userDetails.user().guid()));
-        }
+        CurrentUserJsonDtoLoader dtoLoader = new CurrentUserJsonDtoLoader();
+        return dtoLoader.load();
     }
 
     @Override
@@ -70,21 +59,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String saveUser(UserFormDto formDto) {
-        User user = formDto.newUser();
-        userRepository.saveUser(user);
-        return user.guid();
+        UserFormSaver saver = new UserFormSaver(formDto);
+        return saver.save();
     }
 
 
-    private UserJsonDto loadOauthUserJsonDto(OAuth2Authentication oAuth2Authentication) {
-        UserJsonDto userJsonDto = new UserJsonDto();
-        userJsonDto.setUsername(oAuth2Authentication.getName());
-
-        final Collection<GrantedAuthority> authorities = oAuth2Authentication.getAuthorities();
-        for (GrantedAuthority authority : authorities) {
-            userJsonDto.getPrivileges().add(authority.getAuthority());
-        }
-
-        return userJsonDto;
-    }
 }
