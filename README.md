@@ -172,7 +172,6 @@
                 <li><p><del>升级spring-boot 版本为 2.0.2.RELEASE</del></p></li>
                 <li><p><del>将项目用视频方式展现出来，更直观</p></li>
             </ol>
-            <br/>
        </li>       
        <li>
             <p>
@@ -184,7 +183,6 @@
                 <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
                 <li><strong><del>使用 spring-boot 重构</del></strong></li>
             </ol>
-            <br/>
        </li>
       <li>
            <p>
@@ -195,7 +193,6 @@
            <ol>
                <li><p>---</p></li>
            </ol>
-           <br/>
       </li>
        <li>
             <p>
@@ -212,7 +209,6 @@
                 <li><p><del>Fix ISSUE #IGNQ9  CustomJdbcTokenStore中的CacheEvict不起作用</del></p></li>
                 <li><p>---</p></li>
             </ol>
-            <br/>
        </li>
        <li>
             <p>
@@ -226,7 +222,6 @@
                 <li><p><del>(158) - 对配置,代码必要的地方添加注释,方便理解</del></p></li>
                 <li><p><del>添加OIDC协议文档</del></p></li>
             </ol>
-            <br/>
        </li>
        <li>
             <p>
@@ -241,7 +236,6 @@
                 <li><p><del>(143) - Add project API document</del></p></li>
                 <li><p><del>(144) - Add MongoDB branch</del></p></li>
             </ol>
-            <br/>
        </li>
        <li>
             <p>
