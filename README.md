@@ -5,7 +5,6 @@
 
 项目用Maven管理, 字符编码: UTF-8
 
-<em>授权协议：<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/master/LICENSE">GPL-2.0</a></em>
 
 使用的技术与版本号
 <ol>
@@ -13,31 +12,27 @@
  <li>Servlet (3.1.0)</li>
  <li>Spring (4.1.6.RELEASE)</li>
  <li>Spring Security (4.0.4.RELEASE)</li>
- <li>spring-security-oauth2 (2.0.14.RELEASE)</li>
+ <li>spring-security-oauth2 (2.0.7.RELEASE)</li>
  <li>Log4j (1.2.14)</li>
  <li>MySQL (5.6.23)</li>
  <li>EhCache (2.0.4)</li>
 </ol>
-<h4>技术视频</h4>
-<a href="http://list.youku.com/albumlist/show/id_51900110.html" target="_blank">http://list.youku.com/albumlist/show/id_51900110.html</a>
-(持续更新...)
-
 <hr/>
 
-<h3>Spring-Boot版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">config</a></h3>
+<strong>Java Config版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a></strong>
 
-<strong>MongoDB版本请访问Branch: <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
+<strong>MongoDB版本请访问Branch: <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a></strong>
 
 <strong>OAuth2下一代身份认证授权协议OIDC实现: <a href="https://git.oschina.net/mkk/MyOIDC">MyOIDC</a></strong>
 <hr/>
 <h3>
-   OAuth2客户端项目请访问 <a href="https://gitee.com/mkk/spring-oauth-client">spring-oauth-client</a>
+   OAuth2客户端项目请访问 <a href="http://git.oschina.net/mkk/spring-oauth-client">spring-oauth-client</a>
 </h3>
 <h3>
-   在线测试访问地址 <a href="http://andaily.com/spring-oauth-server/">http://andaily.com/spring-oauth-server/</a>
+   在线测试访问地址 <a href="https://andaily.com/spring-oauth-server/">https://andaily.com/spring-oauth-server/</a>
 </h3>
 <h4>
-   Shiro与OLTU整合的OAuth2项目 <a href="https://gitee.com/mkk/oauth2-shiro">https://gitee.com/mkk/oauth2-shiro</a><br/>
+   Shiro与OLTU整合的OAuth2项目 <a href="http://git.oschina.net/mkk/oauth2-shiro">http://git.oschina.net/mkk/oauth2-shiro</a>
    (相比spring-oauth-server, 该项目入门门槛相对较低, 代码更加透明, 理解更容易,可扩展性更强, 且模块化开发)
 </h4>
 <hr/>
@@ -49,7 +44,7 @@
 项目是Maven管理的, 需要本地安装maven(开发用的maven版本号为3.1.0), 还有MySql(开发用的mysql版本号为5.6)
 </li>
 <li>
-<a href="https://gitee.com/shengzhao/spring-oauth-server/repository/archive?ref=master">下载</a>(或clone)项目到本地
+<a href="http://git.oschina.net/shengzhao/spring-oauth-server/repository/archive?ref=master">下载</a>(或clone)项目到本地
 </li>
 <li>
 创建MySQL数据库(如数据库名oauth2), 并运行相应的SQL脚本(脚本文件位于others/database目录),
@@ -57,7 +52,7 @@
    运行脚本的顺序: initial_db.ddl -> oauth.ddl -> initial_data.ddl
 </li>
 <li>
-修改<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
+修改<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/src/main/resources/spring-oauth-server.properties">spring-oauth-server.properties</a>(位于src/main/resources目录)中的数据库连接信息(包括username, password等)
 </li>
 <li>
 将本地项目导入到IDE(如Intellij IDEA)中,配置Tomcat(或类似的servlet运行服务器), 并启动Tomcat(默认端口为8080);
@@ -68,7 +63,7 @@
          将war放在Tomcat中并启动(注意: 这种方式需要将spring-oauth-server.properties加入到classpath中并正确配置数据库连接信息).
 </li>
 <li>
-参考<a href="https://gitee.com/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
+参考<a href="http://git.oschina.net/shengzhao/spring-oauth-server/blob/master/others/oauth_test.txt">oauth_test.txt</a>(位于others目录)的内容并测试之(也可在浏览器中访问相应的地址,如: http://localhost:8080/spring-oauth-server).
 </li>
 </ol>
 </p>
@@ -98,8 +93,8 @@
 </li>
 <li>
 <p>
- 如果在使用过程中遇到特殊的问题(如:如何将oauth_code存入数据库),请访问项目的 <a href="https://gitee.com/shengzhao/spring-oauth-server/wikis/pages">Wiki</a> 
- 与 <a href="https://gitee.com/shengzhao/spring-oauth-server/attach_files">附件</a>. 
+ 如果在使用过程中遇到特殊的问题(如:如何将oauth_code存入数据库),请访问项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/wikis/pages">Wiki</a> 
+ 与 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">附件</a>. 
  <br/>
  我会把大家反馈的问题解决办法添加在这里.
  <br/>
@@ -110,7 +105,7 @@
 
 <li>
 <p>
- 如果在使用项目的过程中发现任何的BUG或者更好的提议, 建议将其提交到项目的 <a href="https://gitee.com/shengzhao/spring-oauth-server/issues">Issues</a> 中, 
+ 如果在使用项目的过程中发现任何的BUG或者更好的提议, 建议将其提交到项目的 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/issues">Issues</a> 中, 
  我会一直关注并不断改进项目. 
 </p>
 </li>
@@ -120,10 +115,10 @@
 <strong>功能扩展</strong>
 <ol>
     <li>
-        <code>oauth_code存入数据库的配置</code>,  请下载文件 <a href="https://gitee.com/shengzhao/spring-oauth-server/attach_files">oauth_code存入数据库的配置.jpg</a>
+        <code>oauth_code存入数据库的配置</code>,  请下载文件 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">oauth_code存入数据库的配置.jpg</a>
     </li>
     <li>
-        <code>改变token过期的时间的配置</code>, 请下载文件<a href="https://gitee.com/shengzhao/spring-oauth-server/attach_files">改变token过期的时间的配置.jpg</a>
+        <code>改变token过期的时间的配置</code>, 请下载文件<a href="http://git.oschina.net/shengzhao/spring-oauth-server/attach_files">改变token过期的时间的配置.jpg</a>
     </li>
     <li>
         <code>自定义 grant_type</code>, 默认情况支持的grant_type包括 [password,authorization_code,refresh_token,implicit], 若不需要其中的某些grant_type,
@@ -157,58 +152,21 @@
 <p>
 从 0.3版本开始将项目的所有计划的开发内容列出来, 方便大家跟进, 也欢迎你加入.
 <br/>
-项目的开发管理使用开源项目 <a href="https://gitee.com/mkk/andaily-developer">andaily-developer</a>.
+项目的开发管理使用开源项目 <a href="http://git.oschina.net/mkk/andaily-developer">andaily-developer</a>.
 </p>
 <ul>
        <li>
             <p>
-                Version: <strong>2.0.1</strong> [pending]
+                Version: <strong>1.0</strong> [pending]
                 <br/>
-                Date: 2018-05-01 / ---
-            </p>
-            <ol>
-                <li><p>增加 /oauth/check_token 可使用   #IJO9H</p></li>
-                <li><p><del>Fix issue   #IJO9R  /oauth/rest_token 接口 client_secret字段没有校验</del></p></li>
-                <li><p><del>升级spring-boot 版本为 2.0.2.RELEASE</del></p></li>
-                <li><p><del>将项目用视频方式展现出来，更直观</p></li>
-            </ol>
-       </li>       
-       <li>
-            <p>
-                Version: <strong>2.0.0</strong> [finished]
-                <br/>
-                Date: 2018-04-09 / 2018-04-21
-            </p>
-            <ol>
-                <li><p><del>更新UI,为了更易理解与使用,场景化</del></p></li>
-                <li><strong><del>使用 spring-boot 重构</del></strong></li>
-            </ol>
-       </li>
-      <li>
-           <p>
-               Version: <strong>1.1</strong> [pending]
-               <br/>
-               Date: 2018-10-14 / ---
-           </p>
-           <ol>
-               <li><p>---</p></li>
-           </ol>
-      </li>
-       <li>
-            <p>
-                Version: <strong>1.0</strong> [finished]
-                <br/>
-                Date: 2017-03-30 / 2018-04-04
+                Date: 2017-03-30 / ---
             </p>
             <ol>
                 <li><p><del>implicit测试时 取消掉 client secret</del></p></li>
-                <li><p>更新UI,为了更易理解与使用,场景化</p></li>
-                <li><p>增加删除access_token API</p></li>
-                <li><p>增加删除 refresh_token API</p></li>
-                <li><p><del>增加校验 access_token API: /oauth/check_token</del></p></li>
-                <li><p><del>Fix ISSUE #IGNQ9  CustomJdbcTokenStore中的CacheEvict不起作用</del></p></li>
+                <li><p>更新UI,为了更易理解与使用</p></li>
                 <li><p>---</p></li>
             </ol>
+            <br/>
        </li>
        <li>
             <p>
@@ -222,6 +180,7 @@
                 <li><p><del>(158) - 对配置,代码必要的地方添加注释,方便理解</del></p></li>
                 <li><p><del>添加OIDC协议文档</del></p></li>
             </ol>
+            <br/>
        </li>
        <li>
             <p>
@@ -236,6 +195,7 @@
                 <li><p><del>(143) - Add project API document</del></p></li>
                 <li><p><del>(144) - Add MongoDB branch</del></p></li>
             </ol>
+            <br/>
        </li>
        <li>
             <p>
@@ -263,15 +223,16 @@
             <ol>
                 <li><p>#73 - Upgrade 'spring-security-oauth2' version to '2.0.6.RELEASE' (current: 1.0.5.RELEASE)      [CANCELED]</p></li>
                 <li><p><del>#74 - oauth mysql ddl add create_time,  default is now()  </del></p></li>
-                <li><p><del>#75 - Add user information API, for <a href="https://gitee.com/mkk/spring-oauth-client"><code>spring-oauth-client</code></a> project use
-        <pre>
-        URL: /unity/user_info
-        Login: Yes (ROLE_UNITY)
-        Data Format: JSON
-        URL: /m/user_info
-        Login: Yes (ROLE_MOBILE)
-        Data Format: JSON
-        </pre>
+                <li><p><del>#75 - Add user information API, for <a href="http://git.oschina.net/mkk/spring-oauth-client"><code>spring-oauth-client</code></a> project use
+                    <pre>
+                    URL: /unity/user_info
+                    Login: Yes (ROLE_UNITY)
+                    Data Format: JSON
+
+                    URL: /m/user_info
+                    Login: Yes (ROLE_MOBILE)
+                    Data Format: JSON
+                    </pre>
                     </del></p>
                 </li>
                 <li><p><del>#77 - User add Privilege domain.
@@ -283,6 +244,7 @@
                 <li><p><del>#93 - 将默认的 oauth_code存入数据库(当前是存入内存) </del></p></li>
                 <li><p><del> spring-oauth-server project add Bootstrap CSS  </del></p></li>
                 <li><p><del>#95 - Add 'client-details' management; create/delete, show testing links<del></p></li>
+
             </ol>
        </li>
 </ul>
@@ -302,24 +264,23 @@
 <p>
     <ol>
         <li><p><em>2013-11-19</em>     Initial project, start push code</p></li>
-        <li><p><em>2013-11-20</em>     发布<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.1/">0.1</a>版本</p></li>
+        <li><p><em>2013-11-20</em>     发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.1/">0.1</a>版本</p></li>
         <li><p><em>2015-05-06</em>        发布<a href="http://www.oschina.net/news/62176/spring-oauth-server-0-2">0.2</a>版本</p></li>
         <li><p><em>2015-05-27</em>      创建项目博客,访问地址 <a href="http://andaily.com/blog/?cat=19">http://andaily.com/blog/?cat=19</a></p></li>
-        <li><p><em>2015-06-07</em>        发布<a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.3/">0.3</a>版本</p></li>
+        <li><p><em>2015-06-07</em>        发布<a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.3/">0.3</a>版本</p></li>
         <li><p>
             <em>2015-06-16</em>       添加github访问: <a href="https://github.com/monkeyk/spring-oauth-server">https://github.com/monkeyk/spring-oauth-server</a>,
             以后的更新将同步github与gitosc.
         </p></li>
         <li><p><em>2015-11-09</em>        开始开发 0.4-beta 版本</p></li>
-        <li><p><em>2015-11-18</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.4-beta/">0.4-beta</a> 版本</p></li>
-        <li><p><em>2016-01-02</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.4/">0.4</a> 版本</p></li>
+        <li><p><em>2015-11-18</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4-beta/">0.4-beta</a> 版本</p></li>
+        <li><p><em>2016-01-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.4/">0.4</a> 版本</p></li>
         <li><p><em>2016-02-19</em>        Add 0.5 version development planning</p></li>
-        <li><p><em>2016-04-03</em>        Add <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/">config</a> branch</p></li>
-        <li><p><em>2016-04-14</em>        Add <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
-        <li><p><em>2016-06-02</em>        发布 <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/0.5/">0.5</a> 版本</p></li>
+        <li><p><em>2016-04-03</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/config/">config</a> branch</p></li>
+        <li><p><em>2016-04-14</em>        Add <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/mongodb/">mongodb</a> branch</p></li>
+        <li><p><em>2016-06-02</em>        发布 <a href="http://git.oschina.net/shengzhao/spring-oauth-server/tree/0.5/">0.5</a> 版本</p></li>
         <li><p><em>2016-07-06</em>        Add 0.6 version planning</p></li>
         <li><p><em>2016-10-13</em>        发布0.6版本</p></li>
-        <li><p><em>2018-04-21</em>        发布2.0.0版本, <a href="https://gitee.com/shengzhao/spring-oauth-server/tree/config/" target="_blank">spring-boot版本</a></p></li>
     </ol>
 </p>
 
@@ -375,12 +336,7 @@
        </li>
        <li>
             <p>
-                <a href="http://andaily.com/blog/?p=528">正确处理spring-oauth-server中在验证失败或错误时的方式</a>
-            </p>
-       </li>       
-       <li>
-            <p>
-                <a href="https://www.oschina.net/translate/spring-security-oauth-docs-oauth2">Spring Security OAuth2 开发指南[中文]</a>
+                <a href="https://andaily.com/blog/?p=528">正确处理spring-oauth-server中在验证失败或错误时的方式</a>
             </p>
        </li>
 </ul>
@@ -395,9 +351,6 @@
     <br/>
     与项目相关的，与OAuth2相关的问题与回答，以及各类讨论请访问<br/>
     <a href="http://andaily.com/blog/?dwqa-question_category=oauth">http://andaily.com/blog/?dwqa-question_category=oauth</a>
-</p>
-<p>
-    GitHub项目地址: <a href="https://github.com/monkeyk/spring-oauth-server.git">https://github.com/monkeyk/spring-oauth-server.git</a>
 </p>
 
 
@@ -428,13 +381,12 @@
         <li><p>南京索特科技 -- 200元 (2016-12-16)</p></li>
         <li><p>周广文 -- 6.66元 (2017-02-17)</p></li>
         <li><p>境随心转 -- 20元 (2017-06-09)</p></li>
-        <li><p>Xyz(秦) -- 50元 (2018-06-05)</p></li>
     </ul>
 </div>
 
 <hr/>
 <p>
- 关注更多我的开源项目请访问 <a href="http://andaily.com/my_projects.html">http://andaily.com/my_projects.html</a>
+ 关注更多我的开源项目请访问 <a href="https://andaily.com/my_projects.html">https://andaily.com/my_projects.html</a>
 </p>
 
 <p>
@@ -442,6 +394,7 @@
 </p>
 <h3>
  <em>若需商业技术支持或提供技术解决方案, 请联系 <a href="mailto:sz@monkeyk.com">sz@monkeyk.com</a></em>
+ 或访问 <a href="https://monkeyk.com/kso/" target="_blank">https://monkeyk.com/kso/</a>
 </h3>
 <p>
     <img src="http://77g1is.com1.z0.glb.clouddn.com/wechat_qrcode.jpg"/>
